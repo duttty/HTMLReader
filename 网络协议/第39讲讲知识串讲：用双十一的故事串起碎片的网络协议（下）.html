@@ -1,0 +1,434 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <style type="text/css">
+
+#watermark {
+
+  position: relative;
+  overflow: hidden;
+}
+
+#watermark .x {
+  position: absolute;
+  top: 800;
+  left: 400;
+  color: #3300ff;
+  font-size: 50px;
+  pointer-events: none;
+  opacity:0.5;
+  filter:Alpha(opacity=50);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+}
+    </style>
+
+
+    <style type="text/css">
+ html{color:#333;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizelegibility;font-family:Helvetica Neue,PingFang SC,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif}html.borderbox *,html.borderbox :after,html.borderbox :before{box-sizing:border-box}article,aside,blockquote,body,button,code,dd,details,dl,dt,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hr,input,legend,li,menu,nav,ol,p,pre,section,td,textarea,th,ul{margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,menu,nav,section{display:block}audio,canvas,video{display:inline-block}body,button,input,select,textarea{font:300 1em/1.8 PingFang SC,Lantinghei SC,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,Helvetica,sans-serif}button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}blockquote{position:relative;color:#999;font-weight:400;border-left:1px solid #1abc9c;padding-left:1em;margin:1em 3em 1em 2em}@media only screen and (max-width:640px){blockquote{margin:1em 0}}abbr,acronym{border-bottom:1px dotted;font-variant:normal}abbr{cursor:help}del{text-decoration:line-through}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:400}ol,ul{list-style:none}caption,th{text-align:left}q:after,q:before{content:""}sub,sup{font-size:75%;line-height:0;position:relative}:root sub,:root sup{vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}a{color:#1abc9c}a:hover{text-decoration:underline}.typo a{border-bottom:1px solid #1abc9c}.typo a:hover{border-bottom-color:#555;color:#555}.typo a:hover,a,ins{text-decoration:none}.typo-u,u{text-decoration:underline}mark{background:#fffdd1;border-bottom:1px solid #ffedce;padding:2px;margin:0 5px}code,pre,pre tt{font-family:Courier,Courier New,monospace}pre{background:hsla(0,0%,97%,.7);border:1px solid #ddd;padding:1em 1.5em;display:block;-webkit-overflow-scrolling:touch}hr{border:none;border-bottom:1px solid #cfcfcf;margin-bottom:.8em;height:10px}.typo-small,figcaption,small{font-size:.9em;color:#888}b,strong{font-weight:700;color:#000}[draggable]{cursor:move}.clearfix:after,.clearfix:before{content:"";display:table}.clearfix:after{clear:both}.clearfix{zoom:1}.textwrap,.textwrap td,.textwrap th{word-wrap:break-word;word-break:break-all}.textwrap-table{table-layout:fixed}.serif{font-family:Palatino,Optima,Georgia,serif}.typo-dl,.typo-form,.typo-hr,.typo-ol,.typo-p,.typo-pre,.typo-table,.typo-ul,.typo dl,.typo form,.typo hr,.typo ol,.typo p,.typo pre,.typo table,.typo ul,blockquote{margin-bottom:1rem}h1,h2,h3,h4,h5,h6{font-family:PingFang SC,Helvetica Neue,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif;color:#000;line-height:1.35}.typo-h1,.typo-h2,.typo-h3,.typo-h4,.typo-h5,.typo-h6,.typo h1,.typo h2,.typo h3,.typo h4,.typo h5,.typo h6{margin-top:1.2em;margin-bottom:.6em;line-height:1.35}.typo-h1,.typo h1{font-size:2em}.typo-h2,.typo h2{font-size:1.8em}.typo-h3,.typo h3{font-size:1.6em}.typo-h4,.typo h4{font-size:1.4em}.typo-h5,.typo-h6,.typo h5,.typo h6{font-size:1.2em}.typo-ul,.typo ul{margin-left:1.3em;list-style:disc}.typo-ol,.typo ol{list-style:decimal;margin-left:1.9em}.typo-ol ol,.typo-ol ul,.typo-ul ol,.typo-ul ul,.typo li ol,.typo li ul{margin-bottom:.8em;margin-left:2em}.typo-ol ul,.typo-ul ul,.typo li ul{list-style:circle}.typo-table td,.typo-table th,.typo table caption,.typo table td,.typo table th{border:1px solid #ddd;padding:.5em 1em;color:#666}.typo-table th,.typo table th{background:#fbfbfb}.typo-table thead th,.typo table thead th{background:hsla(0,0%,95%,.7)}.typo table caption{border-bottom:none}.typo-input,.typo-textarea{-webkit-appearance:none;border-radius:0}.typo-em,.typo em,caption,legend{color:#000;font-weight:inherit}.typo-em{position:relative}.typo-em:after{position:absolute;top:.65em;left:0;width:100%;overflow:hidden;white-space:nowrap;content:"\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB"}.typo img{max-width:100%}.common-content{font-weight:400;color:#353535;line-height:1.75rem;white-space:normal;word-break:normal;font-size:1rem}.common-content img{display:block;max-width:100%;background-color:#eee}.common-content audio,.common-content video{width:100%;background-color:#eee}.common-content center,.common-content font{margin-top:1rem;display:inline-block}.common-content center{width:100%}.common-content pre{margin-top:1rem;padding-left:0;padding-right:0;position:relative;overflow:hidden}.common-content pre code{font-size:.8rem;font-family:Consolas,Liberation Mono,Menlo,monospace,Courier;display:block;width:100%;box-sizing:border-box;padding-left:1rem;padding-right:1rem;overflow-x:auto}.common-content hr{border:none;margin-top:1.5rem;margin-bottom:1.5rem;border-top:1px solid #f5f5f5;height:1px;background:none}.common-content b,.common-content h1,.common-content h2,.common-content h3,.common-content h4,.common-content h5,.common-content strong{font-weight:700}.common-content h1,.common-content h2{font-size:1.125rem;margin-bottom:.45rem}.common-content h3,.common-content h4,.common-content h5{font-size:1rem;margin-bottom:.45rem}.common-content p{font-weight:400;color:#353535;margin-top:.15rem}.common-content .orange{color:#ff5a05}.common-content .reference{font-size:1rem;color:#888}.custom-rich-content h1{margin-top:0;font-weight:400;font-size:15.25px;border-bottom:1px solid #eee;line-height:2.8}.custom-rich-content li,.custom-rich-content p{font-size:14px;color:#888;line-height:1.6}table.hljs-ln{margin-bottom:0;border-spacing:0;border-collapse:collapse}table.hljs-ln,table.hljs-ln tbody,table.hljs-ln td,table.hljs-ln tr{box-sizing:border-box}table.hljs-ln td{padding:0;border:0}table.hljs-ln td.hljs-ln-numbers{min-width:15px;color:rgba(27,31,35,.3);text-align:right;white-space:nowrap;cursor:pointer;user-select:none}table.hljs-ln td.hljs-ln-code,table.hljs-ln td.hljs-ln-numbers{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;font-size:12px;line-height:20px;vertical-align:top}table.hljs-ln td.hljs-ln-code{position:relative;padding-right:10px;padding-left:10px;overflow:visible;color:#24292e;word-wrap:normal;white-space:pre}video::-webkit-media-controls{overflow:hidden!important}video::-webkit-media-controls-enclosure{width:calc(100% + 32px);margin-left:auto}.button-cancel{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel,.button-primary{-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary{color:#fff;background-color:#ff5a05;border-radius:3px}@font-face{font-family:iconfont;src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot);src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.woff) format("woff"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.ttf) format("truetype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.svg#iconfont) format("svg")}@font-face{font-family:player-font;src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot);src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.woff) format("woff"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.ttf) format("truetype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.svg#player-font) format("svg")}.iconfont{font-family:iconfont!important;font-size:16px;font-style:normal;-webkit-font-smoothing:antialiased;-webkit-text-stroke-width:.2px;-moz-osx-font-smoothing:grayscale}html{background:#fff;min-height:100%;-webkit-tap-highlight-color:rgba(0,0,0,0)}body{width:100%}body.fixed{overflow:hidden;position:fixed;width:100vw;height:100vh}i{font-style:normal}a{word-wrap:break-word;-webkit-tap-highlight-color:rgba(0,0,0,0)}a:hover{text-decoration:none}.fade-enter-active,.fade-leave-active{transition:opacity .3s}.fade-enter,.fade-leave-to{opacity:0}.MathJax,.MathJax_CHTML,.MathJax_MathContainer,.MathJax_MathML,.MathJax_PHTML,.MathJax_PlainSource,.MathJax_SVG{outline:0}.ios-app-switch .js-audit{display:none}._loading_wrap_{position:fixed;width:100vw;height:100vh;top:50%;left:50%;transform:translate(-50%,-50%);z-index:999}._loading_div_class_,._loading_wrap_{display:-ms-flexbox;display:flex;-ms-flex-pack:center;justify-content:center;-ms-flex-align:center;align-items:center}._loading_div_class_{word-wrap:break-word;padding:.5rem .75rem;text-align:center;z-index:9999;font-size:.6rem;max-width:60%;color:#fff;border-radius:.25rem;-ms-flex-direction:column;flex-direction:column}._loading_div_class_ .message{color:#353535;font-size:16px;line-height:3}.spinner{animation:circle-rotator 1.4s linear infinite}.spinner *{line-height:0;box-sizing:border-box}@keyframes circle-rotator{0%{transform:rotate(0deg)}to{transform:rotate(270deg)}}.path{stroke-dasharray:187;stroke-dashoffset:0;transform-origin:center;animation:circle-dash 1.4s ease-in-out infinite,circle-colors 5.6s ease-in-out infinite}@keyframes circle-colors{0%{stroke:#ff5a05}to{stroke:#ff5a05}}@keyframes circle-dash{0%{stroke-dashoffset:187}50%{stroke-dashoffset:46.75;transform:rotate(135deg)}to{stroke-dashoffset:187;transform:rotate(450deg)}}.confirm-box-wrapper,.confirm-box-wrapper .mask{position:absolute;top:0;left:0;right:0;bottom:0}.confirm-box-wrapper .mask{background:rgba(0,0,0,.6)}.confirm-box-wrapper .confirm-box{position:fixed;top:50%;left:50%;width:267px;background:#fff;transform:translate(-50%,-50%);border-radius:7px}.confirm-box-wrapper .confirm-box .head{margin:0 18px;font-size:18px;text-align:center;line-height:65px;border-bottom:1px solid #d9d9d9}.confirm-box-wrapper .confirm-box .body{padding:18px;padding-bottom:0;color:#353535;font-size:12.5px;max-height:150px;overflow:auto}.confirm-box-wrapper .confirm-box .foot{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;padding:18px}.confirm-box-wrapper .confirm-box .foot .button-cancel{border:1px solid #d9d9d9}.hljs{display:block;overflow-x:auto;padding:.5em;color:#333;background:#f8f8f8}.hljs-comment,.hljs-quote{color:#998;font-style:italic}.hljs-keyword,.hljs-selector-tag,.hljs-subst{color:#333;font-weight:700}.hljs-literal,.hljs-number,.hljs-tag .hljs-attr,.hljs-template-variable,.hljs-variable{color:teal}.hljs-doctag,.hljs-string{color:#d14}.hljs-section,.hljs-selector-id,.hljs-title{color:#900;font-weight:700}.hljs-subst{font-weight:400}.hljs-class .hljs-title,.hljs-type{color:#458;font-weight:700}.hljs-attribute,.hljs-name,.hljs-tag{color:navy;font-weight:400}.hljs-link,.hljs-regexp{color:#009926}.hljs-bullet,.hljs-symbol{color:#990073}.hljs-built_in,.hljs-builtin-name{color:#0086b3}.hljs-meta{color:#999;font-weight:700}.hljs-deletion{background:#fdd}.hljs-addition{background:#dfd}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}
+
+
+
+
+    </style>
+    <style type="text/css">
+        .button-cancel[data-v-87ffcada]{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel[data-v-87ffcada],.button-primary[data-v-87ffcada]{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary[data-v-87ffcada]{color:#fff;background-color:#ff5a05;border-radius:3px}.pd[data-v-87ffcada]{padding-left:1.375rem;padding-right:1.375rem}.article[data-v-87ffcada]{max-width:70rem;margin:0 auto}.article .article-unavailable[data-v-87ffcada]{color:#fa8919;font-size:15px;font-weight:600;line-height:24px;border-radius:5px;padding:12px;background-color:#f6f7fb;margin-top:20px}.article .article-unavailable .iconfont[data-v-87ffcada]{font-size:12px}.article .main[data-v-87ffcada]{padding:1.25rem 0;margin-bottom:52px}.article-title[data-v-87ffcada]{color:#353535;font-weight:400;line-height:1.65rem;font-size:1.34375rem}.article-info[data-v-87ffcada]{color:#888;font-size:.9375rem;margin-top:1.0625rem}.article-content[data-v-87ffcada]{margin-top:1.0625rem}.article-content.android video[data-v-87ffcada]::-webkit-media-controls-fullscreen-button{display:none}.copyright[data-v-87ffcada]{color:#b2b2b2;padding-bottom:20px;margin-top:20px;font-size:13px}.audio-player[data-v-87ffcada]{width:100%;margin:20px 0}.to-comment[data-v-87ffcada]{overflow:hidden;padding-top:10px;margin-bottom:-30px}.to-comment a.button-primary[data-v-87ffcada]{float:right;height:20px;font-size:12px;line-height:20px;padding:4px 8px;cursor:pointer}.article-comments[data-v-87ffcada]{margin-top:2rem}.article-comments h2[data-v-87ffcada]{text-align:center;color:#888;position:relative;z-index:1;margin-bottom:1rem}.article-comments h2[data-v-87ffcada]:before{border-top:1px dotted #888;content:"";position:absolute;top:56%;left:0;width:100%;z-index:-1}.article-comments h2 span[data-v-87ffcada]{font-size:15.25px;font-weight:400;padding:0 1rem;background:#fff;display:inline-block}.article-sub-bottom[data-v-87ffcada]{z-index:10;cursor:pointer}.switch-btns[data-v-87ffcada]{height:76px;cursor:pointer;padding-top:24px;padding-bottom:24px;border-bottom:10px solid #f6f7fb;position:relative}.switch-btns[data-v-87ffcada]:before{content:" ";height:1px;background:#e8e8e8;position:absolute;top:0;left:0;-webkit-box-sizing:border-box;box-sizing:border-box;left:1.375rem;right:1.375rem}.switch-btns .btn[data-v-87ffcada]{height:38px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.switch-btns .btn .tag[data-v-87ffcada]{-webkit-box-flex:0;-ms-flex:0 0 62px;flex:0 0 62px;text-align:center;color:#888;font-size:14px;border-radius:10px;height:22px;line-height:22px;background:#f6f7fb;font-weight:400}.switch-btns .btn .txt[data-v-87ffcada]{margin-left:10px;-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto;color:#888;font-size:15px;height:22px;line-height:22px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:400}@media (max-width:769px){.article .breadcrumb[data-v-87ffcada]{padding-top:10px;padding-bottom:10px}}
+
+
+
+
+
+    </style>
+
+    <style type="text/css">
+        .comment-item{list-style-position:inside;width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;margin-bottom:1rem}.comment-item a{border-bottom:none}.comment-item .avatar{width:2.625rem;height:2.625rem;-ms-flex-negative:0;flex-shrink:0;border-radius:50%}.comment-item .info{margin-left:.5rem;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1}.comment-item .info .hd{width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .username{color:#888;font-size:15.25px;font-weight:400;line-height:1.2}.comment-item .info .hd .control{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .control .btn-share{color:#888;font-size:.75rem;margin-right:1rem}.comment-item .info .hd .control .btn-praise{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-size:15.25px;text-decoration:none}.comment-item .info .hd .control .btn-praise i{color:#888;display:inline-block;font-size:.75rem;margin-right:.3rem;margin-top:-.01rem}.comment-item .info .hd .control .btn-praise i.on,.comment-item .info .hd .control .btn-praise span{color:#ff5a05}.comment-item .info .bd{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6}.comment-item .info .time{color:#888;font-size:9px;line-height:1}.comment-item .info .reply .reply-hd{font-size:15.25px}.comment-item .info .reply .reply-hd span{margin-left:-12px;color:#888;font-weight:400}.comment-item .info .reply .reply-hd i{color:#ff5a05;font-size:15.25px}.comment-item .info .reply .reply-content{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all}.comment-item .info .reply .reply-time{color:#888;font-size:9px}
+
+
+
+
+    </style>
+</head>
+<body>
+<div id="app">
+
+
+    <div data-v-87ffcada="" class="article" id="watermark">
+        
+        <div data-v-87ffcada="" class="main main-app">
+            <h1 data-v-87ffcada="" class="article-title pd">
+                第39讲讲知识串讲：用双十一的故事串起碎片的网络协议（下）
+            </h1>
+            <div data-v-87ffcada="" class="article-content typo common-content pd"><img data-v-87ffcada=""
+                                                                                        src="https://static001.geekbang.org/resource/image/81/1a/815daa6f1cd3b4a7899e5fc41233751a.jpg">
+
+
+                <div data-v-87ffcada="" id="article-content" class="">
+                    <div class="text">
+                        <p>上一节，我们封装了一个长长的网络包，“大炮”准备完毕，开始发送。</p>
+<p>发送的时候可以说是重重关隘，从手机到移动网络、互联网，还要经过多个运营商才能到达数据中心，到了数据中心就进入第二个复杂的过程，从网关到VXLAN隧道，到负载均衡，到Controller层、组合服务层、基础服务层，最终才下单入库。今天，我们就来看这最后一段过程。</p>
+<h2>7.一座座城池一道道关，流控拥塞与重传</h2>
+<p>网络包已经组合完毕，接下来我们来看，如何经过一道道城关，到达目标公网IP。</p>
+<p>对于手机来讲，默认的网关在PGW上。在移动网络里面，从手机到SGW，到PGW是有一条隧道的。在这条隧道里面，会将上面的这个包作为隧道的乘客协议放在里面，外面SGW和PGW在核心网机房的IP地址。网络包直到PGW（PGW是隧道的另一端）才将里面的包解出来，转发到外部网络。</p>
+<p>所以，从手机发送出来的时候，网络包的结构为：</p>
+<ul>
+<li>
+<p>源MAC：手机也即UE的MAC；</p>
+</li>
+<li>
+<p>目标MAC：网关PGW上面的隧道端点的MAC；</p>
+</li>
+<li>
+<p>源IP：UE的IP地址；</p>
+</li>
+<li>
+<p>目标IP：SLB的公网IP地址。</p>
+</li>
+</ul>
+<p>进入隧道之后，要封装外层的网络地址，因而网络包的格式为：</p>
+<ul>
+<li>
+<p>外层源MAC：E-NodeB的MAC；</p>
+</li>
+<li>
+<p>外层目标MAC：SGW的MAC；</p>
+</li>
+<li>
+<p>外层源IP：E-NodeB的IP；</p>
+</li>
+<li>
+<p>外层目标IP：SGW的IP；</p>
+</li>
+<li>
+<p>内层源MAC：手机也即UE的MAC；</p>
+</li>
+<li>
+<p>内层目标MAC：网关PGW上面的隧道端点的MAC；</p>
+</li>
+<li>
+<p>内层源IP：UE的IP地址；</p>
+</li>
+<li>
+<p>内层目标IP：SLB的公网IP地址。</p>
+</li>
+</ul><!-- [[[read_end]]] -->
+<p>当隧道在SGW的时候，切换了一个隧道，会从SGW到PGW的隧道，因而网络包的格式为：</p>
+<ul>
+<li>
+<p>外层源MAC：SGW的MAC；</p>
+</li>
+<li>
+<p>外层目标MAC：PGW的MAC；</p>
+</li>
+<li>
+<p>外层源IP：SGW的IP；</p>
+</li>
+<li>
+<p>外层目标IP：PGW的IP；</p>
+</li>
+<li>
+<p>内层源MAC：手机也即UE的MAC；</p>
+</li>
+<li>
+<p>内层目标MAC：网关PGW上面的隧道端点的MAC；</p>
+</li>
+<li>
+<p>内层源IP：UE的IP地址；</p>
+</li>
+<li>
+<p>内层目标IP：SLB的公网IP地址。</p>
+</li>
+</ul>
+<p>在PGW的隧道端点将包解出来，转发出去的时候，一般在PGW出外部网络的路由器上，会部署NAT服务，将手机的IP地址转换为公网IP地址，当请求返回的时候，再NAT回来。</p>
+<p>因而在PGW之后，相当于做了一次<a href="https://time.geekbang.org/column/article/8590">欧洲十国游型</a>的转发，网络包的格式为：</p>
+<ul>
+<li>
+<p>源MAC：PGW出口的MAC；</p>
+</li>
+<li>
+<p>目标MAC：NAT网关的MAC；</p>
+</li>
+<li>
+<p>源IP：UE的IP地址；</p>
+</li>
+<li>
+<p>目标IP：SLB的公网IP地址。</p>
+</li>
+</ul>
+<p>在NAT网关，相当于做了一次<a href="https://time.geekbang.org/column/article/8590">玄奘西游型</a>的转发，网络包的格式变成：</p>
+<ul>
+<li>
+<p>源MAC：NAT网关的MAC；</p>
+</li>
+<li>
+<p>目标MAC：A2路由器的MAC；</p>
+</li>
+<li>
+<p>源IP：UE的公网IP地址；</p>
+</li>
+<li>
+<p>目标IP：SLB的公网IP地址。</p>
+</li>
+</ul>
+<p><img src="https://static001.geekbang.org/resource/image/8e/5a/8edfb048b27aed3cc2eeb892ae22175a.jpg" alt="" /></p>
+<p>出了NAT网关，就从核心网到达了互联网。在网络世界，每一个运营商的网络成为自治系统AS。每个自治系统都有边界路由器，通过它和外面的世界建立联系。</p>
+<p>对于云平台来讲，它可以被称为Multihomed AS，有多个连接连到其他的AS，但是大多拒绝帮其他的AS传输包。例如一些大公司的网络。对于运营商来说，它可以被称为Transit AS，有多个连接连到其他的AS，并且可以帮助其他的AS传输包，比如主干网。</p>
+<p>如何从出口的运营商到达云平台的边界路由器？在路由器之间需要通过BGP协议实现，BGP又分为两类，eBGP和iBGP。自治系统之间、边界路由器之间使用eBGP广播路由。内部网络也需要访问其他的自治系统。</p>
+<p>边界路由器如何将BGP学习到的路由导入到内部网络呢？通过运行iBGP，使内部的路由器能够找到到达外网目的地最好的边界路由器。</p>
+<p>网站的SLB的公网IP地址早已经通过云平台的边界路由器，让全网都知道了。于是这个下单的网络包选择的下一跳是A2，也即将A2的MAC地址放在目标MAC地址中。</p>
+<p>到达A2之后，从路由表中找到下一跳是路由器C1，于是将目标MAC换成C1的MAC地址。到达C1之后，找到下一跳是C2，将目标MAC地址设置为C2的MAC。到达C2后，找到下一跳是云平台的边界路由器，于是将目标MAC设置为边界路由器的MAC地址。</p>
+<p>你会发现，这一路，都是只换MAC，不换目标IP地址。这就是所谓下一跳的概念。</p>
+<p>在云平台的边界路由器，会将下单的包转发进来，经过核心交换，汇聚交换，到达外网网关节点上的SLB的公网IP地址。</p>
+<p>我们可以看到，手机到SLB的公网IP，是一个端到端的连接，连接的过程发送了很多包。所有这些包，无论是TCP三次握手，还是HTTPS的密钥交换，都是要走如此复杂的过程到达SLB的，当然每个包走的路径不一定一致。</p>
+<p>网络包走在这个复杂的道路上，很可能一不小心就丢了，怎么办？这就需要借助TCP的机制重新发送。</p>
+<p>既然TCP要对包进行重传，就需要维护Sequence Number，看哪些包到了，哪些没到，哪些需要重传，传输的速度应该控制到多少，这就是<strong>TCP的滑动窗口协议</strong>。</p>
+<p><img src="https://static001.geekbang.org/resource/image/48/24/4879c63596736cc91dbb696046e95024.jpg" alt="" /></p>
+<p>整个TCP的发送，一开始会协商一个Sequence Number，从这个Sequence Number开始，每个包都有编号。滑动窗口将接收方的网络包分成四个部分：</p>
+<ul>
+<li>
+<p>已经接收，已经ACK，已经交给应用层的包；</p>
+</li>
+<li>
+<p>已经接收，已经ACK，未发送给应用层；</p>
+</li>
+<li>
+<p>已经接收，尚未发送ACK；</p>
+</li>
+<li>
+<p>未接收，尚有空闲的缓存区域。</p>
+</li>
+</ul>
+<p>对于TCP层来讲，每一个包都有ACK。ACK需要从SLB回复到手机端，将上面的那个过程反向来一遍，当然路径不一定一致，可见ACK也不是那么轻松的事情。</p>
+<p>如果发送方超过一定的时间没有收到ACK，就会重新发送。只有TCP层ACK过的包，才会发给应用层，并且只会发送一份，对于下单的场景，应用层是HTTP层。</p>
+<p>你可能会问了，TCP老是重复发送，会不会导致一个单下了两遍？是否要求服务端实现幂等？从TCP的机制来看，是不会的。只有收不到ACK的包才会重复发，发到接收端，在窗口里面只保存一份，所以在同一个TCP连接中，不用担心重传导致二次下单。</p>
+<p>但是TCP连接会因为某种原因断了，例如手机信号不好，这个时候手机把所有的动作重新做一遍，建立一个新的TCP连接，在HTTP层调用两次RESTful API。这个时候可能会导致两遍下单的情况，因而RESTful API需要实现幂等。</p>
+<p>当ACK过的包发给应用层之后，TCP层的缓存就空了出来，这会导致上面图中的大三角，也即接收方能够容纳的总缓存，整体顺时针滑动。小的三角形，也即接收方告知发送方的窗口总大小，也即还没有完全确认收到的缓存大小，如果把这些填满了，就不能再发了，因为没确认收到，所以一个都不能扔。</p>
+<h2>8.从数据中心进网关，公网NAT成私网</h2>
+<p>包从手机端经历千难万险，终于到了SLB的公网IP所在的公网网口。由于匹配上了MAC地址和IP地址，因而将网络包收了进来。</p>
+<p><img src="https://static001.geekbang.org/resource/image/ab/52/ab5b03ebf7facf71721566165f921252.jpg" alt="" /></p>
+<p>在虚拟网关节点的外网网口上，会有一个NAT规则，将公网IP地址转换为VPC里面的私网IP地址，这个私网IP地址就是SLB的HAProxy所在的虚拟机的私网IP地址。</p>
+<p>当然为了承载比较大的吞吐量，虚拟网关节点会有多个，物理网络会将流量分发到不同的虚拟网关节点。同样HAProxy也会是一个大的集群，虚拟网关会选择某个负载均衡节点，将某个请求分发给它，负载均衡之后是Controller层，也是部署在虚拟机里面的。</p>
+<p>当网络包里面的目标IP变成私有IP地址之后，虚拟路由会查找路由规则，将网络包从下方的私网网口发出来。这个时候包的格式为：</p>
+<ul>
+<li>
+<p>源MAC：网关MAC；</p>
+</li>
+<li>
+<p>目标MAC：HAProxy虚拟机的MAC；</p>
+</li>
+<li>
+<p>源IP：UE的公网IP；</p>
+</li>
+<li>
+<p>目标IP：HAProxy虚拟机的私网IP。</p>
+</li>
+</ul>
+<h2>9.进入隧道打标签，RPC远程调用下单</h2>
+<p>在虚拟路由节点上，也会有OVS，将网络包封装在VXLAN隧道里面，VXLAN ID就是给你的租户创建VPC的时候分配的。包的格式为：</p>
+<ul>
+<li>
+<p>外层源MAC：网关物理机MAC；</p>
+</li>
+<li>
+<p>外层目标MAC：物理机A的MAC；</p>
+</li>
+<li>
+<p>外层源IP：网关物理机IP；</p>
+</li>
+<li>
+<p>外层目标IP：物理机A的IP；</p>
+</li>
+<li>
+<p>内层源MAC：网关MAC；</p>
+</li>
+<li>
+<p>内层目标MAC：HAProxy虚拟机的MAC；</p>
+</li>
+<li>
+<p>内层源IP：UE的公网IP；</p>
+</li>
+<li>
+<p>内层目标IP：HAProxy虚拟机的私网IP。</p>
+</li>
+</ul>
+<p>在物理机A上，OVS会将包从VXLAN隧道里面解出来，发给HAProxy所在的虚拟机。HAProxy所在的虚拟机发现MAC地址匹配，目标IP地址匹配，就根据TCP端口，将包发给HAProxy进程，因为HAProxy是在监听这个TCP端口的。因而HAProxy就是这个TCP连接的服务端，客户端是手机。对于TCP的连接状态、滑动窗口等，都是在HAProxy上维护的。</p>
+<p>在这里HAProxy是一个四层负载均衡，也即它只解析到TCP层，里面的HTTP协议它不关心，就将请求转发给后端的多个Controller层的一个。</p>
+<p>HAProxy发出去的网络包就认为HAProxy是客户端了，看不到手机端了。网络包格式如下：</p>
+<ul>
+<li>
+<p>源MAC：HAProxy所在虚拟机的MAC；</p>
+</li>
+<li>
+<p>目标MAC：Controller层所在虚拟机的MAC；</p>
+</li>
+<li>
+<p>源IP：HAProxy所在虚拟机的私网IP；</p>
+</li>
+<li>
+<p>目标IP：Controller层所在虚拟机的私网IP。</p>
+</li>
+</ul>
+<p>当然这个包发出去之后，还是会被物理机上的OVS放入VXLAN隧道里面，网络包格式为：</p>
+<ul>
+<li>
+<p>外层源MAC：物理机A的MAC；</p>
+</li>
+<li>
+<p>外层目标MAC：物理机B的MAC；</p>
+</li>
+<li>
+<p>外层源IP：物理机A的IP；</p>
+</li>
+<li>
+<p>外层目标IP：物理机B的IP；</p>
+</li>
+<li>
+<p>内层源MAC：HAProxy所在虚拟机的MAC；</p>
+</li>
+<li>
+<p>内层目标MAC：Controller层所在虚拟机的MAC；</p>
+</li>
+<li>
+<p>内层源IP：HAProxy所在虚拟机的私网IP；</p>
+</li>
+<li>
+<p>内层目标IP：Controller层所在虚拟机的私网IP。</p>
+</li>
+</ul>
+<p>在物理机B上，OVS会将包从VXLAN隧道里面解出来，发给Controller层所在的虚拟机。Controller层所在的虚拟机发现MAC地址匹配，目标IP地址匹配，就根据TCP端口，将包发给Controller层的进程，因为它在监听这个TCP端口。</p>
+<p>在HAProxy和Controller层之间，维护一个TCP的连接。</p>
+<p>Controller层收到包之后，它是关心HTTP里面是什么的，于是解开HTTP的包，发现是一个POST请求，内容是下单购买一个课程。</p>
+<h2></h2>
+<p>10.下单扣减库存优惠券，数据入库返回成功</p>
+<p>下单是一个复杂的过程，因而往往在组合服务层会有一个专门管理下单的服务，Controller层会通过RPC调用这个组合服务层。</p>
+<p>假设我们使用的是Dubbo，则Controller层需要读取注册中心，将下单服务的进程列表拿出来，选出一个来调用。</p>
+<p>Dubbo中默认的RPC协议是Hessian2。Hessian2将下单的远程调用序列化为二进制进行传输。</p>
+<p>Netty是一个非阻塞的基于事件的网络传输框架。Controller层和下单服务之间，使用了Netty的网络传输框架。有了Netty，就不用自己编写复杂的异步Socket程序了。Netty使用的方式，就是咱们讲<a href="https://time.geekbang.org/column/article/9293">Socket编程</a>的时候，一个项目组支撑多个项目（IO多路复用，从派人盯着到有事通知）这种方式。</p>
+<p>Netty还是工作在Socket这一层的，发送的网络包还是基于TCP的。在TCP的下层，还是需要封装上IP头和MAC头。如果跨物理机通信，还是需要封装的外层的VXLAN隧道里面。当然底层的这些封装，Netty都不感知，它只要做好它的异步通信即可。</p>
+<p>在Netty的服务端，也即下单服务中，收到请求后，先用Hessian2的格式进行解压缩。然后将请求分发到线程中进行处理，在线程中，会调用下单的业务逻辑。</p>
+<p>下单的业务逻辑比较复杂，往往要调用基础服务层里面的库存服务、优惠券服务等，将多个服务调用完毕，才算下单成功。下单服务调用库存服务和优惠券服务，也是通过Dubbo的框架，通过注册中心拿到库存服务和优惠券服务的列表，然后选一个调用。</p>
+<p>调用的时候，统一使用Hessian2进行序列化，使用Netty进行传输，底层如果跨物理机，仍然需要通过VXLAN的封装和解封装。</p>
+<p>咱们以库存为例子的时候，讲述过幂等的接口实现的问题。因为如果扣减库存，仅仅是谁调用谁减一。这样存在的问题是，如果扣减库存因为一次调用失败，而多次调用，这里指的不是TCP多次重试，而是应用层调用的多次重试，就会存在库存扣减多次的情况。</p>
+<p>这里常用的方法是，使用乐观锁（Compare and Set，简称CAS）。CAS要考虑三个方面，当前的库存数、预期原来的库存数和版本，以及新的库存数。在操作之前，查询出原来的库存数和版本，真正扣减库存的时候，判断如果当前库存的值与预期原值和版本相匹配，则将库存值更新为新值，否则不做任何操作。</p>
+<p>这是一种基于状态而非基于动作的设计，符合RESTful的架构设计原则。这样的设计有利于高并发场景。当多个线程尝试使用CAS同时更新同一个变量时，只有其中一个线程能更新变量的值，而其它线程都失败，失败的线程并不会被挂起，而是被告知这次竞争中失败，并可以再次尝试。</p>
+<p>最终，当下单更新到分布式数据库中之后，整个下单过程才算真正告一段落。</p>
+<p>好了，经过了十个过程，下单终于成功了，你是否对这个过程了如指掌了呢？如果发现对哪些细节比较模糊，可以回去看一下相应的章节，相信会有更加深入的理解。</p>
+<p>到此，我带着你用下单过程把网络协议的知识都复习了一遍。授人以鱼不如授人以渔。下一节，我将会带你来搭建一个网络实验环境，配合实验来说明理论。</p>
+<p>欢迎你留言和我讨论。趣谈网络协议，我们下期见！</p>
+<p><img src="https://static001.geekbang.org/resource/image/b5/fb/b5bc14cb81d3630919fee94a512cc3fb.jpg" alt="" /></p>
+
+                    </div>
+                </div>
+
+            </div>
+            <div data-v-87ffcada="" class="article-comments pd"><h2 data-v-87ffcada=""><span
+                    data-v-87ffcada="">精选留言</span></h2>
+                <ul data-v-87ffcada="">
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/8d/44/abb7bfe3.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">程启</span>
+                            </div>
+                            <div class="bd">超哥，赞一个！<br><br>有个小问题，下单系列一和二中，系列一里面说拿到三个slb的公网ip，二里面直接就建连了。<br>本意是说客户端localdns随机返回一个，还是slb自身做负载均衡提供三个里面的一个？ <br></div>
+                            <span class="time">2018-08-15 09:34</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">dns返回多个</p>
+                                <p class="reply-time">2018-08-15 10:07</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">网络已断开</span>
+                            </div>
+                            <div class="bd">这个专辑使我受益颇多，值得之前读三遍。 <br></div>
+                            <span class="time">2018-08-16 11:06</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/95/96/0020bd67.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">夏洛克的救赎</span>
+                            </div>
+                            <div class="bd">提问：为什么本地能够ping通服务器，双方也能通过sftp传输文件，但是服务器不能ping通本地，本地无法通过scp命令从服务器下载文件？<br><br>都是在同一内网环境。 <br></div>
+                            <span class="time">2018-08-15 16:05</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/8d/44/abb7bfe3.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">程启</span>
+                            </div>
+                            <div class="bd">牛 <br></div>
+                            <span class="time">2018-08-15 09:08</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/1a/e5/6899701e.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">favorlm</span>
+                            </div>
+                            <div class="bd">忘记vxlan是什么了 <br></div>
+                            <span class="time">2018-08-15 08:23</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/12/69/4d/81c44f45.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">拉欧</span>
+                            </div>
+                            <div class="bd">每看一遍都会有新的收获，是我基础太差了么？ <br></div>
+                            <span class="time">2018-11-20 09:21</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">不是啦，加油</p>
+                                <p class="reply-time">2018-11-20 17:09</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/b6/11/e8506a04.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">小宇宙</span>
+                            </div>
+                            <div class="bd">有个疑问，在库存的例子里边，因为网络的抖动，用户没收到确认信号，应用层会重新发起扣减库存的请求，我们可以根据客户端的订单ID ，来识别这次的请求属于同一个订单的请求，而不会重复扣减库存，这也可以实现幂等吧，乐观锁不是应对多个用户，多个线程的并发请求 的时候实现幂等的方法吗？ <br></div>
+                            <span class="time">2018-08-27 16:16</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">没收到确认是不会重新发应用层的。下单的幂等是用订单id，但是库存的幂等不是</p>
+                                <p class="reply-time">2018-08-27 21:18</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

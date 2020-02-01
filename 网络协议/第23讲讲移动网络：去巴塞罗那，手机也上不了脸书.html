@@ -1,0 +1,498 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <style type="text/css">
+
+#watermark {
+
+  position: relative;
+  overflow: hidden;
+}
+
+#watermark .x {
+  position: absolute;
+  top: 800;
+  left: 400;
+  color: #3300ff;
+  font-size: 50px;
+  pointer-events: none;
+  opacity:0.5;
+  filter:Alpha(opacity=50);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+}
+    </style>
+
+
+    <style type="text/css">
+ html{color:#333;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizelegibility;font-family:Helvetica Neue,PingFang SC,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif}html.borderbox *,html.borderbox :after,html.borderbox :before{box-sizing:border-box}article,aside,blockquote,body,button,code,dd,details,dl,dt,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hr,input,legend,li,menu,nav,ol,p,pre,section,td,textarea,th,ul{margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,menu,nav,section{display:block}audio,canvas,video{display:inline-block}body,button,input,select,textarea{font:300 1em/1.8 PingFang SC,Lantinghei SC,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,Helvetica,sans-serif}button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}blockquote{position:relative;color:#999;font-weight:400;border-left:1px solid #1abc9c;padding-left:1em;margin:1em 3em 1em 2em}@media only screen and (max-width:640px){blockquote{margin:1em 0}}abbr,acronym{border-bottom:1px dotted;font-variant:normal}abbr{cursor:help}del{text-decoration:line-through}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:400}ol,ul{list-style:none}caption,th{text-align:left}q:after,q:before{content:""}sub,sup{font-size:75%;line-height:0;position:relative}:root sub,:root sup{vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}a{color:#1abc9c}a:hover{text-decoration:underline}.typo a{border-bottom:1px solid #1abc9c}.typo a:hover{border-bottom-color:#555;color:#555}.typo a:hover,a,ins{text-decoration:none}.typo-u,u{text-decoration:underline}mark{background:#fffdd1;border-bottom:1px solid #ffedce;padding:2px;margin:0 5px}code,pre,pre tt{font-family:Courier,Courier New,monospace}pre{background:hsla(0,0%,97%,.7);border:1px solid #ddd;padding:1em 1.5em;display:block;-webkit-overflow-scrolling:touch}hr{border:none;border-bottom:1px solid #cfcfcf;margin-bottom:.8em;height:10px}.typo-small,figcaption,small{font-size:.9em;color:#888}b,strong{font-weight:700;color:#000}[draggable]{cursor:move}.clearfix:after,.clearfix:before{content:"";display:table}.clearfix:after{clear:both}.clearfix{zoom:1}.textwrap,.textwrap td,.textwrap th{word-wrap:break-word;word-break:break-all}.textwrap-table{table-layout:fixed}.serif{font-family:Palatino,Optima,Georgia,serif}.typo-dl,.typo-form,.typo-hr,.typo-ol,.typo-p,.typo-pre,.typo-table,.typo-ul,.typo dl,.typo form,.typo hr,.typo ol,.typo p,.typo pre,.typo table,.typo ul,blockquote{margin-bottom:1rem}h1,h2,h3,h4,h5,h6{font-family:PingFang SC,Helvetica Neue,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif;color:#000;line-height:1.35}.typo-h1,.typo-h2,.typo-h3,.typo-h4,.typo-h5,.typo-h6,.typo h1,.typo h2,.typo h3,.typo h4,.typo h5,.typo h6{margin-top:1.2em;margin-bottom:.6em;line-height:1.35}.typo-h1,.typo h1{font-size:2em}.typo-h2,.typo h2{font-size:1.8em}.typo-h3,.typo h3{font-size:1.6em}.typo-h4,.typo h4{font-size:1.4em}.typo-h5,.typo-h6,.typo h5,.typo h6{font-size:1.2em}.typo-ul,.typo ul{margin-left:1.3em;list-style:disc}.typo-ol,.typo ol{list-style:decimal;margin-left:1.9em}.typo-ol ol,.typo-ol ul,.typo-ul ol,.typo-ul ul,.typo li ol,.typo li ul{margin-bottom:.8em;margin-left:2em}.typo-ol ul,.typo-ul ul,.typo li ul{list-style:circle}.typo-table td,.typo-table th,.typo table caption,.typo table td,.typo table th{border:1px solid #ddd;padding:.5em 1em;color:#666}.typo-table th,.typo table th{background:#fbfbfb}.typo-table thead th,.typo table thead th{background:hsla(0,0%,95%,.7)}.typo table caption{border-bottom:none}.typo-input,.typo-textarea{-webkit-appearance:none;border-radius:0}.typo-em,.typo em,caption,legend{color:#000;font-weight:inherit}.typo-em{position:relative}.typo-em:after{position:absolute;top:.65em;left:0;width:100%;overflow:hidden;white-space:nowrap;content:"\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB"}.typo img{max-width:100%}.common-content{font-weight:400;color:#353535;line-height:1.75rem;white-space:normal;word-break:normal;font-size:1rem}.common-content img{display:block;max-width:100%;background-color:#eee}.common-content audio,.common-content video{width:100%;background-color:#eee}.common-content center,.common-content font{margin-top:1rem;display:inline-block}.common-content center{width:100%}.common-content pre{margin-top:1rem;padding-left:0;padding-right:0;position:relative;overflow:hidden}.common-content pre code{font-size:.8rem;font-family:Consolas,Liberation Mono,Menlo,monospace,Courier;display:block;width:100%;box-sizing:border-box;padding-left:1rem;padding-right:1rem;overflow-x:auto}.common-content hr{border:none;margin-top:1.5rem;margin-bottom:1.5rem;border-top:1px solid #f5f5f5;height:1px;background:none}.common-content b,.common-content h1,.common-content h2,.common-content h3,.common-content h4,.common-content h5,.common-content strong{font-weight:700}.common-content h1,.common-content h2{font-size:1.125rem;margin-bottom:.45rem}.common-content h3,.common-content h4,.common-content h5{font-size:1rem;margin-bottom:.45rem}.common-content p{font-weight:400;color:#353535;margin-top:.15rem}.common-content .orange{color:#ff5a05}.common-content .reference{font-size:1rem;color:#888}.custom-rich-content h1{margin-top:0;font-weight:400;font-size:15.25px;border-bottom:1px solid #eee;line-height:2.8}.custom-rich-content li,.custom-rich-content p{font-size:14px;color:#888;line-height:1.6}table.hljs-ln{margin-bottom:0;border-spacing:0;border-collapse:collapse}table.hljs-ln,table.hljs-ln tbody,table.hljs-ln td,table.hljs-ln tr{box-sizing:border-box}table.hljs-ln td{padding:0;border:0}table.hljs-ln td.hljs-ln-numbers{min-width:15px;color:rgba(27,31,35,.3);text-align:right;white-space:nowrap;cursor:pointer;user-select:none}table.hljs-ln td.hljs-ln-code,table.hljs-ln td.hljs-ln-numbers{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;font-size:12px;line-height:20px;vertical-align:top}table.hljs-ln td.hljs-ln-code{position:relative;padding-right:10px;padding-left:10px;overflow:visible;color:#24292e;word-wrap:normal;white-space:pre}video::-webkit-media-controls{overflow:hidden!important}video::-webkit-media-controls-enclosure{width:calc(100% + 32px);margin-left:auto}.button-cancel{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel,.button-primary{-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary{color:#fff;background-color:#ff5a05;border-radius:3px}@font-face{font-family:iconfont;src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot);src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.woff) format("woff"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.ttf) format("truetype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.svg#iconfont) format("svg")}@font-face{font-family:player-font;src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot);src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.woff) format("woff"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.ttf) format("truetype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.svg#player-font) format("svg")}.iconfont{font-family:iconfont!important;font-size:16px;font-style:normal;-webkit-font-smoothing:antialiased;-webkit-text-stroke-width:.2px;-moz-osx-font-smoothing:grayscale}html{background:#fff;min-height:100%;-webkit-tap-highlight-color:rgba(0,0,0,0)}body{width:100%}body.fixed{overflow:hidden;position:fixed;width:100vw;height:100vh}i{font-style:normal}a{word-wrap:break-word;-webkit-tap-highlight-color:rgba(0,0,0,0)}a:hover{text-decoration:none}.fade-enter-active,.fade-leave-active{transition:opacity .3s}.fade-enter,.fade-leave-to{opacity:0}.MathJax,.MathJax_CHTML,.MathJax_MathContainer,.MathJax_MathML,.MathJax_PHTML,.MathJax_PlainSource,.MathJax_SVG{outline:0}.ios-app-switch .js-audit{display:none}._loading_wrap_{position:fixed;width:100vw;height:100vh;top:50%;left:50%;transform:translate(-50%,-50%);z-index:999}._loading_div_class_,._loading_wrap_{display:-ms-flexbox;display:flex;-ms-flex-pack:center;justify-content:center;-ms-flex-align:center;align-items:center}._loading_div_class_{word-wrap:break-word;padding:.5rem .75rem;text-align:center;z-index:9999;font-size:.6rem;max-width:60%;color:#fff;border-radius:.25rem;-ms-flex-direction:column;flex-direction:column}._loading_div_class_ .message{color:#353535;font-size:16px;line-height:3}.spinner{animation:circle-rotator 1.4s linear infinite}.spinner *{line-height:0;box-sizing:border-box}@keyframes circle-rotator{0%{transform:rotate(0deg)}to{transform:rotate(270deg)}}.path{stroke-dasharray:187;stroke-dashoffset:0;transform-origin:center;animation:circle-dash 1.4s ease-in-out infinite,circle-colors 5.6s ease-in-out infinite}@keyframes circle-colors{0%{stroke:#ff5a05}to{stroke:#ff5a05}}@keyframes circle-dash{0%{stroke-dashoffset:187}50%{stroke-dashoffset:46.75;transform:rotate(135deg)}to{stroke-dashoffset:187;transform:rotate(450deg)}}.confirm-box-wrapper,.confirm-box-wrapper .mask{position:absolute;top:0;left:0;right:0;bottom:0}.confirm-box-wrapper .mask{background:rgba(0,0,0,.6)}.confirm-box-wrapper .confirm-box{position:fixed;top:50%;left:50%;width:267px;background:#fff;transform:translate(-50%,-50%);border-radius:7px}.confirm-box-wrapper .confirm-box .head{margin:0 18px;font-size:18px;text-align:center;line-height:65px;border-bottom:1px solid #d9d9d9}.confirm-box-wrapper .confirm-box .body{padding:18px;padding-bottom:0;color:#353535;font-size:12.5px;max-height:150px;overflow:auto}.confirm-box-wrapper .confirm-box .foot{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;padding:18px}.confirm-box-wrapper .confirm-box .foot .button-cancel{border:1px solid #d9d9d9}.hljs{display:block;overflow-x:auto;padding:.5em;color:#333;background:#f8f8f8}.hljs-comment,.hljs-quote{color:#998;font-style:italic}.hljs-keyword,.hljs-selector-tag,.hljs-subst{color:#333;font-weight:700}.hljs-literal,.hljs-number,.hljs-tag .hljs-attr,.hljs-template-variable,.hljs-variable{color:teal}.hljs-doctag,.hljs-string{color:#d14}.hljs-section,.hljs-selector-id,.hljs-title{color:#900;font-weight:700}.hljs-subst{font-weight:400}.hljs-class .hljs-title,.hljs-type{color:#458;font-weight:700}.hljs-attribute,.hljs-name,.hljs-tag{color:navy;font-weight:400}.hljs-link,.hljs-regexp{color:#009926}.hljs-bullet,.hljs-symbol{color:#990073}.hljs-built_in,.hljs-builtin-name{color:#0086b3}.hljs-meta{color:#999;font-weight:700}.hljs-deletion{background:#fdd}.hljs-addition{background:#dfd}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}
+
+
+
+
+    </style>
+    <style type="text/css">
+        .button-cancel[data-v-87ffcada]{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel[data-v-87ffcada],.button-primary[data-v-87ffcada]{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary[data-v-87ffcada]{color:#fff;background-color:#ff5a05;border-radius:3px}.pd[data-v-87ffcada]{padding-left:1.375rem;padding-right:1.375rem}.article[data-v-87ffcada]{max-width:70rem;margin:0 auto}.article .article-unavailable[data-v-87ffcada]{color:#fa8919;font-size:15px;font-weight:600;line-height:24px;border-radius:5px;padding:12px;background-color:#f6f7fb;margin-top:20px}.article .article-unavailable .iconfont[data-v-87ffcada]{font-size:12px}.article .main[data-v-87ffcada]{padding:1.25rem 0;margin-bottom:52px}.article-title[data-v-87ffcada]{color:#353535;font-weight:400;line-height:1.65rem;font-size:1.34375rem}.article-info[data-v-87ffcada]{color:#888;font-size:.9375rem;margin-top:1.0625rem}.article-content[data-v-87ffcada]{margin-top:1.0625rem}.article-content.android video[data-v-87ffcada]::-webkit-media-controls-fullscreen-button{display:none}.copyright[data-v-87ffcada]{color:#b2b2b2;padding-bottom:20px;margin-top:20px;font-size:13px}.audio-player[data-v-87ffcada]{width:100%;margin:20px 0}.to-comment[data-v-87ffcada]{overflow:hidden;padding-top:10px;margin-bottom:-30px}.to-comment a.button-primary[data-v-87ffcada]{float:right;height:20px;font-size:12px;line-height:20px;padding:4px 8px;cursor:pointer}.article-comments[data-v-87ffcada]{margin-top:2rem}.article-comments h2[data-v-87ffcada]{text-align:center;color:#888;position:relative;z-index:1;margin-bottom:1rem}.article-comments h2[data-v-87ffcada]:before{border-top:1px dotted #888;content:"";position:absolute;top:56%;left:0;width:100%;z-index:-1}.article-comments h2 span[data-v-87ffcada]{font-size:15.25px;font-weight:400;padding:0 1rem;background:#fff;display:inline-block}.article-sub-bottom[data-v-87ffcada]{z-index:10;cursor:pointer}.switch-btns[data-v-87ffcada]{height:76px;cursor:pointer;padding-top:24px;padding-bottom:24px;border-bottom:10px solid #f6f7fb;position:relative}.switch-btns[data-v-87ffcada]:before{content:" ";height:1px;background:#e8e8e8;position:absolute;top:0;left:0;-webkit-box-sizing:border-box;box-sizing:border-box;left:1.375rem;right:1.375rem}.switch-btns .btn[data-v-87ffcada]{height:38px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.switch-btns .btn .tag[data-v-87ffcada]{-webkit-box-flex:0;-ms-flex:0 0 62px;flex:0 0 62px;text-align:center;color:#888;font-size:14px;border-radius:10px;height:22px;line-height:22px;background:#f6f7fb;font-weight:400}.switch-btns .btn .txt[data-v-87ffcada]{margin-left:10px;-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto;color:#888;font-size:15px;height:22px;line-height:22px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:400}@media (max-width:769px){.article .breadcrumb[data-v-87ffcada]{padding-top:10px;padding-bottom:10px}}
+
+
+
+
+
+    </style>
+
+    <style type="text/css">
+        .comment-item{list-style-position:inside;width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;margin-bottom:1rem}.comment-item a{border-bottom:none}.comment-item .avatar{width:2.625rem;height:2.625rem;-ms-flex-negative:0;flex-shrink:0;border-radius:50%}.comment-item .info{margin-left:.5rem;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1}.comment-item .info .hd{width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .username{color:#888;font-size:15.25px;font-weight:400;line-height:1.2}.comment-item .info .hd .control{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .control .btn-share{color:#888;font-size:.75rem;margin-right:1rem}.comment-item .info .hd .control .btn-praise{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-size:15.25px;text-decoration:none}.comment-item .info .hd .control .btn-praise i{color:#888;display:inline-block;font-size:.75rem;margin-right:.3rem;margin-top:-.01rem}.comment-item .info .hd .control .btn-praise i.on,.comment-item .info .hd .control .btn-praise span{color:#ff5a05}.comment-item .info .bd{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6}.comment-item .info .time{color:#888;font-size:9px;line-height:1}.comment-item .info .reply .reply-hd{font-size:15.25px}.comment-item .info .reply .reply-hd span{margin-left:-12px;color:#888;font-weight:400}.comment-item .info .reply .reply-hd i{color:#ff5a05;font-size:15.25px}.comment-item .info .reply .reply-content{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all}.comment-item .info .reply .reply-time{color:#888;font-size:9px}
+
+
+
+
+    </style>
+</head>
+<body>
+<div id="app">
+
+
+    <div data-v-87ffcada="" class="article" id="watermark">
+        
+        <div data-v-87ffcada="" class="main main-app">
+            <h1 data-v-87ffcada="" class="article-title pd">
+                第23讲讲移动网络：去巴塞罗那，手机也上不了脸书
+            </h1>
+            <div data-v-87ffcada="" class="article-content typo common-content pd"><img data-v-87ffcada=""
+                                                                                        src="https://static001.geekbang.org/resource/image/57/dd/571cd8ec01c0703d91d5dc7d43028add.jpg">
+
+
+                <div data-v-87ffcada="" id="article-content" class="">
+                    <div class="text">
+                        <p>前面讲的都是电脑上网的场景，那使用手机上网有什么不同呢？</p>
+<h2>移动网络的发展历程</h2>
+<p>你一定知道手机上网有2G、3G、4G的说法，究竟这都是什么意思呢？有一个通俗的说法就是：用2G看txt，用3G看jpg，用4G看avi。</p>
+<h3>2G网络</h3>
+<p>手机本来是用来打电话的，不是用来上网的，所以原来在2G时代，上网使用的不是IP网络，而是电话网络，走模拟信号，专业名称为公共交换电话网（PSTN，Public Switched Telephone Network）。</p>
+<p>那手机不连网线，也不连电话线，它是怎么上网的呢？</p>
+<p>手机是通过收发无线信号来通信的，专业名称是Mobile Station，简称MS，需要嵌入SIM。手机是客户端，而无线信号的服务端，就是基站子系统（BSS，Base Station SubsystemBSS）。至于什么是基站，你可以回想一下，你在爬山的时候，是不是看到过信号塔？我们平时城市里面的基站比较隐蔽，不容易看到，所以只有在山里才会注意到。正是这个信号塔，通过无线信号，让你的手机可以进行通信。</p>
+<p>但是你要知道一点，<strong>无论无线通信如何无线，最终还是要连接到有线的网络里</strong>。前面讲<a href="https://time.geekbang.org/column/article/10098">数据中心</a>的时候我也讲过，电商的应用是放在数据中心的，数据中心的电脑都是插着网线的。</p><!-- [[[read_end]]] -->
+<p>因而，基站子系统分两部分，一部分对外提供无线通信，叫作基站收发信台（BTS，Base Transceiver Station），另一部分对内连接有线网络，叫作基站控制器（BSC，Base Station Controller）。基站收发信台通过无线收到数据后，转发给基站控制器。</p>
+<p>这部分属于无线的部分，统称为无线接入网（RAN，Radio Access Network）。</p>
+<p>基站控制器通过有线网络，连接到提供手机业务的运营商的数据中心，这部分称为核心网（CN，Core Network）。核心网还没有真的进入互联网，这部分还是主要提供手机业务，是手机业务的有线部分。</p>
+<p>首先接待基站来的数据的是移动业务交换中心（MSC，Mobile Service Switching Center），它是进入核心网的入口，但是它不会让你直接连接到互联网上。</p>
+<p>因为在让你的手机真正进入互联网之前，提供手机业务的运营商，需要认证是不是合法的手机接入。别你自己造了一张手机卡，就连接上来。鉴权中心（AUC，Authentication Center）和设备识别寄存器（EIR，Equipment Identity Register）主要是负责安全性的。</p>
+<p>另外，需要看你是本地的号，还是外地的号，这个牵扯到计费的问题，异地收费还是很贵的。访问位置寄存器（VLR，Visit Location Register）是看你目前在的地方，归属位置寄存器（HLR，Home Location Register）是看你的号码归属地。</p>
+<p>当你的手机卡既合法又有钱的时候，才允许你上网，这个时候需要一个网关，连接核心网和真正的互联网。网关移动交换中心（GMSC ，Gateway Mobile Switching Center）就是干这个的，然后是真正的互连网。在2G时代，还是电话网络PSTN。</p>
+<p>数据中心里面的这些模块统称为网络子系统（NSS，Network and Switching Subsystem）。</p>
+<p><img src="https://static001.geekbang.org/resource/image/c0/e2/c065c4f15421c7fd9924c472948aa8e2.jpg" alt="" /></p>
+<p>因而2G时代的上网如图所示，我们总结一下，有这几个核心点：</p>
+<ul>
+<li>
+<p><strong>手机通过无线信号连接基站；</strong></p>
+</li>
+<li>
+<p><strong>基站一面朝前接无线，一面朝后接核心网；</strong></p>
+</li>
+<li>
+<p><strong>核心网一面朝前接到基站请求，一是判断你是否合法，二是判断你是不是本地号，还有没有钱，一面通过网关连接电话网络。</strong></p>
+</li>
+</ul>
+<h3>2.5G网络</h3>
+<p>后来从2G到了2.5G，也即在原来电路交换的基础上，加入了分组交换业务，支持Packet的转发，从而支持IP网络。</p>
+<p>在上述网络的基础上，基站一面朝前接无线，一面朝后接核心网。在朝后的组件中，多了一个分组控制单元（PCU，Packet Control Unit），用以提供分组交换通道。</p>
+<p>在核心网里面，有个朝前的接待员（SGSN，Service GPRS Supported Node）和朝后连接IP网络的网关型GPRS支持节点（GGSN，Gateway GPRS Supported Node）。</p>
+<p><img src="https://static001.geekbang.org/resource/image/39/90/39fa17696761d28f2f04c8555041aa90.jpg" alt="" /></p>
+<h3>3G网络</h3>
+<p>到了3G时代，主要是无线通信技术有了改进，大大增加了无线的带宽。</p>
+<p>以W-CDMA为例，理论最高2M的下行速度，因而基站改变了，一面朝外的是Node  B，一面朝内连接核心网的是无线网络控制器（RNC，Radio Network Controller）。核心网以及连接的IP网络没有什么变化。</p>
+<p><img src="https://static001.geekbang.org/resource/image/94/18/9453ee22b697455ba3f2c4f89936b018.jpg" alt="" /></p>
+<h3>4G网络</h3>
+<p>然后就到了今天的4G网络，基站为eNodeB，包含了原来Node  B和RNC的功能，下行速度向百兆级别迈进。另外，核心网实现了控制面和数据面的分离，这个怎么理解呢？</p>
+<p>在前面的核心网里面，有接待员MSC或者SGSN，你会发现检查是否合法是它负责，转发数据也是它负责，也即控制面和数据面是合二为一的，这样灵活性比较差，因为控制面主要是指令，多是小包，往往需要高的及时性；数据面主要是流量，多是大包，往往需要吞吐量。</p>
+<p>于是有了下面这个架构。</p>
+<p><img src="https://static001.geekbang.org/resource/image/c8/35/c83a147558c2f8c3a2c2440ca5208835.jpg" alt="" /></p>
+<p>HSS用于存储用户签约信息的数据库，其实就是你这个号码归属地是哪里的，以及一些认证信息。</p>
+<p>MME是核心控制网元，是控制面的核心，当手机通过eNodeB连上的时候，MME会根据HSS的信息，判断你是否合法。如果允许连上来，MME不负责具体的数据的流量，而是MME会选择数据面的SGW和PGW，然后告诉eNodeB，我允许你连上来了，你连接它们吧。</p>
+<p>于是手机直接通过eNodeB连接SGW，连上核心网，SGW相当于数据面的接待员，并通过PGW连到IP网络。PGW就是出口网关。在出口网关，有一个组件PCRF，称为策略和计费控制单元，用来控制上网策略和流量的计费。</p>
+<h2>4G网络协议解析</h2>
+<p>我们来仔细看一下4G网络的协议，真的非常复杂。我们将几个关键组件放大来看。</p>
+<p><img src="https://static001.geekbang.org/resource/image/e4/50/e40f7cb5754e01ed82ae120d8d571f50.jpg" alt="" /></p>
+<h3>控制面协议</h3>
+<p>其中虚线部分是控制面的协议。当一个手机想上网的时候，先要连接eNodeB，并通过S1-MME接口，请求MME对这个手机进行认证和鉴权。S1-MME协议栈如下图所示。</p>
+<p><img src="https://static001.geekbang.org/resource/image/3b/92/3b40f3c06f95de2e261609b82163f392.jpg" alt="" /></p>
+<p>UE就是你的手机，eNodeB还是两面派，朝前对接无线网络，朝后对接核心网络，在控制面对接的是MME。</p>
+<p>eNodeB和MME之间的连接就是很正常的IP网络，但是这里面在IP层之上，却既不是TCP，也不是UDP，而是SCTP。这也是传输层的协议，也是面向连接的，但是更加适合移动网络。 它继承了TCP较为完善的拥塞控制并改进TCP的一些不足之处。</p>
+<p>SCTP的第一个特点是<strong>多宿主</strong>。一台机器可以有多个网卡，而对于TCP连接来讲，虽然服务端可以监听0.0.0.0，也就是从哪个网卡来的连接都能接受，但是一旦建立了连接，就建立了四元组，也就选定了某个网卡。</p>
+<p>SCTP引入了联合（association）的概念，将多个接口、多条路径放到一个联合中来。当检测到一条路径失效时，协议就会通过另外一条路径来发送通信数据。应用程序甚至都不必知道发生了故障、恢复，从而提供更高的可用性和可靠性。</p>
+<p>SCTP的第二个特点是<strong>将一个联合分成多个流</strong>。一个联合中的所有流都是独立的，但均与该联合相关。每个流都给定了一个流编号，它被编码到SCTP报文中，通过联合在网络上传送。在TCP的机制中，由于强制顺序，导致前一个不到达，后一个就得等待，SCTP的多个流不会相互阻塞。</p>
+<p>SCTP的第三个特点是<strong>四次握手，防止SYN攻击</strong>。在TCP中是三次握手，当服务端收到客户的SYN之后，返回一个SYN-ACK之前，就建立数据结构，并记录下状态，等待客户端发送ACK的ACK。当恶意客户端使用虚假的源地址来伪造大量SYN报文时，服务端需要分配大量的资源，最终耗尽资源，无法处理新的请求。</p>
+<p>SCTP可以通过四次握手引入Cookie的概念，来有效地防止这种攻击的产生。在SCTP中，客户机使用一个INIT报文发起一个连接。服务器使用一个INIT-ACK报文进行响应，其中就包括了Cookie。然后客户端就使用一个COOKIE-ECHO报文进行响应，其中包含了服务器所发送的Cookie。这个时候，服务器为这个连接分配资源，并通过向客户机发送一个COOKIE-ACK报文对其进行响应。</p>
+<p>SCTP的第四个特点是<strong>将消息分帧</strong>。TCP是面向流的，也即发送的数据没头没尾，没有明显的界限。这对于发送数据没有问题，但是对于发送一个个消息类型的数据，就不太方便。有可能客户端写入10个字节，然后再写入20个字节。服务端不是读出10个字节的一个消息，再读出20个字节的一个消息，而有可能读入25个字节，再读入5个字节，需要业务层去组合成消息。</p>
+<p>SCTP借鉴了UDP的机制，在数据传输中提供了消息分帧功能。当一端对一个套接字执行写操作时，可确保对等端读出的数据大小与此相同。</p>
+<p>SCTP的第五个特点是<strong>断开连接是三次挥手</strong>。在TCP里面，断开连接是四次挥手，允许另一端处于半关闭的状态。SCTP选择放弃这种状态，当一端关闭自己的套接字时，对等的两端全部需要关闭，将来任何一端都不允许再进行数据的移动了。</p>
+<p>当MME通过认证鉴权，同意这个手机上网的时候，需要建立一个数据面的数据通路。建立通路的过程还是控制面的事情，因而使用的是控制面的协议GTP-C。</p>
+<p>建设的数据通路分两段路，其实是两个隧道。一段是从eNodeB到SGW，这个数据通路由MME通过S1-MME协议告诉eNodeB，它是隧道的一端，通过S11告诉SGW，它是隧道的另一端。第二端是从SGW到PGW，SGW通过S11协议知道自己是其中一端，并主动通过S5协议，告诉PGW它是隧道的另一端。</p>
+<p>GTP-C协议是基于UDP的，这是<a href="https://time.geekbang.org/column/article/8924">UDP的“城会玩”</a>中的一个例子。如果看GTP头，我们可以看到，这里面有隧道的ID，还有序列号。</p>
+<p><img src="https://static001.geekbang.org/resource/image/77/cd/77eb34d092948fbf8773ef9041305fcd.jpg" alt="" /></p>
+<p>通过序列号，不用TCP，GTP-C自己就可以实现可靠性，为每个输出信令消息分配一个依次递增的序列号，以确保信令消息的按序传递，并便于检测重复包。对于每个输出信令消息启动定时器，在定时器超时前未接收到响应消息则进行重发。</p>
+<h3>数据面协议</h3>
+<p>当两个隧道都打通，接在一起的时候，PGW会给手机分配一个IP地址，这个IP地址是隧道内部的IP地址，可以类比为IPsec协议里面的IP地址。这个IP地址是归手机运营商管理的。然后，手机可以使用这个IP地址，连接eNodeB，从eNodeB经过S1-U协议，通过第一段隧道到达SGW，再从SGW经过S8协议，通过第二段隧道到达PGW，然后通过PGW连接到互联网。</p>
+<p>数据面的协议都是通过GTP-U，如图所示。</p>
+<p><img src="https://static001.geekbang.org/resource/image/03/29/0397a72d0c5d76d4e3591cbe61eef729.jpg" alt="" /></p>
+<p>手机每发出的一个包，都由GTP-U隧道协议封装起来，格式如下。</p>
+<p><img src="https://static001.geekbang.org/resource/image/84/32/84c128c408ac748f1206b9b4d4500132.jpg" alt="" /></p>
+<p>和IPsec协议很类似，分为乘客协议、隧道协议、承载协议。其中乘客协议是手机发出来的包，IP是手机的IP，隧道协议里面有隧道ID，不同的手机上线会建立不同的隧道，因而需要隧道ID来标识。承载协议的IP地址是SGW和PGW的IP地址。</p>
+<h3>手机上网流程</h3>
+<p>接下来，我们来看一个手机开机之后上网的流程，这个过程称为<strong>Attach</strong>。可以看出来，移动网络还是很复杂的。因为这个过程要建立很多的隧道，分配很多的隧道ID，所以我画了一个图来详细说明这个过程。</p>
+<p><img src="https://static001.geekbang.org/resource/image/4d/d2/4d3e9282b00410a28e77f91f9375f4d2.jpg" alt="" /></p>
+<ol>
+<li>
+<p>手机开机以后，在附近寻找基站eNodeB，找到后给eNodeB发送Attach Request，说“我来啦，我要上网”。</p>
+</li>
+<li>
+<p>eNodeB将请求发给MME，说“有个手机要上网”。</p>
+</li>
+<li>
+<p>MME去请求手机，一是认证，二是鉴权，还会请求HSS看看有没有钱，看看是在哪里上网。</p>
+</li>
+<li>
+<p>当MME通过了手机的认证之后，开始分配隧道，先告诉SGW，说要创建一个会话（Create Session）。在这里面，会给SGW分配一个隧道ID  t1，并且请求SGW给自己也分配一个隧道ID。</p>
+</li>
+<li>
+<p>SGW转头向PGW请求建立一个会话，为PGW的控制面分配一个隧道ID  t2，也给PGW的数据面分配一个隧道ID  t3，并且请求PGW给自己的控制面和数据面分配隧道ID。</p>
+</li>
+<li>
+<p>PGW回复SGW说“创建会话成功”，使用自己的控制面隧道ID t2，回复里面携带着给SGW控制面分配的隧道ID  t4和控制面的隧道ID  t5，至此SGW和PGW直接的隧道建设完成。双方请求对方，都要带着对方给自己分配的隧道ID，从而标志是这个手机的请求。</p>
+</li>
+<li>
+<p>接下来SGW回复MME说“创建会话成功”，使用自己的隧道ID  t1访问MME，回复里面有给MME分配隧道ID  t6，也有SGW给eNodeB分配的隧道ID  t7。</p>
+</li>
+<li>
+<p>当MME发现后面的隧道都建设成功之后，就告诉eNodeB，“后面的隧道已经建设完毕，SGW给你分配的隧道ID是t7，你可以开始连上来了，但是你也要给SGW分配一个隧道ID”。</p>
+</li>
+<li>
+<p>eNodeB告诉MME自己给SGW分配一个隧道，ID为t8。</p>
+</li>
+<li>
+<p>MME将eNodeB给SGW分配的隧道ID  t8告知SGW，从而前面的隧道也建设完毕。</p>
+</li>
+</ol>
+<p>这样，手机就可以通过建立的隧道成功上网了。</p>
+<h2>异地上网问题</h2>
+<p>接下来我们考虑异地上网的事情。</p>
+<p>为什么要分SGW和PGW呢，一个GW不可以吗？SGW是你本地的运营商的设备，而PGW是你所属的运营商的设备。</p>
+<p>如果你在巴塞罗那，一下飞机，手机开机，周围搜寻到的肯定是巴塞罗那的eNodeB。通过MME去查寻国内运营商的HSS，看你是否合法，是否还有钱。如果允许上网，你的手机和巴塞罗那的SGW会建立一个隧道，然后巴塞罗那的SGW和国内运营商的PGW建立一个隧道，然后通过国内运营商的PGW上网。</p>
+<p><img src="https://static001.geekbang.org/resource/image/d0/2f/d0ef569269e3f45afbdc276fdec83f2f.jpg" alt="" /></p>
+<p>这样判断你是否能上网的在国内运营商的HSS，控制你上网策略的是国内运营商的PCRF，给手机分配的IP地址也是国内运营商的PGW负责的，给手机分配的IP地址也是国内运营商里统计的。运营商由于是在PGW里面统计的，这样你的上网流量全部通过国内运营商即可，只不过巴塞罗那运营商也要和国内运营商进行流量结算。</p>
+<p>由于你的上网策略是由国内运营商在PCRF中控制的，因而你还是上不了脸书。</p>
+<h2>小结</h2>
+<p>好了，这一节就到这里了，我们来总结一下：</p>
+<ul>
+<li>
+<p>移动网络的发展历程从2G到3G，再到4G，逐渐从打电话的功能为主，向上网的功能为主转变；</p>
+</li>
+<li>
+<p>请记住4G网络的结构，有eNodeB、MME、SGW、PGW等，分控制面协议和数据面协议，你可以对照着结构，试着说出手机上网的流程；</p>
+</li>
+<li>
+<p>即便你在国外的运营商下上网，也是要通过国内运营商控制的，因而也上不了脸书。</p>
+</li>
+</ul>
+<p>最后，给你留两个思考题：</p>
+<ol>
+<li>
+<p>咱们上网都有套餐，有交钱多的，有交钱少的，你知道移动网络是如何控制不同优先级的用户的上网流量的吗？</p>
+</li>
+<li>
+<p>前面讲过的所有的网络都是基于物理机的，随着云计算兴起，无论是电商，还是移动网络都要部署在云中了，你知道云中网络的设计有哪些要点吗？</p>
+</li>
+</ol>
+<p>我们的专栏更新到第23讲，不知你掌握得如何？每节课后我留的思考题，你都有没有认真思考，并在留言区写下答案呢？我会从<strong>已发布的文章中选出一批认真留言的同学</strong>，赠送<span class="orange">学习奖励礼券</span>和我整理的<span class="orange">独家网络协议知识图谱</span>。</p>
+<p>欢迎你留言和我讨论。趣谈网络协议，我们下期见！</p>
+<p><img src="https://static001.geekbang.org/resource/image/b5/fb/b5bc14cb81d3630919fee94a512cc3fb.jpg" alt="" /></p>
+
+                    </div>
+                </div>
+
+            </div>
+            <div data-v-87ffcada="" class="article-comments pd"><h2 data-v-87ffcada=""><span
+                    data-v-87ffcada="">精选留言</span></h2>
+                <ul data-v-87ffcada="">
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/ae/ce/abb7bfe3.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">萌</span>
+                            </div>
+                            <div class="bd">刘老师，一直在听您的课，条理很清晰，很佩服，想说，看您能否出一套关于操作系统的课程。。。 <br></div>
+                            <span class="time">2018-07-09 11:16</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">谢谢</p>
+                                <p class="reply-time">2018-07-09 13:56</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/11/4f/be6a03b6.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">babos</span>
+                            </div>
+                            <div class="bd">最近几章确实比较难懂，主要原因是包含了很多平时没接触过的知识，而且每个知识都是可以拿出来单独讲上几章的，所以给大家几个建议，不对的欢迎指出探讨。1.非网络开发或运维人员的可以了解大概原理即可，不必深究细节。2.其实每一层的各种协议都有互通之处，可以先吃透ip、tcp、udp等基础常见也是作者讲解比较详细的协议，举一反三进行学习，作者的每一讲思路确实也是这样的，给个。3.想详细深入学习的建议也别指着这篇文章完全学会这么大一个知识框架，可以看看书和多找点其他文章印证着看，毕竟刚才说了，一篇文章写不完那么多东西 <br></div>
+                            <span class="time">2018-07-09 12:08</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">赞</p>
+                                <p class="reply-time">2018-07-09 16:40</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/6e/28/4846ee93.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">鲍勃</span>
+                            </div>
+                            <div class="bd">跪求刘老师接下来开课讲linux系统 <br></div>
+                            <span class="time">2018-07-10 07:48</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">赤脚小子</span>
+                            </div>
+                            <div class="bd">非常感谢作者，最近接触的5g,和中国移动项目，都需要大量的网络知识，可惜看着课程表没有sdn，nfv的内容了，您的课每一篇都值得仔细阅读，比买过的其他课好太多了。期待您的新课程或者新著作。 <br></div>
+                            <span class="time">2018-07-09 09:29</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">后面会有sdn</p>
+                                <p class="reply-time">2018-07-09 13:58</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/28/1e/76e19bd3.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">张立春</span>
+                            </div>
+                            <div class="bd">曾经做了十年通讯，看了很亲切，感慨作者的渊博知识和感谢作者的用心做事。题外话，通讯活又脏又累，建设好通讯高速公路真不容易，到头来被OTT了。现在的通讯人就像工地民工，干的苦拿的少，互联网人就像装修公司，光鲜亮丽财大气粗！ <br></div>
+                            <span class="time">2018-07-09 23:38</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/7d/03/2846ac30.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">蓝色理想</span>
+                            </div>
+                            <div class="bd">老师蓝牙wifi会讲吗？ <br></div>
+                            <span class="time">2018-07-09 08:22</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/7d/03/2846ac30.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">蓝色理想</span>
+                            </div>
+                            <div class="bd">老师如此博学 <br></div>
+                            <span class="time">2018-07-09 08:21</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/8a/35/c8808201.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">秦峰</span>
+                            </div>
+                            <div class="bd">按照课程原理，买一张国外的手机sim卡，就可以在国内上脸书了。 <br></div>
+                            <span class="time">2018-07-18 11:20</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">是的，只要国内允许接入</p>
+                                <p class="reply-time">2018-07-18 16:18</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/10/61/bc/88a905a5.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">赵强强</span>
+                            </div>
+                            <div class="bd">刘老师您好，我的理解是SCTP的四次握手可以避免TCP协议的一个问题:客户端不ACK，导致服务器端长时间处于SYNC已接收状态。但如果客户端可以伪造大量IP，建立连接后不通信，消耗服务器端资源，这两种协议都避免不了吧？ <br></div>
+                            <span class="time">2018-07-10 10:12</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">sctp第一次不建立数据结构</p>
+                                <p class="reply-time">2018-07-10 20:34</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/10/09/42/b7a406c9.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">Hurt</span>
+                            </div>
+                            <div class="bd">真的是 越来越难 越来越复杂了呀  <br></div>
+                            <span class="time">2018-07-09 19:42</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/10/d6/1a/532f8a66.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">summer</span>
+                            </div>
+                            <div class="bd">控制不同优先级的用户的上网流量，应该是通过PCRF做的QoS <br></div>
+                            <span class="time">2018-07-09 17:00</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">赞</p>
+                                <p class="reply-time">2018-07-09 17:05</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/10/69/ee/bd0c6c02.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">瞬息</span>
+                            </div>
+                            <div class="bd">老师您好，其实如果一星期三节的时间太赶的话，您可以稍微拉长一点时间，其实我们都不怕用等待来换取更完美的知识 <br></div>
+                            <span class="time">2018-07-09 22:24</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">赤脚小子</span>
+                            </div>
+                            <div class="bd">非常感谢作者，最近接触的5g,和中国移动项目，都需要大量的网络知识，可惜看着课程表没有sdn，nfv的内容了，您的课每一篇都值得仔细阅读，比买过的其他课好太多了。期待您的新课程或者新著作。 <br></div>
+                            <span class="time">2018-07-09 09:29</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/10/c8/d5/e88c1805.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">JackLei</span>
+                            </div>
+                            <div class="bd">跟不上，跟不上，车开的太快 <br></div>
+                            <span class="time">2018-11-20 10:40</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">加油</p>
+                                <p class="reply-time">2018-11-20 17:12</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/e3/45/d392d494.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">意文</span>
+                            </div>
+                            <div class="bd">2g应该由模拟信号进化到数字信号了，不然打电话很容易被窃听。<br>PCRF控制策略，不同的套餐应该也是通过它来控制，比如带宽限制规则等。 <br></div>
+                            <span class="time">2018-11-09 10:28</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">大徐</span>
+                            </div>
+                            <div class="bd">期待操作系统课！ <br></div>
+                            <span class="time">2018-11-03 02:04</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/e2/e6/7b61e654.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">Mr. Child</span>
+                            </div>
+                            <div class="bd">根据经验，出国以后手机确实可以访问国内无法访问的网络，请问老师是什么原因。 <br></div>
+                            <span class="time">2018-10-29 09:13</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/12/57/6e/ae14e53b.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">Howard.Wundt</span>
+                            </div>
+                            <div class="bd">手机通信中的 XG 网络一般理解就是 第X代通信网络 的意思，其中的 G 不是带宽单位的意思。 <br></div>
+                            <span class="time">2018-09-24 11:30</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">是的，是代的意思</p>
+                                <p class="reply-time">2018-09-25 16:26</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/10/ee/2f/aecf69a5.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">凌天</span>
+                            </div>
+                            <div class="bd">老司机博学啊 <br></div>
+                            <span class="time">2018-09-21 21:53</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/10/08/c7/6b0cb046.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">小花小黑的铲屎官</span>
+                            </div>
+                            <div class="bd">在车上快速移动的时候，手机怎么和基站通信呢？ <br></div>
+                            <span class="time">2018-08-13 08:59</span>
+                            
+                        </div>
+                    </li>
+                    
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

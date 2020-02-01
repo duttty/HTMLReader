@@ -1,0 +1,438 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <style type="text/css">
+
+#watermark {
+
+  position: relative;
+  overflow: hidden;
+}
+
+#watermark .x {
+  position: absolute;
+  top: 800;
+  left: 400;
+  color: #3300ff;
+  font-size: 50px;
+  pointer-events: none;
+  opacity:0.5;
+  filter:Alpha(opacity=50);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+}
+    </style>
+
+
+    <style type="text/css">
+ html{color:#333;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizelegibility;font-family:Helvetica Neue,PingFang SC,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif}html.borderbox *,html.borderbox :after,html.borderbox :before{box-sizing:border-box}article,aside,blockquote,body,button,code,dd,details,dl,dt,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hr,input,legend,li,menu,nav,ol,p,pre,section,td,textarea,th,ul{margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,menu,nav,section{display:block}audio,canvas,video{display:inline-block}body,button,input,select,textarea{font:300 1em/1.8 PingFang SC,Lantinghei SC,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,Helvetica,sans-serif}button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}blockquote{position:relative;color:#999;font-weight:400;border-left:1px solid #1abc9c;padding-left:1em;margin:1em 3em 1em 2em}@media only screen and (max-width:640px){blockquote{margin:1em 0}}abbr,acronym{border-bottom:1px dotted;font-variant:normal}abbr{cursor:help}del{text-decoration:line-through}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:400}ol,ul{list-style:none}caption,th{text-align:left}q:after,q:before{content:""}sub,sup{font-size:75%;line-height:0;position:relative}:root sub,:root sup{vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}a{color:#1abc9c}a:hover{text-decoration:underline}.typo a{border-bottom:1px solid #1abc9c}.typo a:hover{border-bottom-color:#555;color:#555}.typo a:hover,a,ins{text-decoration:none}.typo-u,u{text-decoration:underline}mark{background:#fffdd1;border-bottom:1px solid #ffedce;padding:2px;margin:0 5px}code,pre,pre tt{font-family:Courier,Courier New,monospace}pre{background:hsla(0,0%,97%,.7);border:1px solid #ddd;padding:1em 1.5em;display:block;-webkit-overflow-scrolling:touch}hr{border:none;border-bottom:1px solid #cfcfcf;margin-bottom:.8em;height:10px}.typo-small,figcaption,small{font-size:.9em;color:#888}b,strong{font-weight:700;color:#000}[draggable]{cursor:move}.clearfix:after,.clearfix:before{content:"";display:table}.clearfix:after{clear:both}.clearfix{zoom:1}.textwrap,.textwrap td,.textwrap th{word-wrap:break-word;word-break:break-all}.textwrap-table{table-layout:fixed}.serif{font-family:Palatino,Optima,Georgia,serif}.typo-dl,.typo-form,.typo-hr,.typo-ol,.typo-p,.typo-pre,.typo-table,.typo-ul,.typo dl,.typo form,.typo hr,.typo ol,.typo p,.typo pre,.typo table,.typo ul,blockquote{margin-bottom:1rem}h1,h2,h3,h4,h5,h6{font-family:PingFang SC,Helvetica Neue,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif;color:#000;line-height:1.35}.typo-h1,.typo-h2,.typo-h3,.typo-h4,.typo-h5,.typo-h6,.typo h1,.typo h2,.typo h3,.typo h4,.typo h5,.typo h6{margin-top:1.2em;margin-bottom:.6em;line-height:1.35}.typo-h1,.typo h1{font-size:2em}.typo-h2,.typo h2{font-size:1.8em}.typo-h3,.typo h3{font-size:1.6em}.typo-h4,.typo h4{font-size:1.4em}.typo-h5,.typo-h6,.typo h5,.typo h6{font-size:1.2em}.typo-ul,.typo ul{margin-left:1.3em;list-style:disc}.typo-ol,.typo ol{list-style:decimal;margin-left:1.9em}.typo-ol ol,.typo-ol ul,.typo-ul ol,.typo-ul ul,.typo li ol,.typo li ul{margin-bottom:.8em;margin-left:2em}.typo-ol ul,.typo-ul ul,.typo li ul{list-style:circle}.typo-table td,.typo-table th,.typo table caption,.typo table td,.typo table th{border:1px solid #ddd;padding:.5em 1em;color:#666}.typo-table th,.typo table th{background:#fbfbfb}.typo-table thead th,.typo table thead th{background:hsla(0,0%,95%,.7)}.typo table caption{border-bottom:none}.typo-input,.typo-textarea{-webkit-appearance:none;border-radius:0}.typo-em,.typo em,caption,legend{color:#000;font-weight:inherit}.typo-em{position:relative}.typo-em:after{position:absolute;top:.65em;left:0;width:100%;overflow:hidden;white-space:nowrap;content:"\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB"}.typo img{max-width:100%}.common-content{font-weight:400;color:#353535;line-height:1.75rem;white-space:normal;word-break:normal;font-size:1rem}.common-content img{display:block;max-width:100%;background-color:#eee}.common-content audio,.common-content video{width:100%;background-color:#eee}.common-content center,.common-content font{margin-top:1rem;display:inline-block}.common-content center{width:100%}.common-content pre{margin-top:1rem;padding-left:0;padding-right:0;position:relative;overflow:hidden}.common-content pre code{font-size:.8rem;font-family:Consolas,Liberation Mono,Menlo,monospace,Courier;display:block;width:100%;box-sizing:border-box;padding-left:1rem;padding-right:1rem;overflow-x:auto}.common-content hr{border:none;margin-top:1.5rem;margin-bottom:1.5rem;border-top:1px solid #f5f5f5;height:1px;background:none}.common-content b,.common-content h1,.common-content h2,.common-content h3,.common-content h4,.common-content h5,.common-content strong{font-weight:700}.common-content h1,.common-content h2{font-size:1.125rem;margin-bottom:.45rem}.common-content h3,.common-content h4,.common-content h5{font-size:1rem;margin-bottom:.45rem}.common-content p{font-weight:400;color:#353535;margin-top:.15rem}.common-content .orange{color:#ff5a05}.common-content .reference{font-size:1rem;color:#888}.custom-rich-content h1{margin-top:0;font-weight:400;font-size:15.25px;border-bottom:1px solid #eee;line-height:2.8}.custom-rich-content li,.custom-rich-content p{font-size:14px;color:#888;line-height:1.6}table.hljs-ln{margin-bottom:0;border-spacing:0;border-collapse:collapse}table.hljs-ln,table.hljs-ln tbody,table.hljs-ln td,table.hljs-ln tr{box-sizing:border-box}table.hljs-ln td{padding:0;border:0}table.hljs-ln td.hljs-ln-numbers{min-width:15px;color:rgba(27,31,35,.3);text-align:right;white-space:nowrap;cursor:pointer;user-select:none}table.hljs-ln td.hljs-ln-code,table.hljs-ln td.hljs-ln-numbers{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;font-size:12px;line-height:20px;vertical-align:top}table.hljs-ln td.hljs-ln-code{position:relative;padding-right:10px;padding-left:10px;overflow:visible;color:#24292e;word-wrap:normal;white-space:pre}video::-webkit-media-controls{overflow:hidden!important}video::-webkit-media-controls-enclosure{width:calc(100% + 32px);margin-left:auto}.button-cancel{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel,.button-primary{-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary{color:#fff;background-color:#ff5a05;border-radius:3px}@font-face{font-family:iconfont;src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot);src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.woff) format("woff"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.ttf) format("truetype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.svg#iconfont) format("svg")}@font-face{font-family:player-font;src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot);src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.woff) format("woff"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.ttf) format("truetype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.svg#player-font) format("svg")}.iconfont{font-family:iconfont!important;font-size:16px;font-style:normal;-webkit-font-smoothing:antialiased;-webkit-text-stroke-width:.2px;-moz-osx-font-smoothing:grayscale}html{background:#fff;min-height:100%;-webkit-tap-highlight-color:rgba(0,0,0,0)}body{width:100%}body.fixed{overflow:hidden;position:fixed;width:100vw;height:100vh}i{font-style:normal}a{word-wrap:break-word;-webkit-tap-highlight-color:rgba(0,0,0,0)}a:hover{text-decoration:none}.fade-enter-active,.fade-leave-active{transition:opacity .3s}.fade-enter,.fade-leave-to{opacity:0}.MathJax,.MathJax_CHTML,.MathJax_MathContainer,.MathJax_MathML,.MathJax_PHTML,.MathJax_PlainSource,.MathJax_SVG{outline:0}.ios-app-switch .js-audit{display:none}._loading_wrap_{position:fixed;width:100vw;height:100vh;top:50%;left:50%;transform:translate(-50%,-50%);z-index:999}._loading_div_class_,._loading_wrap_{display:-ms-flexbox;display:flex;-ms-flex-pack:center;justify-content:center;-ms-flex-align:center;align-items:center}._loading_div_class_{word-wrap:break-word;padding:.5rem .75rem;text-align:center;z-index:9999;font-size:.6rem;max-width:60%;color:#fff;border-radius:.25rem;-ms-flex-direction:column;flex-direction:column}._loading_div_class_ .message{color:#353535;font-size:16px;line-height:3}.spinner{animation:circle-rotator 1.4s linear infinite}.spinner *{line-height:0;box-sizing:border-box}@keyframes circle-rotator{0%{transform:rotate(0deg)}to{transform:rotate(270deg)}}.path{stroke-dasharray:187;stroke-dashoffset:0;transform-origin:center;animation:circle-dash 1.4s ease-in-out infinite,circle-colors 5.6s ease-in-out infinite}@keyframes circle-colors{0%{stroke:#ff5a05}to{stroke:#ff5a05}}@keyframes circle-dash{0%{stroke-dashoffset:187}50%{stroke-dashoffset:46.75;transform:rotate(135deg)}to{stroke-dashoffset:187;transform:rotate(450deg)}}.confirm-box-wrapper,.confirm-box-wrapper .mask{position:absolute;top:0;left:0;right:0;bottom:0}.confirm-box-wrapper .mask{background:rgba(0,0,0,.6)}.confirm-box-wrapper .confirm-box{position:fixed;top:50%;left:50%;width:267px;background:#fff;transform:translate(-50%,-50%);border-radius:7px}.confirm-box-wrapper .confirm-box .head{margin:0 18px;font-size:18px;text-align:center;line-height:65px;border-bottom:1px solid #d9d9d9}.confirm-box-wrapper .confirm-box .body{padding:18px;padding-bottom:0;color:#353535;font-size:12.5px;max-height:150px;overflow:auto}.confirm-box-wrapper .confirm-box .foot{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;padding:18px}.confirm-box-wrapper .confirm-box .foot .button-cancel{border:1px solid #d9d9d9}.hljs{display:block;overflow-x:auto;padding:.5em;color:#333;background:#f8f8f8}.hljs-comment,.hljs-quote{color:#998;font-style:italic}.hljs-keyword,.hljs-selector-tag,.hljs-subst{color:#333;font-weight:700}.hljs-literal,.hljs-number,.hljs-tag .hljs-attr,.hljs-template-variable,.hljs-variable{color:teal}.hljs-doctag,.hljs-string{color:#d14}.hljs-section,.hljs-selector-id,.hljs-title{color:#900;font-weight:700}.hljs-subst{font-weight:400}.hljs-class .hljs-title,.hljs-type{color:#458;font-weight:700}.hljs-attribute,.hljs-name,.hljs-tag{color:navy;font-weight:400}.hljs-link,.hljs-regexp{color:#009926}.hljs-bullet,.hljs-symbol{color:#990073}.hljs-built_in,.hljs-builtin-name{color:#0086b3}.hljs-meta{color:#999;font-weight:700}.hljs-deletion{background:#fdd}.hljs-addition{background:#dfd}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}
+
+
+
+
+    </style>
+    <style type="text/css">
+        .button-cancel[data-v-87ffcada]{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel[data-v-87ffcada],.button-primary[data-v-87ffcada]{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary[data-v-87ffcada]{color:#fff;background-color:#ff5a05;border-radius:3px}.pd[data-v-87ffcada]{padding-left:1.375rem;padding-right:1.375rem}.article[data-v-87ffcada]{max-width:70rem;margin:0 auto}.article .article-unavailable[data-v-87ffcada]{color:#fa8919;font-size:15px;font-weight:600;line-height:24px;border-radius:5px;padding:12px;background-color:#f6f7fb;margin-top:20px}.article .article-unavailable .iconfont[data-v-87ffcada]{font-size:12px}.article .main[data-v-87ffcada]{padding:1.25rem 0;margin-bottom:52px}.article-title[data-v-87ffcada]{color:#353535;font-weight:400;line-height:1.65rem;font-size:1.34375rem}.article-info[data-v-87ffcada]{color:#888;font-size:.9375rem;margin-top:1.0625rem}.article-content[data-v-87ffcada]{margin-top:1.0625rem}.article-content.android video[data-v-87ffcada]::-webkit-media-controls-fullscreen-button{display:none}.copyright[data-v-87ffcada]{color:#b2b2b2;padding-bottom:20px;margin-top:20px;font-size:13px}.audio-player[data-v-87ffcada]{width:100%;margin:20px 0}.to-comment[data-v-87ffcada]{overflow:hidden;padding-top:10px;margin-bottom:-30px}.to-comment a.button-primary[data-v-87ffcada]{float:right;height:20px;font-size:12px;line-height:20px;padding:4px 8px;cursor:pointer}.article-comments[data-v-87ffcada]{margin-top:2rem}.article-comments h2[data-v-87ffcada]{text-align:center;color:#888;position:relative;z-index:1;margin-bottom:1rem}.article-comments h2[data-v-87ffcada]:before{border-top:1px dotted #888;content:"";position:absolute;top:56%;left:0;width:100%;z-index:-1}.article-comments h2 span[data-v-87ffcada]{font-size:15.25px;font-weight:400;padding:0 1rem;background:#fff;display:inline-block}.article-sub-bottom[data-v-87ffcada]{z-index:10;cursor:pointer}.switch-btns[data-v-87ffcada]{height:76px;cursor:pointer;padding-top:24px;padding-bottom:24px;border-bottom:10px solid #f6f7fb;position:relative}.switch-btns[data-v-87ffcada]:before{content:" ";height:1px;background:#e8e8e8;position:absolute;top:0;left:0;-webkit-box-sizing:border-box;box-sizing:border-box;left:1.375rem;right:1.375rem}.switch-btns .btn[data-v-87ffcada]{height:38px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.switch-btns .btn .tag[data-v-87ffcada]{-webkit-box-flex:0;-ms-flex:0 0 62px;flex:0 0 62px;text-align:center;color:#888;font-size:14px;border-radius:10px;height:22px;line-height:22px;background:#f6f7fb;font-weight:400}.switch-btns .btn .txt[data-v-87ffcada]{margin-left:10px;-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto;color:#888;font-size:15px;height:22px;line-height:22px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:400}@media (max-width:769px){.article .breadcrumb[data-v-87ffcada]{padding-top:10px;padding-bottom:10px}}
+
+
+
+
+
+    </style>
+
+    <style type="text/css">
+        .comment-item{list-style-position:inside;width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;margin-bottom:1rem}.comment-item a{border-bottom:none}.comment-item .avatar{width:2.625rem;height:2.625rem;-ms-flex-negative:0;flex-shrink:0;border-radius:50%}.comment-item .info{margin-left:.5rem;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1}.comment-item .info .hd{width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .username{color:#888;font-size:15.25px;font-weight:400;line-height:1.2}.comment-item .info .hd .control{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .control .btn-share{color:#888;font-size:.75rem;margin-right:1rem}.comment-item .info .hd .control .btn-praise{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-size:15.25px;text-decoration:none}.comment-item .info .hd .control .btn-praise i{color:#888;display:inline-block;font-size:.75rem;margin-right:.3rem;margin-top:-.01rem}.comment-item .info .hd .control .btn-praise i.on,.comment-item .info .hd .control .btn-praise span{color:#ff5a05}.comment-item .info .bd{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6}.comment-item .info .time{color:#888;font-size:9px;line-height:1}.comment-item .info .reply .reply-hd{font-size:15.25px}.comment-item .info .reply .reply-hd span{margin-left:-12px;color:#888;font-weight:400}.comment-item .info .reply .reply-hd i{color:#ff5a05;font-size:15.25px}.comment-item .info .reply .reply-content{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all}.comment-item .info .reply .reply-time{color:#888;font-size:9px}
+
+
+
+
+    </style>
+</head>
+<body>
+<div id="app">
+
+
+    <div data-v-87ffcada="" class="article" id="watermark">
+        
+        <div data-v-87ffcada="" class="main main-app">
+            <h1 data-v-87ffcada="" class="article-title pd">
+                第29讲讲容器网络：来去自由的日子，不买公寓去合租
+            </h1>
+            <div data-v-87ffcada="" class="article-content typo common-content pd"><img data-v-87ffcada=""
+                                                                                        src="https://static001.geekbang.org/resource/image/7a/45/7aaea6279f6e1aeeda8cb33899327245.jpg">
+
+
+                <div data-v-87ffcada="" id="article-content" class="">
+                    <div class="text">
+                        <p>如果说虚拟机是买公寓，容器则相当于合租，有一定的隔离，但是隔离性没有那么好。云计算解决了基础资源层的弹性伸缩，却没有解决PaaS层应用随基础资源层弹性伸缩而带来的批量、快速部署问题。于是，容器应运而生。</p>
+<p>容器就是Container，而Container的另一个意思是集装箱。其实<strong>容器的思想就是要变成软件交付的集装箱</strong>。集装箱的特点，一是打包，二是标准。</p>
+<p><img src="https://static001.geekbang.org/resource/image/a5/dc/a50157f1084c946b9e27f3b328b8d2dc.jpg" alt="" /></p>
+<p>在没有集装箱的时代，假设要将货物从A运到B，中间要经过三个码头、换三次船。每次都要将货物卸下船来，弄的乱七八糟，然后还要再搬上船重新整齐摆好。因此在没有集装箱的时候，每次换船，船员们都要在岸上待几天才能干完活。</p>
+<p>有了尺寸全部都一样的集装箱以后，可以把所有的货物都打包在一起，所以每次换船的时候，一个箱子整体搬过去就行了，小时级别就能完成，船员再也不用耗费很长时间了。这是集装箱的“打包”“标准”两大特点在生活中的应用。</p>
+<p><img src="https://static001.geekbang.org/resource/image/50/cb/50c12f33ec178972c315e57b370dffcb.jpg" alt="" /></p>
+<p>那么容器如何对应用打包呢？</p>
+<p>学习集装箱，首先要有个封闭的环境，将货物封装起来，让货物之间互不干扰，互相隔离，这样装货卸货才方便。</p>
+<p>封闭的环境主要使用了两种技术，一种是<strong>看起来是隔离的技术</strong>，称为<strong>namespace</strong>，也即每个 namespace中的应用看到的是不同的 IP地址、用户空间、程号等。另一种是<strong>用起来是隔离的技术</strong>，称为<strong>cgroup</strong>，也即明明整台机器有很多的 CPU、内存，而一个应用只能用其中的一部分。</p><!-- [[[read_end]]] -->
+<p>有了这两项技术，就相当于我们焊好了集装箱。接下来的问题就是如何“将这个集装箱标准化”，并在哪艘船上都能运输。这里的标准首先就是<strong>镜像</strong>。</p>
+<p>所谓镜像，就是将你焊好集装箱的那一刻，将集装箱的状态保存下来，就像孙悟空说：“定！”，集装箱里的状态就被定在了那一刻，然后将这一刻的状态保存成一系列文件。无论从哪里运行这个镜像，都能完整地还原当时的情况。</p>
+<p><img src="https://static001.geekbang.org/resource/image/ad/9d/ad59fa4271e5dd7b40588a2dfeb6f79d.jpg" alt="" /></p>
+<p>接下来我们就具体来看看，这两种网络方面的打包技术。</p>
+<h2>命名空间（namespace）</h2>
+<p>我们首先来看网络namespace。</p>
+<p>namespace翻译过来就是命名空间。其实很多面向对象的程序设计语言里面，都有命名空间这个东西。大家一起写代码，难免类会起相同的名词，编译就会冲突。而每个功能都有自己的命名空间，在不同的空间里面，类名相同，不会冲突。</p>
+<p>在Linux下也是这样的，很多的资源都是全局的。比如进程有全局的进程ID，网络也有全局的路由表。但是，当一台Linux上跑多个进程的时候，如果我们觉得使用不同的路由策略，这些进程可能会冲突，那就需要将这个进程放在一个独立的namespace里面，这样就可以独立配置网络了。</p>
+<p>网络的namespace由ip netns命令操作。它可以创建、删除、查询namespace。</p>
+<p>我们再来看将你们宿舍放进一台物理机的那个图。你们宿舍长的电脑是一台路由器，你现在应该知道怎么实现这个路由器吧？可以创建一个Router虚拟机来做这件事情，但是还有一个更加简单的办法，就是我在图里画的这条虚线，这个就是通过namespace实现的。</p>
+<p><img src="https://static001.geekbang.org/resource/image/1a/1a/1a5d299c2eb5480eda93a8f8e3b3ca1a.jpg" alt="" /></p>
+<p>我们创建一个routerns，于是一个独立的网络空间就产生了。你可以在里面尽情设置自己的规则。</p>
+<pre><code>ip netns add routerns
+</code></pre>
+<p>既然是路由器，肯定要能转发嘛，因而forward开关要打开。</p>
+<pre><code>ip netns exec routerns sysctl -w net.ipv4.ip_forward=1
+</code></pre>
+<p>exec的意思就是进入这个网络空间做点事情。初始化一下iptables，因为这里面要配置NAT规则。</p>
+<pre><code>ip netns exec routerns iptables-save -c 
+ip netns exec routerns iptables-restore -c
+</code></pre>
+<p>路由器需要有一张网卡连到br0上，因而要创建一个网卡。</p>
+<pre><code>ovs-vsctl -- add-port br0 taprouter -- set Interface taprouter type=internal -- set Interface taprouter external-ids:iface-status=active -- set Interface taprouter external-ids:attached-mac=fa:16:3e:84:6e:cc
+</code></pre>
+<p>这个网络创建完了，但是是在namespace外面的，如何进去呢？可以通过这个命令：</p>
+<pre><code>ip link set taprouter netns routerns
+</code></pre>
+<p>要给这个网卡配置一个IP地址，当然应该是虚拟机网络的网关地址。例如虚拟机私网网段为192.168.1.0/24，网关的地址往往为192.168.1.1。</p>
+<pre><code>ip netns exec routerns ip -4 addr add 192.168.1.1/24 brd 192.168.1.255 scope global dev taprouter
+</code></pre>
+<p>为了访问外网，还需要另一个网卡连在外网网桥br-ex上，并且塞在namespace里面。</p>
+<pre><code>ovs-vsctl -- add-port br-ex taprouterex -- set Interface taprouterex type=internal -- set Interface taprouterex external-ids:iface-status=active -- set Interface taprouterex external-ids:attached-mac=fa:16:3e:68:12:c0
+</code></pre>
+<pre><code>ip link set taprouterex netns routerns
+</code></pre>
+<p>我们还需要为这个网卡分配一个地址，这个地址应该和物理外网网络在一个网段。假设物理外网为16.158.1.0/24，可以分配一个外网地址16.158.1.100/24。</p>
+<pre><code>ip netns exec routerns ip -4 addr add 16.158.1.100/24 brd 16.158.1.255 scope global dev taprouterex
+</code></pre>
+<p>接下来，既然是路由器，就需要配置路由表，路由表是这样的：</p>
+<pre><code>ip netns exec routerns route -n
+Kernel IP routing table
+Destination   Gateway     Genmask     Flags Metric Ref  Use Iface
+0.0.0.0     16.158.1.1  0.0.0.0     UG  0   0    0 taprouterex
+192.168.1.0    0.0.0.0     255.255.255.0  U   0   0    0 taprouter
+16.158.1.0  0.0.0.0     255.255.255.0  U   0   0    0 taprouterex
+</code></pre>
+<p>路由表中的默认路由是去物理外网的，去192.168.1.0/24也即虚拟机私网，走下面的网卡，去16.158.1.0/24也即物理外网，走上面的网卡。</p>
+<p>我们在前面的章节讲过，如果要在虚拟机里面提供服务，提供给外网的客户端访问，客户端需要访问外网IP3，会在外网网口NAT称为虚拟机私网IP。这个NAT规则要在这个namespace里面配置。</p>
+<pre><code>ip netns exec routerns iptables -t nat -nvL
+Chain PREROUTING
+target  prot opt  in  out  source  destination
+DNAT  all  --  *  *  0.0.0.0/0 16.158.1.103 to:192.168.1.3
+Chain POSTROUTING
+target  prot opt  in  out  source   destination
+SNAT  all  --  *  *  192.168.1.3  0.0.0.0/0 to:16.158.1.103
+</code></pre>
+<p>这里面有两个规则，一个是SNAT，将虚拟机的私网IP 192.168.1.3 NAT成物理外网IP 16.158.1.103。一个是DNAT，将物理外网IP 16.158.1.103 NAT成虚拟机私网IP 192.168.1.3。</p>
+<p>至此为止，基于网络namespace的路由器实现完毕。</p>
+<h2>机制网络（cgroup）</h2>
+<p>我们再来看打包的另一个机制网络cgroup。</p>
+<p>cgroup全称control groups，是Linux内核提供的一种可以限制、隔离进程使用的资源机制。</p>
+<p>cgroup能控制哪些资源呢？它有很多子系统：</p>
+<ul>
+<li>
+<p>CPU子系统使用调度程序为进程控制CPU的访问；</p>
+</li>
+<li>
+<p>cpuset，如果是多核心的CPU，这个子系统会为进程分配单独的CPU和内存；</p>
+</li>
+<li>
+<p>memory子系统，设置进程的内存限制以及产生内存资源报告；</p>
+</li>
+<li>
+<p>blkio子系统，设置限制每个块设备的输入输出控制；</p>
+</li>
+<li>
+<p>net_cls，这个子系统使用等级识别符（classid）标记网络数据包，可允许Linux 流量控制程序（tc）识别从具体cgroup中生成的数据包。</p>
+</li>
+</ul>
+<p>我们这里最关心的是net_cls，它可以和前面讲过的TC关联起来。</p>
+<p>cgroup提供了一个虚拟文件系统，作为进行分组管理和各子系统设置的用户接口。要使用cgroup，必须挂载cgroup文件系统，一般情况下都是挂载到/sys/fs/cgroup目录下。</p>
+<p>所以首先我们要挂载一个net_cls的文件系统。</p>
+<pre><code>mkdir /sys/fs/cgroup/net_cls
+mount -t cgroup -onet_cls net_cls /sys/fs/cgroup/net_cls
+</code></pre>
+<p>接下来我们要配置TC了。还记得咱们实验TC的时候那个树吗？</p>
+<p><img src="https://static001.geekbang.org/resource/image/9a/b5/9a1b8a7c0c5403a2b4b3c277545991b5.jpg" alt="" /></p>
+<p>当时我们通过这个命令设定了规则：从1.2.3.4来的，发送给port 80的包，从1:10走；其他从1.2.3.4发送来的包从1:11走；其他的走默认。</p>
+<pre><code>tc filter add dev eth0 protocol ip parent 1:0 prio 1 u32 match ip src 1.2.3.4 match ip dport 80 0xffff flowid 1:10
+tc filter add dev eth0 protocol ip parent 1:0 prio 1 u32 match ip src 1.2.3.4 flowid 1:11
+</code></pre>
+<p>这里是根据源IP来设定的，现在有了cgroup，我们按照cgroup再来设定规则。</p>
+<pre><code>tc filter add dev eth0 protocol ip parent 1:0 prio 1 handle 1: cgroup
+</code></pre>
+<p>假设我们有两个用户a和b，要对它们进行带宽限制。</p>
+<p>首先，我们要创建两个net_cls。</p>
+<pre><code>mkdir /sys/fs/cgroup/net_cls/a   
+mkdir /sys/fs/cgroup/net_cls/b
+</code></pre>
+<p>假设用户a启动的进程ID为12345，把它放在net_cls/a/tasks文件中。同样假设用户b启动的进程ID为12346，把它放在net_cls/b/tasks文件中。</p>
+<p>net_cls/a目录下面，还有一个文件net_cls.classid，我们放flowid 1:10。net_cls/b目录下面，也创建一个文件net_cls.classid，我们放flowid 1:11。</p>
+<p>这个数字怎么放呢？要转换成一个0xAAAABBBB的值，AAAA对应class中冒号前面的数字，而BBBB对应后面的数字。</p>
+<pre><code>echo 0x00010010 &gt; /sys/fs/cgroup/net_cls/a/net_cls.classid    
+echo 0x00010011 &gt; /sys/fs/cgroup/net_cls/b/net_cls.classid
+</code></pre>
+<p>这样用户a的进程发的包，会打上1:10这个标签；用户b的进程发的包，会打上1:11这个标签。然后TC根据这两个标签，让用户a的进程的包走左边的分支，用户b的进程的包走右边的分支。</p>
+<h2>容器网络中如何融入物理网络？</h2>
+<p>了解了容器背后的技术，接下来我们来看，容器网络究竟是如何融入物理网络的？</p>
+<p>如果你使用docker run运行一个容器，你应该能看到这样一个拓扑结构。</p>
+<p><img src="https://static001.geekbang.org/resource/image/20/d2/20e87bc215b9d049a4a504d775d26dd2.jpg" alt="" /></p>
+<p>是不是和虚拟机很像？容器里面有张网卡，容器外有张网卡，容器外的网卡连到docker0网桥，通过这个网桥，容器直接实现相互访问。</p>
+<p>如果你用brctl查看docker0网桥，你会发现它上面连着一些网卡。其实这个网桥和<a href="https://time.geekbang.org/column/article/10742">第24讲</a>，咱们自己用brctl创建的网桥没什么两样。</p>
+<p>那连接容器和网桥的那个网卡和虚拟机一样吗？在虚拟机场景下，有一个虚拟化软件，通过TUN/TAP设备虚拟一个网卡给虚拟机，但是容器场景下并没有虚拟化软件，这该怎么办呢？</p>
+<p>在Linux下，可以创建一对veth pair的网卡，从一边发送包，另一边就能收到。</p>
+<p>我们首先通过这个命令创建这么一对。</p>
+<pre><code>ip link add name veth1 mtu 1500 type veth peer name veth2 mtu 1500
+</code></pre>
+<p>其中一边可以打到docker0网桥上。</p>
+<pre><code>ip link set veth1 master testbr    
+ip link set veth1 up
+</code></pre>
+<p>那另一端如何放到容器里呢？</p>
+<p>一个容器的启动会对应一个namespace，我们要先找到这个namespace。对于docker来讲，pid就是namespace的名字，可以通过这个命令获取。</p>
+<pre><code>docker inspect '--format={{ .State.Pid }}' test
+</code></pre>
+<p>假设结果为12065，这个就是namespace名字。</p>
+<p>默认Docker创建的网络namespace不在默认路径下 ，ip netns看不到，所以需要ln软链接一下。链接完毕以后，我们就可以通过ip netns命令操作了。</p>
+<pre><code>rm -f /var/run/netns/12065    
+ln -s /proc/12065/ns/net /var/run/netns/12065
+</code></pre>
+<p>然后，我们就可以将另一端veth2塞到namespace里面。</p>
+<pre><code>ip link set veth2 netns 12065
+</code></pre>
+<p>然后，将容器内的网卡重命名。</p>
+<pre><code>ip netns exec 12065 ip link set veth2 name eth0
+</code></pre>
+<p>然后，给容器内网卡设置ip地址。</p>
+<pre><code>ip netns exec 12065 ip addr add 172.17.0.2/24 dev eth0    
+ip netns exec 12065 ip link set eth0 up
+</code></pre>
+<p>一台机器内部容器的互相访问没有问题了，那如何访问外网呢？</p>
+<p>你先想想看有没有思路？对，就是虚拟机里面的桥接模式和NAT模式。Docker默认使用NAT模式。NAT模式分为SNAT和DNAT，如果是容器内部访问外部，就需要通过SNAT。</p>
+<p>从容器内部的客户端访问外部网络中的服务器，我画了一张图。在<a href="https://time.geekbang.org/column/article/10742">虚拟机</a>那一节，也有一张类似的图。</p>
+<p><img src="https://static001.geekbang.org/resource/image/54/93/5452971c96e8fea33c3f873860e25c93.jpg" alt="" /></p>
+<p>在宿主机上，有这么一条iptables规则：</p>
+<pre><code>-A POSTROUTING -s 172.17.0.0/16 ! -o docker0 -j MASQUERADE
+</code></pre>
+<p>所有从容器内部发出来的包，都要做地址伪装，将源IP地址，转换为物理网卡的IP地址。如果有多个容器，所有的容器共享一个外网的IP地址，但是在conntrack表中，记录下这个出去的连接。</p>
+<p>当服务器返回结果的时候，到达物理机，会根据conntrack表中的规则，取出原来的私网IP，通过DNAT将地址转换为私网IP地址，通过网桥docker0实现对内的访问。</p>
+<p>如果在容器内部属于一个服务，例如部署一个网站，提供给外部进行访问，需要通过Docker的端口映射技术，将容器内部的端口映射到物理机上来。</p>
+<p>例如容器内部监听80端口，可以通Docker run命令中的参数-p 10080:80，将物理机上的10080端口和容器的80端口映射起来， 当外部的客户端访问这个网站的时候，通过访问物理机的10080端口，就能访问到容器内的80端口了。</p>
+<p><img src="https://static001.geekbang.org/resource/image/49/bb/49bb6b2a30fe76b124182980da935ebb.jpg" alt="" /></p>
+<p>Docker有两种方式，一种是通过一个进程<strong>docker-proxy</strong>的方式，监听10080，转换为80端口。</p>
+<pre><code>/usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 10080 -container-ip 172.17.0.2 -container-port 80
+</code></pre>
+<p>另外一种方式是通过<strong>DNAT</strong>方式，在-A PREROUTING阶段加一个规则，将到端口10080的DNAT称为容器的私有网络。</p>
+<pre><code>-A DOCKER -p tcp -m tcp --dport 10080 -j DNAT --to-destination 172.17.0.2:80
+</code></pre>
+<p>如此就可以实现容器和物理网络之间的互通了。</p>
+<h2>小结</h2>
+<p>好了，这一节就到这里了，我们来总结一下。</p>
+<ul>
+<li>
+<p>容器是一种比虚拟机更加轻量级的隔离方式，主要通过namespace和cgroup技术进行资源的隔离，namespace用于负责看起来隔离，cgroup用于负责用起来隔离。</p>
+</li>
+<li>
+<p>容器网络连接到物理网络的方式和虚拟机很像，通过桥接的方式实现一台物理机上的容器进行相互访问，如果要访问外网，最简单的方式还是通过NAT。</p>
+</li>
+</ul>
+<p>最后，给你留两个思考题：</p>
+<ol>
+<li>
+<p>容器内的网络和物理机网络可以使用NAT的方式相互访问，如果这种方式用于部署应用，有什么问题呢？</p>
+</li>
+<li>
+<p>和虚拟机一样，不同物理机上的容器需要相互通信，你知道容器是怎么做到这一点吗？</p>
+</li>
+</ol>
+<p>我们的专栏更新到第29讲，不知你掌握得如何？每节课后我留的思考题，你都有没有认真思考，并在留言区写下答案呢？我会从<strong>已发布的文章中选出一批认真留言的同学</strong>，赠送<span class="orange">学习奖励礼券</span>和我整理的<span class="orange">独家网络协议知识图谱</span>。</p>
+<p>欢迎你留言和我讨论。趣谈网络协议，我们下期见！</p>
+<p><img src="https://static001.geekbang.org/resource/image/b5/fb/b5bc14cb81d3630919fee94a512cc3fb.jpg" alt="" /></p>
+
+                    </div>
+                </div>
+
+            </div>
+            <div data-v-87ffcada="" class="article-comments pd"><h2 data-v-87ffcada=""><span
+                    data-v-87ffcada="">精选留言</span></h2>
+                <ul data-v-87ffcada="">
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/f7/c4/bd7dd30a.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">小文</span>
+                            </div>
+                            <div class="bd">我怎么感觉干运维的才能理解这么深 <br></div>
+                            <span class="time">2018-08-14 19:06</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/ab/2a/f3207127.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">贾鹏</span>
+                            </div>
+                            <div class="bd">问题1，由于nat导致网络性能有损耗，而且物理机端口被占用，当容器多的时候对于物理机端口的占用更加明显<br>问题2，跨物理机间的容器通信，主要的思路是构造扁平化网络模型，主要有cnm和cni模型，支持很多网络插件实现集群内的容器只有唯一的IP。这些插件很多，比如flannel macvlan<br>另外求网络梳理图<br>不分享还不能留言吗？ <br></div>
+                            <span class="time">2018-07-25 20:15</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/52/c3/896f3410.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">kissingers</span>
+                            </div>
+                            <div class="bd">老师，命名空间（namespace）配做router 这段，OVS&#47;Bridge 的端口能直接放到namespace 里面 ？不用veth pair ？   <br></div>
+                            <span class="time">2018-11-13 19:40</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/7a/5e/9431165a.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">spdia</span>
+                            </div>
+                            <div class="bd">这章比较难，主要是我对ip netns 不熟悉，还要多看几遍，再上虚拟机上操作几遍才行。 <br></div>
+                            <span class="time">2018-09-08 20:32</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">鼓励操作</p>
+                                <p class="reply-time">2018-09-09 22:38</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/b6/11/e8506a04.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">小宇宙</span>
+                            </div>
+                            <div class="bd">部署应用要考虑服务发现问题，就是外部的client怎么找到这个应用并访问，还有就是一般应用都是集群化部署，还涉及到负载的均衡问题，通过NAT的方式，要暴露宿主机的ip和端口，进行端口映射和ip地址转换，一方面消耗很多宝贵的主机的网络资源，另一方面服务注册和服务发现也会变复杂。 <br></div>
+                            <span class="time">2018-08-27 12:39</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/23/5b/dead073b.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">Jay</span>
+                            </div>
+                            <div class="bd">请问下docker()是什么意思？分享才能留言？ <br></div>
+                            <span class="time">2018-08-03 19:17</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/de/f3/6b47cedf.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">夜风</span>
+                            </div>
+                            <div class="bd">看了一遍，没看明白，我多去看几遍 <br></div>
+                            <span class="time">2018-07-30 00:29</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/ab/2a/f3207127.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">贾鹏</span>
+                            </div>
+                            <div class="bd">问题1，nat会导致性能损耗<br>问题2，主要是通过构造扁平网络，k8s主要是cni和cnm网络模型，支持很多网络插件来实现，比如flannel，macvlan等，从而让不同物理机上的容器有不同的IP <br></div>
+                            <span class="time">2018-07-25 19:59</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/10/09/42/b7a406c9.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">Hurt</span>
+                            </div>
+                            <div class="bd">老师我又来签到了 你还记得我吗 <br></div>
+                            <span class="time">2018-07-23 19:39</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/7c/16/38c07a04.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">_CountingStars</span>
+                            </div>
+                            <div class="bd">突然想起来一个问题 nat网络 虽然能通信 但是别人看到的ip是你被nat之后的ip 例如服务注册这样的功能 会导致 服务注册获取的ip 是你nat之后的ip 而不是你真实的ip <br></div>
+                            <span class="time">2018-07-23 13:51</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/a9/90/0c5ed3d9.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">颇忒妥</span>
+                            </div>
+                            <div class="bd">第二个问题docker用的是macvlan <br></div>
+                            <span class="time">2018-07-23 08:24</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/7c/16/38c07a04.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">_CountingStars</span>
+                            </div>
+                            <div class="bd">1.使用nat部署服务 可能会有网络性能问题<br>2.容器跨节点通信 可以使用 bgp 主机路由 vxlan 等方式 <br></div>
+                            <span class="time">2018-07-23 08:24</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/7c/16/38c07a04.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">_CountingStars</span>
+                            </div>
+                            <div class="bd">1.使用nat部署服务 可能会有网络性能问题<br>2.容器跨节点通信 可以使用 bgp 主机路由 vxlan 等方式 <br></div>
+                            <span class="time">2018-07-23 08:23</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/eb/f6/ec7971f4.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">固态U盘</span>
+                            </div>
+                            <div class="bd">及时的文章，多谢老师。 <br></div>
+                            <span class="time">2018-07-23 07:33</span>
+                            
+                        </div>
+                    </li>
+                    
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

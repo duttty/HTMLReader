@@ -1,0 +1,356 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <style type="text/css">
+
+#watermark {
+
+  position: relative;
+  overflow: hidden;
+}
+
+#watermark .x {
+  position: absolute;
+  top: 800;
+  left: 400;
+  color: #3300ff;
+  font-size: 50px;
+  pointer-events: none;
+  opacity:0.5;
+  filter:Alpha(opacity=50);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+}
+    </style>
+
+
+    <style type="text/css">
+ html{color:#333;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizelegibility;font-family:Helvetica Neue,PingFang SC,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif}html.borderbox *,html.borderbox :after,html.borderbox :before{box-sizing:border-box}article,aside,blockquote,body,button,code,dd,details,dl,dt,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hr,input,legend,li,menu,nav,ol,p,pre,section,td,textarea,th,ul{margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,menu,nav,section{display:block}audio,canvas,video{display:inline-block}body,button,input,select,textarea{font:300 1em/1.8 PingFang SC,Lantinghei SC,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,Helvetica,sans-serif}button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}blockquote{position:relative;color:#999;font-weight:400;border-left:1px solid #1abc9c;padding-left:1em;margin:1em 3em 1em 2em}@media only screen and (max-width:640px){blockquote{margin:1em 0}}abbr,acronym{border-bottom:1px dotted;font-variant:normal}abbr{cursor:help}del{text-decoration:line-through}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:400}ol,ul{list-style:none}caption,th{text-align:left}q:after,q:before{content:""}sub,sup{font-size:75%;line-height:0;position:relative}:root sub,:root sup{vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}a{color:#1abc9c}a:hover{text-decoration:underline}.typo a{border-bottom:1px solid #1abc9c}.typo a:hover{border-bottom-color:#555;color:#555}.typo a:hover,a,ins{text-decoration:none}.typo-u,u{text-decoration:underline}mark{background:#fffdd1;border-bottom:1px solid #ffedce;padding:2px;margin:0 5px}code,pre,pre tt{font-family:Courier,Courier New,monospace}pre{background:hsla(0,0%,97%,.7);border:1px solid #ddd;padding:1em 1.5em;display:block;-webkit-overflow-scrolling:touch}hr{border:none;border-bottom:1px solid #cfcfcf;margin-bottom:.8em;height:10px}.typo-small,figcaption,small{font-size:.9em;color:#888}b,strong{font-weight:700;color:#000}[draggable]{cursor:move}.clearfix:after,.clearfix:before{content:"";display:table}.clearfix:after{clear:both}.clearfix{zoom:1}.textwrap,.textwrap td,.textwrap th{word-wrap:break-word;word-break:break-all}.textwrap-table{table-layout:fixed}.serif{font-family:Palatino,Optima,Georgia,serif}.typo-dl,.typo-form,.typo-hr,.typo-ol,.typo-p,.typo-pre,.typo-table,.typo-ul,.typo dl,.typo form,.typo hr,.typo ol,.typo p,.typo pre,.typo table,.typo ul,blockquote{margin-bottom:1rem}h1,h2,h3,h4,h5,h6{font-family:PingFang SC,Helvetica Neue,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif;color:#000;line-height:1.35}.typo-h1,.typo-h2,.typo-h3,.typo-h4,.typo-h5,.typo-h6,.typo h1,.typo h2,.typo h3,.typo h4,.typo h5,.typo h6{margin-top:1.2em;margin-bottom:.6em;line-height:1.35}.typo-h1,.typo h1{font-size:2em}.typo-h2,.typo h2{font-size:1.8em}.typo-h3,.typo h3{font-size:1.6em}.typo-h4,.typo h4{font-size:1.4em}.typo-h5,.typo-h6,.typo h5,.typo h6{font-size:1.2em}.typo-ul,.typo ul{margin-left:1.3em;list-style:disc}.typo-ol,.typo ol{list-style:decimal;margin-left:1.9em}.typo-ol ol,.typo-ol ul,.typo-ul ol,.typo-ul ul,.typo li ol,.typo li ul{margin-bottom:.8em;margin-left:2em}.typo-ol ul,.typo-ul ul,.typo li ul{list-style:circle}.typo-table td,.typo-table th,.typo table caption,.typo table td,.typo table th{border:1px solid #ddd;padding:.5em 1em;color:#666}.typo-table th,.typo table th{background:#fbfbfb}.typo-table thead th,.typo table thead th{background:hsla(0,0%,95%,.7)}.typo table caption{border-bottom:none}.typo-input,.typo-textarea{-webkit-appearance:none;border-radius:0}.typo-em,.typo em,caption,legend{color:#000;font-weight:inherit}.typo-em{position:relative}.typo-em:after{position:absolute;top:.65em;left:0;width:100%;overflow:hidden;white-space:nowrap;content:"\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB"}.typo img{max-width:100%}.common-content{font-weight:400;color:#353535;line-height:1.75rem;white-space:normal;word-break:normal;font-size:1rem}.common-content img{display:block;max-width:100%;background-color:#eee}.common-content audio,.common-content video{width:100%;background-color:#eee}.common-content center,.common-content font{margin-top:1rem;display:inline-block}.common-content center{width:100%}.common-content pre{margin-top:1rem;padding-left:0;padding-right:0;position:relative;overflow:hidden}.common-content pre code{font-size:.8rem;font-family:Consolas,Liberation Mono,Menlo,monospace,Courier;display:block;width:100%;box-sizing:border-box;padding-left:1rem;padding-right:1rem;overflow-x:auto}.common-content hr{border:none;margin-top:1.5rem;margin-bottom:1.5rem;border-top:1px solid #f5f5f5;height:1px;background:none}.common-content b,.common-content h1,.common-content h2,.common-content h3,.common-content h4,.common-content h5,.common-content strong{font-weight:700}.common-content h1,.common-content h2{font-size:1.125rem;margin-bottom:.45rem}.common-content h3,.common-content h4,.common-content h5{font-size:1rem;margin-bottom:.45rem}.common-content p{font-weight:400;color:#353535;margin-top:.15rem}.common-content .orange{color:#ff5a05}.common-content .reference{font-size:1rem;color:#888}.custom-rich-content h1{margin-top:0;font-weight:400;font-size:15.25px;border-bottom:1px solid #eee;line-height:2.8}.custom-rich-content li,.custom-rich-content p{font-size:14px;color:#888;line-height:1.6}table.hljs-ln{margin-bottom:0;border-spacing:0;border-collapse:collapse}table.hljs-ln,table.hljs-ln tbody,table.hljs-ln td,table.hljs-ln tr{box-sizing:border-box}table.hljs-ln td{padding:0;border:0}table.hljs-ln td.hljs-ln-numbers{min-width:15px;color:rgba(27,31,35,.3);text-align:right;white-space:nowrap;cursor:pointer;user-select:none}table.hljs-ln td.hljs-ln-code,table.hljs-ln td.hljs-ln-numbers{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;font-size:12px;line-height:20px;vertical-align:top}table.hljs-ln td.hljs-ln-code{position:relative;padding-right:10px;padding-left:10px;overflow:visible;color:#24292e;word-wrap:normal;white-space:pre}video::-webkit-media-controls{overflow:hidden!important}video::-webkit-media-controls-enclosure{width:calc(100% + 32px);margin-left:auto}.button-cancel{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel,.button-primary{-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary{color:#fff;background-color:#ff5a05;border-radius:3px}@font-face{font-family:iconfont;src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot);src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.woff) format("woff"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.ttf) format("truetype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.svg#iconfont) format("svg")}@font-face{font-family:player-font;src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot);src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.woff) format("woff"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.ttf) format("truetype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.svg#player-font) format("svg")}.iconfont{font-family:iconfont!important;font-size:16px;font-style:normal;-webkit-font-smoothing:antialiased;-webkit-text-stroke-width:.2px;-moz-osx-font-smoothing:grayscale}html{background:#fff;min-height:100%;-webkit-tap-highlight-color:rgba(0,0,0,0)}body{width:100%}body.fixed{overflow:hidden;position:fixed;width:100vw;height:100vh}i{font-style:normal}a{word-wrap:break-word;-webkit-tap-highlight-color:rgba(0,0,0,0)}a:hover{text-decoration:none}.fade-enter-active,.fade-leave-active{transition:opacity .3s}.fade-enter,.fade-leave-to{opacity:0}.MathJax,.MathJax_CHTML,.MathJax_MathContainer,.MathJax_MathML,.MathJax_PHTML,.MathJax_PlainSource,.MathJax_SVG{outline:0}.ios-app-switch .js-audit{display:none}._loading_wrap_{position:fixed;width:100vw;height:100vh;top:50%;left:50%;transform:translate(-50%,-50%);z-index:999}._loading_div_class_,._loading_wrap_{display:-ms-flexbox;display:flex;-ms-flex-pack:center;justify-content:center;-ms-flex-align:center;align-items:center}._loading_div_class_{word-wrap:break-word;padding:.5rem .75rem;text-align:center;z-index:9999;font-size:.6rem;max-width:60%;color:#fff;border-radius:.25rem;-ms-flex-direction:column;flex-direction:column}._loading_div_class_ .message{color:#353535;font-size:16px;line-height:3}.spinner{animation:circle-rotator 1.4s linear infinite}.spinner *{line-height:0;box-sizing:border-box}@keyframes circle-rotator{0%{transform:rotate(0deg)}to{transform:rotate(270deg)}}.path{stroke-dasharray:187;stroke-dashoffset:0;transform-origin:center;animation:circle-dash 1.4s ease-in-out infinite,circle-colors 5.6s ease-in-out infinite}@keyframes circle-colors{0%{stroke:#ff5a05}to{stroke:#ff5a05}}@keyframes circle-dash{0%{stroke-dashoffset:187}50%{stroke-dashoffset:46.75;transform:rotate(135deg)}to{stroke-dashoffset:187;transform:rotate(450deg)}}.confirm-box-wrapper,.confirm-box-wrapper .mask{position:absolute;top:0;left:0;right:0;bottom:0}.confirm-box-wrapper .mask{background:rgba(0,0,0,.6)}.confirm-box-wrapper .confirm-box{position:fixed;top:50%;left:50%;width:267px;background:#fff;transform:translate(-50%,-50%);border-radius:7px}.confirm-box-wrapper .confirm-box .head{margin:0 18px;font-size:18px;text-align:center;line-height:65px;border-bottom:1px solid #d9d9d9}.confirm-box-wrapper .confirm-box .body{padding:18px;padding-bottom:0;color:#353535;font-size:12.5px;max-height:150px;overflow:auto}.confirm-box-wrapper .confirm-box .foot{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;padding:18px}.confirm-box-wrapper .confirm-box .foot .button-cancel{border:1px solid #d9d9d9}.hljs{display:block;overflow-x:auto;padding:.5em;color:#333;background:#f8f8f8}.hljs-comment,.hljs-quote{color:#998;font-style:italic}.hljs-keyword,.hljs-selector-tag,.hljs-subst{color:#333;font-weight:700}.hljs-literal,.hljs-number,.hljs-tag .hljs-attr,.hljs-template-variable,.hljs-variable{color:teal}.hljs-doctag,.hljs-string{color:#d14}.hljs-section,.hljs-selector-id,.hljs-title{color:#900;font-weight:700}.hljs-subst{font-weight:400}.hljs-class .hljs-title,.hljs-type{color:#458;font-weight:700}.hljs-attribute,.hljs-name,.hljs-tag{color:navy;font-weight:400}.hljs-link,.hljs-regexp{color:#009926}.hljs-bullet,.hljs-symbol{color:#990073}.hljs-built_in,.hljs-builtin-name{color:#0086b3}.hljs-meta{color:#999;font-weight:700}.hljs-deletion{background:#fdd}.hljs-addition{background:#dfd}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}
+
+
+
+
+    </style>
+    <style type="text/css">
+        .button-cancel[data-v-87ffcada]{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel[data-v-87ffcada],.button-primary[data-v-87ffcada]{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary[data-v-87ffcada]{color:#fff;background-color:#ff5a05;border-radius:3px}.pd[data-v-87ffcada]{padding-left:1.375rem;padding-right:1.375rem}.article[data-v-87ffcada]{max-width:70rem;margin:0 auto}.article .article-unavailable[data-v-87ffcada]{color:#fa8919;font-size:15px;font-weight:600;line-height:24px;border-radius:5px;padding:12px;background-color:#f6f7fb;margin-top:20px}.article .article-unavailable .iconfont[data-v-87ffcada]{font-size:12px}.article .main[data-v-87ffcada]{padding:1.25rem 0;margin-bottom:52px}.article-title[data-v-87ffcada]{color:#353535;font-weight:400;line-height:1.65rem;font-size:1.34375rem}.article-info[data-v-87ffcada]{color:#888;font-size:.9375rem;margin-top:1.0625rem}.article-content[data-v-87ffcada]{margin-top:1.0625rem}.article-content.android video[data-v-87ffcada]::-webkit-media-controls-fullscreen-button{display:none}.copyright[data-v-87ffcada]{color:#b2b2b2;padding-bottom:20px;margin-top:20px;font-size:13px}.audio-player[data-v-87ffcada]{width:100%;margin:20px 0}.to-comment[data-v-87ffcada]{overflow:hidden;padding-top:10px;margin-bottom:-30px}.to-comment a.button-primary[data-v-87ffcada]{float:right;height:20px;font-size:12px;line-height:20px;padding:4px 8px;cursor:pointer}.article-comments[data-v-87ffcada]{margin-top:2rem}.article-comments h2[data-v-87ffcada]{text-align:center;color:#888;position:relative;z-index:1;margin-bottom:1rem}.article-comments h2[data-v-87ffcada]:before{border-top:1px dotted #888;content:"";position:absolute;top:56%;left:0;width:100%;z-index:-1}.article-comments h2 span[data-v-87ffcada]{font-size:15.25px;font-weight:400;padding:0 1rem;background:#fff;display:inline-block}.article-sub-bottom[data-v-87ffcada]{z-index:10;cursor:pointer}.switch-btns[data-v-87ffcada]{height:76px;cursor:pointer;padding-top:24px;padding-bottom:24px;border-bottom:10px solid #f6f7fb;position:relative}.switch-btns[data-v-87ffcada]:before{content:" ";height:1px;background:#e8e8e8;position:absolute;top:0;left:0;-webkit-box-sizing:border-box;box-sizing:border-box;left:1.375rem;right:1.375rem}.switch-btns .btn[data-v-87ffcada]{height:38px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.switch-btns .btn .tag[data-v-87ffcada]{-webkit-box-flex:0;-ms-flex:0 0 62px;flex:0 0 62px;text-align:center;color:#888;font-size:14px;border-radius:10px;height:22px;line-height:22px;background:#f6f7fb;font-weight:400}.switch-btns .btn .txt[data-v-87ffcada]{margin-left:10px;-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto;color:#888;font-size:15px;height:22px;line-height:22px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:400}@media (max-width:769px){.article .breadcrumb[data-v-87ffcada]{padding-top:10px;padding-bottom:10px}}
+
+
+
+
+
+    </style>
+
+    <style type="text/css">
+        .comment-item{list-style-position:inside;width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;margin-bottom:1rem}.comment-item a{border-bottom:none}.comment-item .avatar{width:2.625rem;height:2.625rem;-ms-flex-negative:0;flex-shrink:0;border-radius:50%}.comment-item .info{margin-left:.5rem;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1}.comment-item .info .hd{width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .username{color:#888;font-size:15.25px;font-weight:400;line-height:1.2}.comment-item .info .hd .control{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .control .btn-share{color:#888;font-size:.75rem;margin-right:1rem}.comment-item .info .hd .control .btn-praise{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-size:15.25px;text-decoration:none}.comment-item .info .hd .control .btn-praise i{color:#888;display:inline-block;font-size:.75rem;margin-right:.3rem;margin-top:-.01rem}.comment-item .info .hd .control .btn-praise i.on,.comment-item .info .hd .control .btn-praise span{color:#ff5a05}.comment-item .info .bd{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6}.comment-item .info .time{color:#888;font-size:9px;line-height:1}.comment-item .info .reply .reply-hd{font-size:15.25px}.comment-item .info .reply .reply-hd span{margin-left:-12px;color:#888;font-weight:400}.comment-item .info .reply .reply-hd i{color:#ff5a05;font-size:15.25px}.comment-item .info .reply .reply-content{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all}.comment-item .info .reply .reply-time{color:#888;font-size:9px}
+
+
+
+
+    </style>
+</head>
+<body>
+<div id="app">
+
+
+    <div data-v-87ffcada="" class="article" id="watermark">
+        
+        <div data-v-87ffcada="" class="main main-app">
+            <h1 data-v-87ffcada="" class="article-title pd">
+                开篇词讲想成为技术牛人？先搞定网络协议！
+            </h1>
+            <div data-v-87ffcada="" class="article-content typo common-content pd"><img data-v-87ffcada=""
+                                                                                        src="https://static001.geekbang.org/resource/image/7d/50/7dd3f821b4e790b9367af9f23a7e8750.jpg">
+
+
+                <div data-v-87ffcada="" id="article-content" class="">
+                    <div class="text">
+                        <p>你好，我是刘超，网易研究院云计算技术部的首席架构师。我主要负责两部分工作，对内支撑网易核心业务上云，对外帮助客户搞定容器化与微服务化架构。</p>
+<p>当极客时间约我做“趣谈网络协议”专栏的时候，我非常开心，因为网络协议也是我长期研究和关注的点。摸爬滚打15年，有了一些收获也溅了一身血，我才能在这里和你分享。</p>
+<p>为什么网络协议这么重要呢？为什么“计算机组成与系统结构”“数据结构与算法”“操作系统”“计算机网络”“编译原理”，会成为大学计算机的核心课程呢？至少看起来，这些内容没有“多少天搞定MFC、Structs”这样的内容更容易帮你找到工作。我毕业的时候，也感到很困惑。</p>
+<p>不过当时我抱着一个理想，也可能是大多数程序员的理想：我要做技术牛人，我要搞定大系统。</p>
+<p>工作15年，我在EMC做过类似GFS的分布式存储开发，做过基于Lucene的搜索引擎，做过Hadoop的运维；在HP和华为做过OpenStack的开发、实施和解决方案；还创业倒腾过Mesos容器平台，后来在网易做Kubernetes。</p>
+<p>随着见过的世面越来越多，我渐渐发现，无论是对于大规模系统的架构，还是对于程序员的个人职业生涯，网络和网络协议都是绕不过去的坎儿。</p>
+<p>集群规模一大，我们首先想到的就是网络互通的问题；应用吞吐量压不上去，我们首先想到的也是网络互通的问题。不客气地讲，很多情况下，只要搞定了网络，一个大型系统也就搞定了一半。所以，要成为技术牛人，搞定大系统，一定要过网络这一关，而网络协议在网络中占有举足轻重的地位。</p>
+<p>相信大部分人都思考过“技术变化太快，容易过时”的问题。毕竟，技术浪潮一浪接一浪，新技术层出不穷。从搜索引擎、大数据、云计算，到人工智能、区块链，简直就是“你方唱罢我登场”。<strong>这里面究竟有没有最本质的东西，使得你掌握了它，就能在新技术的滚滚浪潮中，保持快速学习的能力？</strong></p>
+<!-- [[[read_end]]] -->
+<p>通过对大量开源技术的代码进行分析，我发现很多技术看起来轰轰烈烈，扒下外衣，本质的东西其实就是基础知识和核心概念。<strong>想要不被滚滚而来的新技术淘汰，就要掌握这些可以长久使用的知识，而网络协议就是值得你学习，而且是到40岁之后依然有价值的知识。</strong></p>
+<p>但是，要想真正学习和掌握网络协议，也并非易事。下面这些场景，你是不是也感同身受呢？</p>
+<ul>
+<li><p><strong>网络协议知识点太多，学完记不住。</strong>我们都学过计算机网络课程，学的时候感觉并不难。尤其这门课没有公式，更像是文科。学了一大堆，也背了一大堆，应付完考试之后，最终都“还给老师”了。</p>
+</li>
+<li><p><strong>看上去懂了，但是经不住问。</strong>没关系，网上有很多的文章嘛。于是，你会搜索很多文章去看。看的时候，你感觉别人说的很有道理，好像理解了，但是经不住问，一问就发现，你只是了解了大概的流程，很多细节还是不知道。所以说，从能看懂到能给别人讲明白，中间还有很长一段距离。</p>
+</li>
+<li><p><strong>知识学会了，实际应用依旧不会</strong>。细节都摸索得差不多了，但是当你自己去应用和调试的时候，发现还是没有思路。比如，当创建出来的虚拟机不能上网的时候，该怎么办呢？学过的东西，怎么还是不会用？</p>
+</li>
+</ul>
+<p>我把这样的网络协议学习过程总结为：<strong><span class="orange">一看觉得懂，一问就打鼓，一用就糊涂。</span></strong>  </p>
+<p>那网络协议究竟该怎么学？基于这个问题，我决定从以下三个角度和你分享我所理解的网络协议。</p>
+<p><strong>第一，我会从身边经常见到的事情出发，用故事来讲解各种网络协议，然后慢慢扩展到不熟悉的领域。</strong></p>
+<p>例如，每个人都会查看IP地址，那我们就从这个命令开始，展开一些概念；很多人都在大学宿舍组过简单的网络来打游戏，我就从宿舍里最简单的网络概念开始讲；然后说到办公室，说到日常上网、购物、视频下载等过程涉及的协议；最后说到最陌生的数据中心。</p>
+<p><strong>第二，我会用贴近场景的方式来讲解网络协议，将各个层次的关系串起来，而非孤立地讲解某个概念。</strong></p>
+<p>常见的计算机网络课程往往会按照网络分层，一层一层地讲，却很少讲层与层之间的关系。例如，我们学习路由协议的时候，在真实场景中，这么多的算法和二层是什么关系呢？和四层又是什么关系呢？例如，在真实的网络通信中，我们访问一个网站，做一个支付，在TCP进行三次握手的时候，IP层在干嘛？MAC层又在干嘛？这些你是不是都清楚？</p>
+<p><strong>第三，我会在讲解完各个层次的网络协议之后，着重剖析如何在当下热门领域使用这些协议，比如云计算、容器和微服务。</strong></p>
+<p>一方面你可以知道网络协议真实应用的地方，另一方面你也可以通过上手使用云计算、容器、微服务来进一步加深对于协议的理解。</p>
+<p>千里之行，始于足下。不管何时，我相信，扎实的功底和过硬的技术，都会是你职业发展的助力器。</p>
+<p>希望这个专栏，不仅可以帮你理清繁杂的网络协议概念，帮你构建一个精准的网络协议知识框架，帮你在热门领域应用这些底层知识，更重要的是给你一种学习知识的方法和态度：<strong>看似最枯燥、最基础的东西往往具有最长久的生命力</strong>。</p>
+<p><img src="https://static001.geekbang.org/resource/image/b5/fb/b5bc14cb81d3630919fee94a512cc3fb.jpg" alt=""></p>
+
+                    </div>
+                </div>
+
+            </div>
+            <div data-v-87ffcada="" class="article-comments pd"><h2 data-v-87ffcada=""><span
+                    data-v-87ffcada="">精选留言</span></h2>
+                <ul data-v-87ffcada="">
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/51/44/7c99fc6d.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">会飞的</span>
+                            </div>
+                            <div class="bd">急需学习网络协议，多久更新一篇啊？ <br></div>
+                            <span class="time">2018-05-17 17:07</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">以后每周三次</p>
+                                <p class="reply-time">2018-05-17 18:54</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/41/6b/6c0c0f29.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">lalala</span>
+                            </div>
+                            <div class="bd">一顿饭钱  不亏 <br></div>
+                            <span class="time">2018-05-15 08:39</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/44/28/948cab86.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">JasonYe</span>
+                            </div>
+                            <div class="bd">这是我第一次付费，期待刘超老师的精彩教学 <br></div>
+                            <span class="time">2018-05-15 11:34</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/7c/e0/acbca24e.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">108度</span>
+                            </div>
+                            <div class="bd">40岁后仍有用的知识，冲着这句话来的 <br></div>
+                            <span class="time">2018-05-15 19:30</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/f5/b9/888fe350.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">不记年</span>
+                            </div>
+                            <div class="bd">期待！这种教程肯定第一时间订阅 <br></div>
+                            <span class="time">2018-05-14 18:59</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/f8/ba/14e05601.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">约书亚</span>
+                            </div>
+                            <div class="bd">似乎是原声哎，赞。极客时间的配音，念英文的时候实在是...<br>带过不少刚入门的人，问我先研究哪个基础时我都会建议网络。在我眼里网络技术最好玩，很绕很复杂但原理并不难懂，可是出了问题却很难找，也不像其他类型的问题可以绕过去，所以平日里就要做大量积累 <br></div>
+                            <span class="time">2018-05-14 22:50</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">是的，网络最基础，但是比较难搞</p>
+                                <p class="reply-time">2018-05-14 23:18</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/ff/71/7b7e4553.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">来</span>
+                            </div>
+                            <div class="bd">赞，第一时间订阅了，网络通信一直是自己的短板，希望通过这个课程可以补上这块短板 <br></div>
+                            <span class="time">2018-05-14 21:56</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/10/68/73/3cda533e.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">乔良qiaoliang</span>
+                            </div>
+                            <div class="bd">程序员长青秘诀:网络协议，操作系统，数据库，数据结构与算法，敏捷开发，体力好，颈椎腰椎手腕视力。。 <br></div>
+                            <span class="time">2018-05-24 19:21</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">颈椎非常重要</p>
+                                <p class="reply-time">2018-05-25 08:38</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/10/00/c9/6e77921a.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">hacksport</span>
+                            </div>
+                            <div class="bd">老师，您敢不敢更新的快点，听不够啊 <br></div>
+                            <span class="time">2018-05-15 18:32</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/10/40/00/0759bde1.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">飞</span>
+                            </div>
+                            <div class="bd">直击痛点，协议看了n遍就是记不住。期待更新 <br></div>
+                            <span class="time">2018-05-14 22:48</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/67/f4/9a1feb59.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">godtrue</span>
+                            </div>
+                            <div class="bd">看似最枯燥，最基本的东西往往具有更长久的生命力。非常认同这个观点，以前没有嚼碎的硬骨头，现在往往会成为卡在喉咙里的梗。昨天听一位即将离职的同事讲，公司现在实行末位淘汰制，我们小组的末位听他讲会在我和另一位同事之间选一个。听到这个消息，首先，感觉有些心凉，我工作认真负责，对于业务知识也是不遗余力的学习和总结，我怎么就成了末位待选了？当然，回头想想，大家都不是傻子，小组leader更不傻，我的短板可能有三吧！一是技术一般，二是做事有时效率不高，三是思维跟不上，有些事情考虑不周。同事提醒我不要一天天整那点业务逻辑了，补补技术才是关键，万一那天把我给辞退了，不要一点准备都没有。恩，所以，昨天我一直在想，是啊！作为技术人，也许每天都需要问问自己，如果公司明天把你辞退了怎么办？你做的工作还有很多价值吗？比你的工资高吗？自己真的很容易随随便便就被一些新人取代吗？正如作者所言，新技术的浪潮一浪接一浪，掌握不易变的东西，深入的掌握这些东西，也许才是技术人员潮头戏浪，不易翻到的法宝。上大学时也学习过计算机网络技术相关的东西，现在细节都基本淡忘了，希望能跟大牛一起再好好的重温一下，订阅过雨迪的拆解JVM恰好看到这个专栏，我想这也正是我想要的。 <br></div>
+                            <span class="time">2018-08-05 11:47</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/de/c7/26485903.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">Yolo七夜</span>
+                            </div>
+                            <div class="bd">这一次，一定要把网络协议踩在脚下 <br></div>
+                            <span class="time">2018-06-20 22:34</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/10/ed/a5/40bee263.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">lau</span>
+                            </div>
+                            <div class="bd">很高兴看到这种学霸辅导学渣的课程，也希望自己经过这门课后，能成功克服网络难题。 <br></div>
+                            <span class="time">2018-05-15 19:21</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/10/13/74/bedb38f2.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">ALEX</span>
+                            </div>
+                            <div class="bd">搞嵌入式，硬件软件全通，就是网络这部分一看就头大，这门课来的及时 <br></div>
+                            <span class="time">2018-05-15 08:31</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/08/24/4c78548f.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">张峰华</span>
+                            </div>
+                            <div class="bd">放码过来吧 <br></div>
+                            <span class="time">2018-05-17 20:47</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/38/62/f71bf099.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">小太阳</span>
+                            </div>
+                            <div class="bd">哈哈哈，非常期待，每次看网络相关的博客就非常困，看着看着就走神，希望这次可以把这个学好 <br></div>
+                            <span class="time">2018-05-15 19:35</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/41/1c/7e276f27.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">zhubingchu</span>
+                            </div>
+                            <div class="bd">知识就是金钱，这钱花得值 <br></div>
+                            <span class="time">2018-05-15 18:44</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/45/82/164b9073.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">Majorin_Che</span>
+                            </div>
+                            <div class="bd">很好的一门课程，第一次付费学习，主要还是网络协议太重要了 <br></div>
+                            <span class="time">2018-05-15 14:17</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/50/34/fefb125f.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">笨笨熊</span>
+                            </div>
+                            <div class="bd">期待课程更新，对网络很感兴趣。 <br></div>
+                            <span class="time">2018-05-14 22:10</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/b2/e9/f1541957.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">wgl</span>
+                            </div>
+                            <div class="bd">及时雨 <br></div>
+                            <span class="time">2018-05-14 21:59</span>
+                            
+                        </div>
+                    </li>
+                    
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

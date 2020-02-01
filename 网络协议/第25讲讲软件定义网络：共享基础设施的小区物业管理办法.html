@@ -1,0 +1,509 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <style type="text/css">
+
+#watermark {
+
+  position: relative;
+  overflow: hidden;
+}
+
+#watermark .x {
+  position: absolute;
+  top: 800;
+  left: 400;
+  color: #3300ff;
+  font-size: 50px;
+  pointer-events: none;
+  opacity:0.5;
+  filter:Alpha(opacity=50);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+}
+    </style>
+
+
+    <style type="text/css">
+ html{color:#333;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizelegibility;font-family:Helvetica Neue,PingFang SC,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif}html.borderbox *,html.borderbox :after,html.borderbox :before{box-sizing:border-box}article,aside,blockquote,body,button,code,dd,details,dl,dt,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hr,input,legend,li,menu,nav,ol,p,pre,section,td,textarea,th,ul{margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,menu,nav,section{display:block}audio,canvas,video{display:inline-block}body,button,input,select,textarea{font:300 1em/1.8 PingFang SC,Lantinghei SC,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,Helvetica,sans-serif}button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}blockquote{position:relative;color:#999;font-weight:400;border-left:1px solid #1abc9c;padding-left:1em;margin:1em 3em 1em 2em}@media only screen and (max-width:640px){blockquote{margin:1em 0}}abbr,acronym{border-bottom:1px dotted;font-variant:normal}abbr{cursor:help}del{text-decoration:line-through}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:400}ol,ul{list-style:none}caption,th{text-align:left}q:after,q:before{content:""}sub,sup{font-size:75%;line-height:0;position:relative}:root sub,:root sup{vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}a{color:#1abc9c}a:hover{text-decoration:underline}.typo a{border-bottom:1px solid #1abc9c}.typo a:hover{border-bottom-color:#555;color:#555}.typo a:hover,a,ins{text-decoration:none}.typo-u,u{text-decoration:underline}mark{background:#fffdd1;border-bottom:1px solid #ffedce;padding:2px;margin:0 5px}code,pre,pre tt{font-family:Courier,Courier New,monospace}pre{background:hsla(0,0%,97%,.7);border:1px solid #ddd;padding:1em 1.5em;display:block;-webkit-overflow-scrolling:touch}hr{border:none;border-bottom:1px solid #cfcfcf;margin-bottom:.8em;height:10px}.typo-small,figcaption,small{font-size:.9em;color:#888}b,strong{font-weight:700;color:#000}[draggable]{cursor:move}.clearfix:after,.clearfix:before{content:"";display:table}.clearfix:after{clear:both}.clearfix{zoom:1}.textwrap,.textwrap td,.textwrap th{word-wrap:break-word;word-break:break-all}.textwrap-table{table-layout:fixed}.serif{font-family:Palatino,Optima,Georgia,serif}.typo-dl,.typo-form,.typo-hr,.typo-ol,.typo-p,.typo-pre,.typo-table,.typo-ul,.typo dl,.typo form,.typo hr,.typo ol,.typo p,.typo pre,.typo table,.typo ul,blockquote{margin-bottom:1rem}h1,h2,h3,h4,h5,h6{font-family:PingFang SC,Helvetica Neue,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif;color:#000;line-height:1.35}.typo-h1,.typo-h2,.typo-h3,.typo-h4,.typo-h5,.typo-h6,.typo h1,.typo h2,.typo h3,.typo h4,.typo h5,.typo h6{margin-top:1.2em;margin-bottom:.6em;line-height:1.35}.typo-h1,.typo h1{font-size:2em}.typo-h2,.typo h2{font-size:1.8em}.typo-h3,.typo h3{font-size:1.6em}.typo-h4,.typo h4{font-size:1.4em}.typo-h5,.typo-h6,.typo h5,.typo h6{font-size:1.2em}.typo-ul,.typo ul{margin-left:1.3em;list-style:disc}.typo-ol,.typo ol{list-style:decimal;margin-left:1.9em}.typo-ol ol,.typo-ol ul,.typo-ul ol,.typo-ul ul,.typo li ol,.typo li ul{margin-bottom:.8em;margin-left:2em}.typo-ol ul,.typo-ul ul,.typo li ul{list-style:circle}.typo-table td,.typo-table th,.typo table caption,.typo table td,.typo table th{border:1px solid #ddd;padding:.5em 1em;color:#666}.typo-table th,.typo table th{background:#fbfbfb}.typo-table thead th,.typo table thead th{background:hsla(0,0%,95%,.7)}.typo table caption{border-bottom:none}.typo-input,.typo-textarea{-webkit-appearance:none;border-radius:0}.typo-em,.typo em,caption,legend{color:#000;font-weight:inherit}.typo-em{position:relative}.typo-em:after{position:absolute;top:.65em;left:0;width:100%;overflow:hidden;white-space:nowrap;content:"\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB"}.typo img{max-width:100%}.common-content{font-weight:400;color:#353535;line-height:1.75rem;white-space:normal;word-break:normal;font-size:1rem}.common-content img{display:block;max-width:100%;background-color:#eee}.common-content audio,.common-content video{width:100%;background-color:#eee}.common-content center,.common-content font{margin-top:1rem;display:inline-block}.common-content center{width:100%}.common-content pre{margin-top:1rem;padding-left:0;padding-right:0;position:relative;overflow:hidden}.common-content pre code{font-size:.8rem;font-family:Consolas,Liberation Mono,Menlo,monospace,Courier;display:block;width:100%;box-sizing:border-box;padding-left:1rem;padding-right:1rem;overflow-x:auto}.common-content hr{border:none;margin-top:1.5rem;margin-bottom:1.5rem;border-top:1px solid #f5f5f5;height:1px;background:none}.common-content b,.common-content h1,.common-content h2,.common-content h3,.common-content h4,.common-content h5,.common-content strong{font-weight:700}.common-content h1,.common-content h2{font-size:1.125rem;margin-bottom:.45rem}.common-content h3,.common-content h4,.common-content h5{font-size:1rem;margin-bottom:.45rem}.common-content p{font-weight:400;color:#353535;margin-top:.15rem}.common-content .orange{color:#ff5a05}.common-content .reference{font-size:1rem;color:#888}.custom-rich-content h1{margin-top:0;font-weight:400;font-size:15.25px;border-bottom:1px solid #eee;line-height:2.8}.custom-rich-content li,.custom-rich-content p{font-size:14px;color:#888;line-height:1.6}table.hljs-ln{margin-bottom:0;border-spacing:0;border-collapse:collapse}table.hljs-ln,table.hljs-ln tbody,table.hljs-ln td,table.hljs-ln tr{box-sizing:border-box}table.hljs-ln td{padding:0;border:0}table.hljs-ln td.hljs-ln-numbers{min-width:15px;color:rgba(27,31,35,.3);text-align:right;white-space:nowrap;cursor:pointer;user-select:none}table.hljs-ln td.hljs-ln-code,table.hljs-ln td.hljs-ln-numbers{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;font-size:12px;line-height:20px;vertical-align:top}table.hljs-ln td.hljs-ln-code{position:relative;padding-right:10px;padding-left:10px;overflow:visible;color:#24292e;word-wrap:normal;white-space:pre}video::-webkit-media-controls{overflow:hidden!important}video::-webkit-media-controls-enclosure{width:calc(100% + 32px);margin-left:auto}.button-cancel{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel,.button-primary{-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary{color:#fff;background-color:#ff5a05;border-radius:3px}@font-face{font-family:iconfont;src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot);src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.woff) format("woff"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.ttf) format("truetype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.svg#iconfont) format("svg")}@font-face{font-family:player-font;src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot);src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.woff) format("woff"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.ttf) format("truetype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.svg#player-font) format("svg")}.iconfont{font-family:iconfont!important;font-size:16px;font-style:normal;-webkit-font-smoothing:antialiased;-webkit-text-stroke-width:.2px;-moz-osx-font-smoothing:grayscale}html{background:#fff;min-height:100%;-webkit-tap-highlight-color:rgba(0,0,0,0)}body{width:100%}body.fixed{overflow:hidden;position:fixed;width:100vw;height:100vh}i{font-style:normal}a{word-wrap:break-word;-webkit-tap-highlight-color:rgba(0,0,0,0)}a:hover{text-decoration:none}.fade-enter-active,.fade-leave-active{transition:opacity .3s}.fade-enter,.fade-leave-to{opacity:0}.MathJax,.MathJax_CHTML,.MathJax_MathContainer,.MathJax_MathML,.MathJax_PHTML,.MathJax_PlainSource,.MathJax_SVG{outline:0}.ios-app-switch .js-audit{display:none}._loading_wrap_{position:fixed;width:100vw;height:100vh;top:50%;left:50%;transform:translate(-50%,-50%);z-index:999}._loading_div_class_,._loading_wrap_{display:-ms-flexbox;display:flex;-ms-flex-pack:center;justify-content:center;-ms-flex-align:center;align-items:center}._loading_div_class_{word-wrap:break-word;padding:.5rem .75rem;text-align:center;z-index:9999;font-size:.6rem;max-width:60%;color:#fff;border-radius:.25rem;-ms-flex-direction:column;flex-direction:column}._loading_div_class_ .message{color:#353535;font-size:16px;line-height:3}.spinner{animation:circle-rotator 1.4s linear infinite}.spinner *{line-height:0;box-sizing:border-box}@keyframes circle-rotator{0%{transform:rotate(0deg)}to{transform:rotate(270deg)}}.path{stroke-dasharray:187;stroke-dashoffset:0;transform-origin:center;animation:circle-dash 1.4s ease-in-out infinite,circle-colors 5.6s ease-in-out infinite}@keyframes circle-colors{0%{stroke:#ff5a05}to{stroke:#ff5a05}}@keyframes circle-dash{0%{stroke-dashoffset:187}50%{stroke-dashoffset:46.75;transform:rotate(135deg)}to{stroke-dashoffset:187;transform:rotate(450deg)}}.confirm-box-wrapper,.confirm-box-wrapper .mask{position:absolute;top:0;left:0;right:0;bottom:0}.confirm-box-wrapper .mask{background:rgba(0,0,0,.6)}.confirm-box-wrapper .confirm-box{position:fixed;top:50%;left:50%;width:267px;background:#fff;transform:translate(-50%,-50%);border-radius:7px}.confirm-box-wrapper .confirm-box .head{margin:0 18px;font-size:18px;text-align:center;line-height:65px;border-bottom:1px solid #d9d9d9}.confirm-box-wrapper .confirm-box .body{padding:18px;padding-bottom:0;color:#353535;font-size:12.5px;max-height:150px;overflow:auto}.confirm-box-wrapper .confirm-box .foot{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;padding:18px}.confirm-box-wrapper .confirm-box .foot .button-cancel{border:1px solid #d9d9d9}.hljs{display:block;overflow-x:auto;padding:.5em;color:#333;background:#f8f8f8}.hljs-comment,.hljs-quote{color:#998;font-style:italic}.hljs-keyword,.hljs-selector-tag,.hljs-subst{color:#333;font-weight:700}.hljs-literal,.hljs-number,.hljs-tag .hljs-attr,.hljs-template-variable,.hljs-variable{color:teal}.hljs-doctag,.hljs-string{color:#d14}.hljs-section,.hljs-selector-id,.hljs-title{color:#900;font-weight:700}.hljs-subst{font-weight:400}.hljs-class .hljs-title,.hljs-type{color:#458;font-weight:700}.hljs-attribute,.hljs-name,.hljs-tag{color:navy;font-weight:400}.hljs-link,.hljs-regexp{color:#009926}.hljs-bullet,.hljs-symbol{color:#990073}.hljs-built_in,.hljs-builtin-name{color:#0086b3}.hljs-meta{color:#999;font-weight:700}.hljs-deletion{background:#fdd}.hljs-addition{background:#dfd}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}
+
+
+
+
+    </style>
+    <style type="text/css">
+        .button-cancel[data-v-87ffcada]{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel[data-v-87ffcada],.button-primary[data-v-87ffcada]{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary[data-v-87ffcada]{color:#fff;background-color:#ff5a05;border-radius:3px}.pd[data-v-87ffcada]{padding-left:1.375rem;padding-right:1.375rem}.article[data-v-87ffcada]{max-width:70rem;margin:0 auto}.article .article-unavailable[data-v-87ffcada]{color:#fa8919;font-size:15px;font-weight:600;line-height:24px;border-radius:5px;padding:12px;background-color:#f6f7fb;margin-top:20px}.article .article-unavailable .iconfont[data-v-87ffcada]{font-size:12px}.article .main[data-v-87ffcada]{padding:1.25rem 0;margin-bottom:52px}.article-title[data-v-87ffcada]{color:#353535;font-weight:400;line-height:1.65rem;font-size:1.34375rem}.article-info[data-v-87ffcada]{color:#888;font-size:.9375rem;margin-top:1.0625rem}.article-content[data-v-87ffcada]{margin-top:1.0625rem}.article-content.android video[data-v-87ffcada]::-webkit-media-controls-fullscreen-button{display:none}.copyright[data-v-87ffcada]{color:#b2b2b2;padding-bottom:20px;margin-top:20px;font-size:13px}.audio-player[data-v-87ffcada]{width:100%;margin:20px 0}.to-comment[data-v-87ffcada]{overflow:hidden;padding-top:10px;margin-bottom:-30px}.to-comment a.button-primary[data-v-87ffcada]{float:right;height:20px;font-size:12px;line-height:20px;padding:4px 8px;cursor:pointer}.article-comments[data-v-87ffcada]{margin-top:2rem}.article-comments h2[data-v-87ffcada]{text-align:center;color:#888;position:relative;z-index:1;margin-bottom:1rem}.article-comments h2[data-v-87ffcada]:before{border-top:1px dotted #888;content:"";position:absolute;top:56%;left:0;width:100%;z-index:-1}.article-comments h2 span[data-v-87ffcada]{font-size:15.25px;font-weight:400;padding:0 1rem;background:#fff;display:inline-block}.article-sub-bottom[data-v-87ffcada]{z-index:10;cursor:pointer}.switch-btns[data-v-87ffcada]{height:76px;cursor:pointer;padding-top:24px;padding-bottom:24px;border-bottom:10px solid #f6f7fb;position:relative}.switch-btns[data-v-87ffcada]:before{content:" ";height:1px;background:#e8e8e8;position:absolute;top:0;left:0;-webkit-box-sizing:border-box;box-sizing:border-box;left:1.375rem;right:1.375rem}.switch-btns .btn[data-v-87ffcada]{height:38px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.switch-btns .btn .tag[data-v-87ffcada]{-webkit-box-flex:0;-ms-flex:0 0 62px;flex:0 0 62px;text-align:center;color:#888;font-size:14px;border-radius:10px;height:22px;line-height:22px;background:#f6f7fb;font-weight:400}.switch-btns .btn .txt[data-v-87ffcada]{margin-left:10px;-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto;color:#888;font-size:15px;height:22px;line-height:22px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:400}@media (max-width:769px){.article .breadcrumb[data-v-87ffcada]{padding-top:10px;padding-bottom:10px}}
+
+
+
+
+
+    </style>
+
+    <style type="text/css">
+        .comment-item{list-style-position:inside;width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;margin-bottom:1rem}.comment-item a{border-bottom:none}.comment-item .avatar{width:2.625rem;height:2.625rem;-ms-flex-negative:0;flex-shrink:0;border-radius:50%}.comment-item .info{margin-left:.5rem;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1}.comment-item .info .hd{width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .username{color:#888;font-size:15.25px;font-weight:400;line-height:1.2}.comment-item .info .hd .control{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .control .btn-share{color:#888;font-size:.75rem;margin-right:1rem}.comment-item .info .hd .control .btn-praise{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-size:15.25px;text-decoration:none}.comment-item .info .hd .control .btn-praise i{color:#888;display:inline-block;font-size:.75rem;margin-right:.3rem;margin-top:-.01rem}.comment-item .info .hd .control .btn-praise i.on,.comment-item .info .hd .control .btn-praise span{color:#ff5a05}.comment-item .info .bd{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6}.comment-item .info .time{color:#888;font-size:9px;line-height:1}.comment-item .info .reply .reply-hd{font-size:15.25px}.comment-item .info .reply .reply-hd span{margin-left:-12px;color:#888;font-weight:400}.comment-item .info .reply .reply-hd i{color:#ff5a05;font-size:15.25px}.comment-item .info .reply .reply-content{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all}.comment-item .info .reply .reply-time{color:#888;font-size:9px}
+
+
+
+
+    </style>
+</head>
+<body>
+<div id="app">
+
+
+    <div data-v-87ffcada="" class="article" id="watermark">
+        
+        <div data-v-87ffcada="" class="main main-app">
+            <h1 data-v-87ffcada="" class="article-title pd">
+                第25讲讲软件定义网络：共享基础设施的小区物业管理办法
+            </h1>
+            <div data-v-87ffcada="" class="article-content typo common-content pd"><img data-v-87ffcada=""
+                                                                                        src="https://static001.geekbang.org/resource/image/20/1b/209cac2f555cbc5c8981129e9bfd451b.jpg">
+
+
+                <div data-v-87ffcada="" id="article-content" class="">
+                    <div class="text">
+                        <p>上一节我们说到，使用原生的VLAN和Linux网桥的方式来进行云平台的管理，但是这样在灵活性、隔离性方面都显得不足，而且整个网络缺少统一的视图、统一的管理。</p>
+<p>可以这样比喻，云计算就像大家一起住公寓，要共享小区里面的基础设施，其中网络就相当于小区里面的电梯、楼道、路、大门等，大家都走，往往会常出现问题，尤其在上班高峰期，出门的人太多，对小区的物业管理就带来了挑战。</p>
+<p>物业可以派自己的物业管理人员，到每个单元的楼梯那里，将电梯的上下行速度调快一点，可以派人将隔离健身区、景色区的栅栏门暂时打开，让大家可以横穿小区，直接上地铁，还可以派人将多个小区出入口，改成出口多、入口少等等。等过了十点半，上班高峰过去，再派人都改回来。</p>
+<h2>软件定义网络（SDN）</h2>
+<p>这种模式就像传统的网络设备和普通的Linux网桥的模式，配置整个云平台的网络通路，你需要登录到这台机器上配置这个，再登录到另外一个设备配置那个，才能成功。</p>
+<p>如果物业管理人员有一套智能的控制系统，在物业监控室里就能看到小区里每个单元、每个电梯的人流情况，然后在监控室里面，只要通过远程控制的方式，拨弄一个手柄，电梯的速度就调整了，栅栏门就打开了，某个入口就改出口了。</p><!-- [[[read_end]]] -->
+<p>这就是软件定义网络（SDN）。它主要有以下三个特点。</p>
+<p><img src="https://static001.geekbang.org/resource/image/34/f9/346fe3b3dbe1024e7119ec4ffa9377f9.jpg" alt="" /></p>
+<ul>
+<li>
+<p><strong>控制与转发分离</strong>：转发平面就是一个个虚拟或者物理的网络设备，就像小区里面的一条条路。控制平面就是统一的控制中心，就像小区物业的监控室。它们原来是一起的，物业管理员要从监控室出来，到路上去管理设备，现在是分离的，路就是走人的，控制都在监控室。</p>
+</li>
+<li>
+<p><strong>控制平面与转发平面之间的开放接口</strong>：控制器向上提供接口，被应用层调用，就像总控室提供按钮，让物业管理员使用。控制器向下调用接口，来控制网络设备，就像总控室会远程控制电梯的速度。这里经常使用两个名词，前面这个接口称为<strong>北向接口</strong>，后面这个接口称为<strong>南向接口</strong>，上北下南嘛。</p>
+</li>
+<li>
+<p><strong>逻辑上的集中控制</strong>：逻辑上集中的控制平面可以控制多个转发面设备，也就是控制整个物理网络，因而可以获得全局的网络状态视图，并根据该全局网络状态视图实现对网络的优化控制，就像物业管理员在监控室能够看到整个小区的情况，并根据情况优化出入方案。</p>
+</li>
+</ul>
+<h2>OpenFlow和OpenvSwitch</h2>
+<p>SDN有很多种实现方式，我们来看一种开源的实现方式。</p>
+<p>OpenFlow是SDN控制器和网络设备之间互通的南向接口协议，OpenvSwitch用于创建软件的虚拟交换机。OpenvSwitch是支持OpenFlow协议的，当然也有一些硬件交换机也支持OpenFlow协议。它们都可以被统一的SDN控制器管理，从而实现物理机和虚拟机的网络连通。</p>
+<p><img src="https://static001.geekbang.org/resource/image/38/d0/383710afd8e2b7e99ba8ccfef69c02d0.jpg" alt="" /></p>
+<p>SDN控制器是如何通过OpenFlow协议控制网络的呢？</p>
+<p><img src="https://static001.geekbang.org/resource/image/ed/f7/ed8939e33728c6118db3c0283b1dbdf7.jpg" alt="" /></p>
+<p>在OpenvSwitch里面，有一个流表规则，任何通过这个交换机的包，都会经过这些规则进行处理，从而接收、转发、放弃。</p>
+<p>那流表长啥样呢？其实就是一个个表格，每个表格好多行，每行都是一条规则。每条规则都有优先级，先看高优先级的规则，再看低优先级的规则。</p>
+<p><img src="https://static001.geekbang.org/resource/image/91/77/91a7f011885ec48ca57d61940b748477.jpg" alt="" /></p>
+<p>对于每一条规则，要看是否满足匹配条件。这些条件包括，从哪个端口进来的，网络包头里面有什么等等。满足了条件的网络包，就要执行一个动作，对这个网络包进行处理。可以修改包头里的内容，可以跳到任何一个表格，可以转发到某个网口出去，也可以丢弃。</p>
+<p>通过这些表格，可以对收到的网络包随意处理。</p>
+<p><img src="https://static001.geekbang.org/resource/image/34/22/342ac21bda24e20d8d78f47ca8415a22.jpg" alt="" /></p>
+<p>具体都能做什么处理呢？通过上面的表格可以看出，简直是想怎么处理怎么处理，可以覆盖TCP/IP协议栈的四层。</p>
+<p>对于物理层：</p>
+<ul>
+<li>
+<p>匹配规则包括由从哪个口进来；</p>
+</li>
+<li>
+<p>执行动作包括从哪个口出去。</p>
+</li>
+</ul>
+<p>对于MAC层：</p>
+<ul>
+<li>
+<p>匹配规则包括：源MAC地址是多少？（dl_src），目标MAC是多少？（dl_dst），所属vlan是多少？（dl_vlan）；</p>
+</li>
+<li>
+<p>执行动作包括：修改源MAC（mod_dl_src），修改目标MAC（mod_dl_dst），修改VLAN（mod_vlan_vid），删除VLAN（strip_vlan），MAC地址学习（learn）。</p>
+</li>
+</ul>
+<p>对于网络层：</p>
+<ul>
+<li>
+<p>匹配规则包括：源IP地址是多少？(nw_src)，目标IP是多少？（nw_dst）。</p>
+</li>
+<li>
+<p>执行动作包括：修改源IP地址（mod_nw_src），修改目标IP地址（mod_nw_dst）。</p>
+</li>
+</ul>
+<p>对于传输层：</p>
+<ul>
+<li>
+<p>匹配规则包括：源端口是多少？（tp_src），目标端口是多少？（tp_dst）。</p>
+</li>
+<li>
+<p>执行动作包括：修改源端口（mod_tp_src），修改目标端口（mod_tp_dst）。</p>
+</li>
+</ul>
+<p>总而言之，对于OpenvSwitch来讲，网络包到了我手里，就是一个Buffer，我想怎么改怎么改，想发到哪个端口就发送到哪个端口。</p>
+<p>OpenvSwitch有本地的命令行可以进行配置，能够实验咱们前面讲过的一些功能。我们可以通过OpenvSwitch的命令创建一个虚拟交换机。然后可以将多个虚拟端口port添加到这个虚拟交换机上。</p>
+<pre><code>ovs-vsctl add-br ubuntu_br
+</code></pre>
+<h2>实验一：用OpenvSwitch实现VLAN的功能</h2>
+<p>下面我们实验一下通过OpenvSwitch实现VLAN的功能，在OpenvSwitch中端口port分两种。</p>
+<p>第一类是access port：</p>
+<ul>
+<li>
+<p>这个端口配置tag，从这个端口进来的包会被打上这个tag；</p>
+</li>
+<li>
+<p>如果网络包本身带有的VLAN ID等于tag，则会从这个port发出；</p>
+</li>
+<li>
+<p>从access port发出的包不带VLAN ID。</p>
+</li>
+</ul>
+<p>第二类是trunk port：</p>
+<ul>
+<li>
+<p>这个port不配置tag，配置trunks；</p>
+</li>
+<li>
+<p>如果trunks为空，则所有的VLAN都trunk，也就意味着对于所有VLAN的包，本身带什么VLAN ID，就是携带者什么VLAN ID，如果没有设置VLAN，就属于VLAN 0，全部允许通过；</p>
+</li>
+<li>
+<p>如果trunks不为空，则仅仅带着这些VLAN ID的包通过。</p>
+</li>
+</ul>
+<p>我们通过以下命令创建如下的环境：</p>
+<pre><code>ovs-vsctl add-port ubuntu_br first_br
+ovs-vsctl add-port ubuntu_br second_br
+ovs-vsctl add-port ubuntu_br third_br
+ovs-vsctl set Port vnet0 tag=101
+ovs-vsctl set Port vnet1 tag=102
+ovs-vsctl set Port vnet2 tag=103
+ovs-vsctl set Port first_br tag=103
+ovs-vsctl clear Port second_br tag
+ovs-vsctl set Port third_br trunks=101,102
+</code></pre>
+<p>另外要配置禁止MAC地址学习。</p>
+<pre><code>ovs-vsctl set bridge ubuntu_br flood-vlans=101,102,103
+</code></pre>
+<p><img src="https://static001.geekbang.org/resource/image/6e/b4/6e1ddc1eb92c85cda32f40b62dd9fcb4.jpg" alt="" /></p>
+<p>创建好了环境以后，我们来做这个实验。</p>
+<ol>
+<li>
+<p>从192.168.100.102来ping 192.168.100.103，然后用tcpdump进行抓包。first_if收到包了，从first_br出来的包头是没有VLAN ID的。second_if也收到包了，由于second_br是trunk port，因而出来的包头是有VLAN ID的，third_if收不到包。</p>
+</li>
+<li>
+<p>从192.168.100.100来ping 192.168.100.105, 则second_if和third_if可以收到包，当然ping不通，因为third_if不属于某个VLAN。first_if是收不到包的。second_if能够收到包，而且包头里面是VLAN ID=101。third_if也能收到包，而且包头里面是VLAN ID=101。</p>
+</li>
+<li>
+<p>从192.168.100.101来ping 192.168.100.104， 则second_if和third_if可以收到包。first_if是收不到包的。second_br能够收到包，而且包头里面是VLAN ID=102。third_if也能收到包，而且包头里面是VLAN ID=102。</p>
+</li>
+</ol>
+<p>通过这个例子，我们可以看到，通过OpenvSwitch，不用买一个支持VLAN的交换机，你也能学习VLAN的工作模式了。</p>
+<h2>实验二：用OpenvSwitch模拟网卡绑定，连接交换机</h2>
+<p>接下来，我们来做另一个实验。在前面，我们还说过，为了高可用，可以使用网卡绑定，连接到交换机，OpenvSwitch也可以模拟这一点。</p>
+<p>在OpenvSwitch里面，有个bond_mode，可以设置为以下三个值：</p>
+<ul>
+<li>
+<p>active-backup：一个连接是active，其他的是backup，当active失效的时候，backup顶上；</p>
+</li>
+<li>
+<p>balance-slb：流量安装源MAC和output VLAN进行负载均衡；</p>
+</li>
+<li>
+<p>balance-tcp：必须在支持LACP协议的情况下才可以，可根据L2, L3, L4进行负载均衡。</p>
+</li>
+</ul>
+<p>我们搭建一个测试环境。</p>
+<p><img src="https://static001.geekbang.org/resource/image/8a/6c/8a1956cb5bbf03de7d6cbaa2e706046c.jpg" alt="" /></p>
+<p>我们使用下面的命令，建立bond连接。</p>
+<pre><code>ovs-vsctl add-bond br0 bond0 first_br second_br
+ovs-vsctl add-bond br1 bond1 first_if second_if
+ovs-vsctl set Port bond0 lacp=active
+ovs-vsctl set Port bond1 lacp=active
+</code></pre>
+<p>默认情况下bond_mode是active-backup模式，一开始active的是first_br和first_if。</p>
+<p>这个时候我们从192.168.100.100 ping 192.168.100.102，以及从192.168.100.101 ping 192.168.100.103的时候，tcpdump可以看到所有的包都是从first_if通过。</p>
+<p>如果把first_if设成down，则包的走向会变，发现second_if开始有流量，对于192.168.100.100和192.168.100.101似乎没有收到影响。</p>
+<p>如果我们通过以下命令，把bond_mode设为balance-slb。然后我们同时在192.168.100.100 ping 192.168.100.102，在192.168.100.101 ping 192.168.100.103，我们通过tcpdump发现包已经被分流了。</p>
+<pre><code>ovs-vsctl set Port bond0 bond_mode=balance-slb
+ovs-vsctl set Port bond1 bond_mode=balance-slb
+</code></pre>
+<p>通过这个例子，我们可以看到，通过OpenvSwitch，你不用买两台支持bond的交换机，也能看到bond的效果。</p>
+<p>那OpenvSwitch是怎么做到这些的呢？我们来看OpenvSwitch的架构图。</p>
+<p><img src="https://static001.geekbang.org/resource/image/d8/14/d870e5bfcad8ec45d146c3226cdccb14.jpg" alt="" /></p>
+<p>OpenvSwitch包含很多的模块，在用户态有两个重要的进程，也有两个重要的命令行工具。</p>
+<ul>
+<li>
+<p>第一个进程是OVSDB进程。ovs-vsctl命令行会和这个进程通信，去创建虚拟交换机，创建端口，将端口添加到虚拟交换机上，OVSDB会将这些拓扑信息保存在一个本地的文件中。</p>
+</li>
+<li>
+<p>第一个进程是vswitchd进程。ovs-ofctl命令行会和这个进程通信，去下发流表规则，规则里面会规定如何对网络包进行处理，vswitchd会将流表放在用户态Flow Table中。</p>
+</li>
+</ul>
+<p>在内核态，OpenvSwitch有内核模块OpenvSwitch.ko，对应图中的Datapath部分。在网卡上注册一个函数，每当有网络包到达网卡的时候，这个函数就会被调用。</p>
+<p>在内核的这个函数里面，会拿到网络包，将各个层次的重要信息拿出来，例如：</p>
+<ul>
+<li>
+<p>在物理层，in_port即包进入的网口的ID；</p>
+</li>
+<li>
+<p>在MAC层，源和目的MAC地址；</p>
+</li>
+<li>
+<p>在IP层，源和目的IP地址；</p>
+</li>
+<li>
+<p>在传输层，源和目的端口号。</p>
+</li>
+</ul>
+<p>在内核中，有一个内核态Flow Table。接下来内核模块在这个内核流表中匹配规则，如果匹配上了，则执行操作、修改包，或者转发或者放弃。如果内核没有匹配上，则需要进入用户态，用户态和内核态之间通过Linux的一个机制Netlink相互通信。</p>
+<p>内核通过upcall，告知用户态进程vswitchd在用户态Flow Table里面去匹配规则，这里面的规则是全量的流表规则，而内核Flow Table里面的只是为了快速处理，保留了部分规则，内核里面的规则过一阵就会过期。</p>
+<p>当在用户态匹配到了流表规则之后，就在用户态执行操作，同时将这个匹配成功的流表通过reinject下发到内核，从而接下来的包都能在内核找到这个规则。</p>
+<p>这里调用openflow协议的，是本地的命令行工具，也可以是远程的SDN控制器，一个重要的SDN控制器是OpenDaylight。</p>
+<p>下面这个图就是OpenDaylight中看到的拓扑图。是不是有种物业管理员在监控室里的感觉？</p>
+<p><img src="https://static001.geekbang.org/resource/image/27/a8/274442ba251fdc63c88bc5dbfc6183a8.jpg" alt="" /></p>
+<p>我们可以通过在OpenDaylight里，将两个交换机之间配置通，也可以配置不通，还可以配置一个虚拟IP地址VIP，在不同的机器之间实现负载均衡等等，所有的策略都可以灵活配置。</p>
+<h2>如何在云计算中使用OpenvSwitch？</h2>
+<p>OpenvSwitch这么牛，如何用在云计算中呢？</p>
+<p><img src="https://static001.geekbang.org/resource/image/24/59/24b09861632f7ba7211073e2829d4f59.jpg" alt="" /></p>
+<p>我们还是讨论VLAN的场景。</p>
+<p>在没有OpenvSwitch的时候，如果一个新的用户要使用一个新的VLAN，还需要创建一个属于新的VLAN的虚拟网卡，并且为这个租户创建一个单独的虚拟网桥，这样用户越来越多的时候，虚拟网卡和虚拟网桥会越来越多，管理非常复杂。</p>
+<p>另一个问题是虚拟机的VLAN和物理环境的VLAN是透传的，也即从一开始规划的时候，就需要匹配起来，将物理环境和虚拟环境强绑定，本来就不灵活。</p>
+<p>而引入了OpenvSwitch，状态就得到了改观。</p>
+<p>首先，由于OpenvSwitch本身就是支持VLAN的，所有的虚拟机都可以放在一个网桥br0上，通过不同的用户配置不同的tag，就能够实现隔离。例如上面的图，用户A的虚拟机都在br0上，用户B的虚拟机都在br1上，有了OpenvSwitch，就可以都放在br0上，只是设置了不同的tag。</p>
+<p>另外，还可以创建一个虚拟交换机br1，将物理网络和虚拟网络进行隔离。物理网络有物理网络的VLAN规划，虚拟机在一台物理机上，所有的VLAN都是从1开始的。由于一台机器上的虚拟机不会超过4096个，所以VLAN在一台物理机上如果从1开始，肯定够用了。</p>
+<p>例如在图中，上面的物理机里面，用户A被分配的tag是1，用户B被分配的tag是2，而在下面的物理机里面，用户A被分配的tag是7，用户B被分配的tag是6。</p>
+<p>如果物理机之间的通信和隔离还是通过VLAN的话，需要将虚拟机的VLAN和物理环境的VLAN对应起来，但为了灵活性，不一定一致，这样可以实现分别管理物理机的网络和虚拟机的网络。好在OpenvSwitch可以对包的内容进行修改。例如通过匹配dl_vlan，然后执行mod_vlan_vid来改进进出出物理机的网络包。</p>
+<p>尽管租户多了，物理环境的VLAN还是不够用，但是有了OpenvSwitch的映射，将物理和虚拟解耦，从而可以让物理环境使用其他技术，而不影响虚拟机环境，这个我们后面再讲。</p>
+<h2>小结</h2>
+<p>好了，这一节就到这里了，我们来总结一下：</p>
+<ul>
+<li>
+<p>用SDN控制整个云里面的网络，就像小区保安从总控室管理整个物业是一样的，将控制面和数据面进行了分离；</p>
+</li>
+<li>
+<p>一种开源的虚拟交换机的实现OpenvSwitch，它能对经过自己的包做任意修改，从而使得云对网络的控制十分灵活；</p>
+</li>
+<li>
+<p>将OpenvSwitch引入了云之后，可以使得配置简单而灵活，并且可以解耦物理网络和虚拟网络。</p>
+</li>
+</ul>
+<p>最后，给你留两个思考题：</p>
+<ol>
+<li>
+<p>在这一节中，提到了通过VIP可以通过流表在不同的机器之间实现复杂均衡，你知道怎样才能做到吗？</p>
+</li>
+<li>
+<p>虽然OpenvSwitch可以解耦物理网络和虚拟网络，但是在物理网络里面使用VLAN，数目还是不够，你知道该怎么办吗？</p>
+</li>
+</ol>
+<p>我们的专栏更新到第25讲，不知你掌握得如何？每节课后我留的思考题，你都有没有认真思考，并在留言区写下答案呢？我会从<strong>已发布的文章中选出一批认真留言的同学</strong>，赠送<span class="orange">学习奖励礼券</span>和我整理的<span class="orange">独家网络协议知识图谱</span>。</p>
+<p>欢迎你留言和我讨论。趣谈网络协议，我们下期见！</p>
+<p><img src="https://static001.geekbang.org/resource/image/b5/fb/b5bc14cb81d3630919fee94a512cc3fb.jpg" alt="" /></p>
+
+                    </div>
+                </div>
+
+            </div>
+            <div data-v-87ffcada="" class="article-comments pd"><h2 data-v-87ffcada=""><span
+                    data-v-87ffcada="">精选留言</span></h2>
+                <ul data-v-87ffcada="">
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/10/d2/d6/d393593d.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">小小鸟</span>
+                            </div>
+                            <div class="bd">跟不上了 平时工作也接触不到 尴尬 <br></div>
+                            <span class="time">2018-07-24 06:21</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/10/09/42/b7a406c9.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">Hurt</span>
+                            </div>
+                            <div class="bd">哈哈哈 跟不上了 和前面的联系不上了 需要好好多听几遍了 <br></div>
+                            <span class="time">2018-07-13 18:32</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">还要复习一下哈</p>
+                                <p class="reply-time">2018-07-13 20:56</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/ac/c8/4b1c0d40.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">勤劳的小胖子-libo</span>
+                            </div>
+                            <div class="bd">等二个是通过overlay技术，比如vxlan, 但需要使用tun 而不是tap  <br></div>
+                            <span class="time">2018-07-13 15:52</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/7c/28/cb6d8768.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">Jobs</span>
+                            </div>
+                            <div class="bd">从 192.168.100.100 来 ping 192.168.100.105,为何ping不通，third_if却能收到包？<br>另外这里为啥要禁止mac地址学习？<br><br> <br></div>
+                            <span class="time">2018-11-13 15:25</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/c1/60/f5439f04.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">maomaostyle</span>
+                            </div>
+                            <div class="bd">请问刘老师，大规模环境中的sdn控制器是一个独立实例或独立集群来实现么？主流控制器有哪些？另外流表要在每一台宿主机保存么？那大小限制的问题如何解决？能否独立集中存放流表 <br></div>
+                            <span class="time">2018-07-31 19:13</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/7c/28/cb6d8768.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">Jobs</span>
+                            </div>
+                            <div class="bd">刘老师您好！我现在工作中正在研究Linux 上的VM，即qemu-kvm，职业方向是不是也可以不断往云计算去进阶呢？这两年顺着你这几天及将来的文章不断深入细节去研究就可以了吗 <br></div>
+                            <span class="time">2018-07-13 09:15</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">我的只是个开端</p>
+                                <p class="reply-time">2018-07-13 17:17</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/13/e2/df/660a13fe.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">我是谁</span>
+                            </div>
+                            <div class="bd">first_if 这个是什么，怎么产生的？ <br></div>
+                            <span class="time">2018-12-07 20:09</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/10/dd/d0/36b6eaf7.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">许森森</span>
+                            </div>
+                            <div class="bd">实验一中的配置文件在哪里下啊？<br>ovs-vsctl  set  Port  vnet0 tag=101 <br></div>
+                            <span class="time">2018-12-03 15:29</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/8d/a6/a28e6110.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">楊_宵夜</span>
+                            </div>
+                            <div class="bd">超哥, 两个问题:<br>在 [实验一 用 OpenvSwitch 实现 VLAN 的功能] 中;<br><br>--  问题一&amp;引用一 <br>2. 从192.168.100.100来ping192.168.100.105, 则second_if和third_if可以收到包; 当然ping不通,<br>因为third_if不属于某个VLAN...<br>--<br>我读上下文, 没有发现third_if是属于哪个VLAN呢? <br>并且也没看出来 100.103 和 100.104 的VLAN分别是什么;<br><br>--问题二&amp;引用一 <br>ovs-vsctl add-port ubuntu_br first_br<br>ovs-vsctl set Port vnet0 tag=101<br>ovs-vsctl set Port first_br tag=103<br>--<br>可以看到端口first_br是需要先add的;<br>为什么vnet0不需要先add呢? <br></div>
+                            <span class="time">2018-11-20 15:38</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">在配置文件里面配置了，vnet创建完毕就已经在ovs上了</p>
+                                <p class="reply-time">2018-11-20 17:13</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="http://thirdwx.qlogo.cn/mmopen/vi_32/3IrblACSCxr7ianvicQXRexScIaZ1zXVQYc1eLUlia6WkhPNKPzMoIJRgfVHe1BHskfTx8E9FCmicYGCeZic6HrGbRA/132" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">我爱探索</span>
+                            </div>
+                            <div class="bd">OpenDaylight和openvswtch是否自由开源并很好的扩展Linux系统的网络能力 <br></div>
+                            <span class="time">2018-10-18 21:41</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/49/86/554cc50e.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">张张张 </span>
+                            </div>
+                            <div class="bd">一直在追，一直跟不上，不是这个专业，很多理解起来很困难，要看好几遍。讲得还是很专业的 <br></div>
+                            <span class="time">2018-10-12 21:58</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/10/d0/a1/07027529.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">偏偏喜欢你</span>
+                            </div>
+                            <div class="bd">老师您好，前面的还能看懂，现在有点跟不上了，有没有好的书籍推荐下，好加深理解，还有可以获得老师整理的网络知识图谱 <br></div>
+                            <span class="time">2018-09-27 22:54</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/72/4c/4d636a23.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">在路上</span>
+                            </div>
+                            <div class="bd">老师讲解每一讲后，能不能推荐一些相关的书籍，现在是完全跟不上节奏啊 <br></div>
+                            <span class="time">2018-08-15 22:53</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/99/24/e1cb609e.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">破晓</span>
+                            </div>
+                            <div class="bd">哎，跟不上啦。 <br></div>
+                            <span class="time">2018-07-18 23:08</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/10/e0/41/eae81006.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">chars</span>
+                            </div>
+                            <div class="bd">网络这一块是短板，越到后面越迷糊了，自己要加油了 <br></div>
+                            <span class="time">2018-07-15 14:00</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/10/67/3d/3fcec39c.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">胖芮</span>
+                            </div>
+                            <div class="bd">老师讲的通俗易懂，从第一讲到今天，一直坚持着，同时配合nodejs以及eggjs一起学习，受益匪浅。 <br></div>
+                            <span class="time">2018-07-13 08:28</span>
+                            
+                        </div>
+                    </li>
+                    
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

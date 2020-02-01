@@ -1,0 +1,495 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <style type="text/css">
+
+#watermark {
+
+  position: relative;
+  overflow: hidden;
+}
+
+#watermark .x {
+  position: absolute;
+  top: 800;
+  left: 400;
+  color: #3300ff;
+  font-size: 50px;
+  pointer-events: none;
+  opacity:0.5;
+  filter:Alpha(opacity=50);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+}
+    </style>
+
+
+    <style type="text/css">
+ html{color:#333;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizelegibility;font-family:Helvetica Neue,PingFang SC,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif}html.borderbox *,html.borderbox :after,html.borderbox :before{box-sizing:border-box}article,aside,blockquote,body,button,code,dd,details,dl,dt,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hr,input,legend,li,menu,nav,ol,p,pre,section,td,textarea,th,ul{margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,menu,nav,section{display:block}audio,canvas,video{display:inline-block}body,button,input,select,textarea{font:300 1em/1.8 PingFang SC,Lantinghei SC,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,Helvetica,sans-serif}button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}blockquote{position:relative;color:#999;font-weight:400;border-left:1px solid #1abc9c;padding-left:1em;margin:1em 3em 1em 2em}@media only screen and (max-width:640px){blockquote{margin:1em 0}}abbr,acronym{border-bottom:1px dotted;font-variant:normal}abbr{cursor:help}del{text-decoration:line-through}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:400}ol,ul{list-style:none}caption,th{text-align:left}q:after,q:before{content:""}sub,sup{font-size:75%;line-height:0;position:relative}:root sub,:root sup{vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}a{color:#1abc9c}a:hover{text-decoration:underline}.typo a{border-bottom:1px solid #1abc9c}.typo a:hover{border-bottom-color:#555;color:#555}.typo a:hover,a,ins{text-decoration:none}.typo-u,u{text-decoration:underline}mark{background:#fffdd1;border-bottom:1px solid #ffedce;padding:2px;margin:0 5px}code,pre,pre tt{font-family:Courier,Courier New,monospace}pre{background:hsla(0,0%,97%,.7);border:1px solid #ddd;padding:1em 1.5em;display:block;-webkit-overflow-scrolling:touch}hr{border:none;border-bottom:1px solid #cfcfcf;margin-bottom:.8em;height:10px}.typo-small,figcaption,small{font-size:.9em;color:#888}b,strong{font-weight:700;color:#000}[draggable]{cursor:move}.clearfix:after,.clearfix:before{content:"";display:table}.clearfix:after{clear:both}.clearfix{zoom:1}.textwrap,.textwrap td,.textwrap th{word-wrap:break-word;word-break:break-all}.textwrap-table{table-layout:fixed}.serif{font-family:Palatino,Optima,Georgia,serif}.typo-dl,.typo-form,.typo-hr,.typo-ol,.typo-p,.typo-pre,.typo-table,.typo-ul,.typo dl,.typo form,.typo hr,.typo ol,.typo p,.typo pre,.typo table,.typo ul,blockquote{margin-bottom:1rem}h1,h2,h3,h4,h5,h6{font-family:PingFang SC,Helvetica Neue,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif;color:#000;line-height:1.35}.typo-h1,.typo-h2,.typo-h3,.typo-h4,.typo-h5,.typo-h6,.typo h1,.typo h2,.typo h3,.typo h4,.typo h5,.typo h6{margin-top:1.2em;margin-bottom:.6em;line-height:1.35}.typo-h1,.typo h1{font-size:2em}.typo-h2,.typo h2{font-size:1.8em}.typo-h3,.typo h3{font-size:1.6em}.typo-h4,.typo h4{font-size:1.4em}.typo-h5,.typo-h6,.typo h5,.typo h6{font-size:1.2em}.typo-ul,.typo ul{margin-left:1.3em;list-style:disc}.typo-ol,.typo ol{list-style:decimal;margin-left:1.9em}.typo-ol ol,.typo-ol ul,.typo-ul ol,.typo-ul ul,.typo li ol,.typo li ul{margin-bottom:.8em;margin-left:2em}.typo-ol ul,.typo-ul ul,.typo li ul{list-style:circle}.typo-table td,.typo-table th,.typo table caption,.typo table td,.typo table th{border:1px solid #ddd;padding:.5em 1em;color:#666}.typo-table th,.typo table th{background:#fbfbfb}.typo-table thead th,.typo table thead th{background:hsla(0,0%,95%,.7)}.typo table caption{border-bottom:none}.typo-input,.typo-textarea{-webkit-appearance:none;border-radius:0}.typo-em,.typo em,caption,legend{color:#000;font-weight:inherit}.typo-em{position:relative}.typo-em:after{position:absolute;top:.65em;left:0;width:100%;overflow:hidden;white-space:nowrap;content:"\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB"}.typo img{max-width:100%}.common-content{font-weight:400;color:#353535;line-height:1.75rem;white-space:normal;word-break:normal;font-size:1rem}.common-content img{display:block;max-width:100%;background-color:#eee}.common-content audio,.common-content video{width:100%;background-color:#eee}.common-content center,.common-content font{margin-top:1rem;display:inline-block}.common-content center{width:100%}.common-content pre{margin-top:1rem;padding-left:0;padding-right:0;position:relative;overflow:hidden}.common-content pre code{font-size:.8rem;font-family:Consolas,Liberation Mono,Menlo,monospace,Courier;display:block;width:100%;box-sizing:border-box;padding-left:1rem;padding-right:1rem;overflow-x:auto}.common-content hr{border:none;margin-top:1.5rem;margin-bottom:1.5rem;border-top:1px solid #f5f5f5;height:1px;background:none}.common-content b,.common-content h1,.common-content h2,.common-content h3,.common-content h4,.common-content h5,.common-content strong{font-weight:700}.common-content h1,.common-content h2{font-size:1.125rem;margin-bottom:.45rem}.common-content h3,.common-content h4,.common-content h5{font-size:1rem;margin-bottom:.45rem}.common-content p{font-weight:400;color:#353535;margin-top:.15rem}.common-content .orange{color:#ff5a05}.common-content .reference{font-size:1rem;color:#888}.custom-rich-content h1{margin-top:0;font-weight:400;font-size:15.25px;border-bottom:1px solid #eee;line-height:2.8}.custom-rich-content li,.custom-rich-content p{font-size:14px;color:#888;line-height:1.6}table.hljs-ln{margin-bottom:0;border-spacing:0;border-collapse:collapse}table.hljs-ln,table.hljs-ln tbody,table.hljs-ln td,table.hljs-ln tr{box-sizing:border-box}table.hljs-ln td{padding:0;border:0}table.hljs-ln td.hljs-ln-numbers{min-width:15px;color:rgba(27,31,35,.3);text-align:right;white-space:nowrap;cursor:pointer;user-select:none}table.hljs-ln td.hljs-ln-code,table.hljs-ln td.hljs-ln-numbers{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;font-size:12px;line-height:20px;vertical-align:top}table.hljs-ln td.hljs-ln-code{position:relative;padding-right:10px;padding-left:10px;overflow:visible;color:#24292e;word-wrap:normal;white-space:pre}video::-webkit-media-controls{overflow:hidden!important}video::-webkit-media-controls-enclosure{width:calc(100% + 32px);margin-left:auto}.button-cancel{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel,.button-primary{-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary{color:#fff;background-color:#ff5a05;border-radius:3px}@font-face{font-family:iconfont;src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot);src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.woff) format("woff"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.ttf) format("truetype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.svg#iconfont) format("svg")}@font-face{font-family:player-font;src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot);src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.woff) format("woff"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.ttf) format("truetype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.svg#player-font) format("svg")}.iconfont{font-family:iconfont!important;font-size:16px;font-style:normal;-webkit-font-smoothing:antialiased;-webkit-text-stroke-width:.2px;-moz-osx-font-smoothing:grayscale}html{background:#fff;min-height:100%;-webkit-tap-highlight-color:rgba(0,0,0,0)}body{width:100%}body.fixed{overflow:hidden;position:fixed;width:100vw;height:100vh}i{font-style:normal}a{word-wrap:break-word;-webkit-tap-highlight-color:rgba(0,0,0,0)}a:hover{text-decoration:none}.fade-enter-active,.fade-leave-active{transition:opacity .3s}.fade-enter,.fade-leave-to{opacity:0}.MathJax,.MathJax_CHTML,.MathJax_MathContainer,.MathJax_MathML,.MathJax_PHTML,.MathJax_PlainSource,.MathJax_SVG{outline:0}.ios-app-switch .js-audit{display:none}._loading_wrap_{position:fixed;width:100vw;height:100vh;top:50%;left:50%;transform:translate(-50%,-50%);z-index:999}._loading_div_class_,._loading_wrap_{display:-ms-flexbox;display:flex;-ms-flex-pack:center;justify-content:center;-ms-flex-align:center;align-items:center}._loading_div_class_{word-wrap:break-word;padding:.5rem .75rem;text-align:center;z-index:9999;font-size:.6rem;max-width:60%;color:#fff;border-radius:.25rem;-ms-flex-direction:column;flex-direction:column}._loading_div_class_ .message{color:#353535;font-size:16px;line-height:3}.spinner{animation:circle-rotator 1.4s linear infinite}.spinner *{line-height:0;box-sizing:border-box}@keyframes circle-rotator{0%{transform:rotate(0deg)}to{transform:rotate(270deg)}}.path{stroke-dasharray:187;stroke-dashoffset:0;transform-origin:center;animation:circle-dash 1.4s ease-in-out infinite,circle-colors 5.6s ease-in-out infinite}@keyframes circle-colors{0%{stroke:#ff5a05}to{stroke:#ff5a05}}@keyframes circle-dash{0%{stroke-dashoffset:187}50%{stroke-dashoffset:46.75;transform:rotate(135deg)}to{stroke-dashoffset:187;transform:rotate(450deg)}}.confirm-box-wrapper,.confirm-box-wrapper .mask{position:absolute;top:0;left:0;right:0;bottom:0}.confirm-box-wrapper .mask{background:rgba(0,0,0,.6)}.confirm-box-wrapper .confirm-box{position:fixed;top:50%;left:50%;width:267px;background:#fff;transform:translate(-50%,-50%);border-radius:7px}.confirm-box-wrapper .confirm-box .head{margin:0 18px;font-size:18px;text-align:center;line-height:65px;border-bottom:1px solid #d9d9d9}.confirm-box-wrapper .confirm-box .body{padding:18px;padding-bottom:0;color:#353535;font-size:12.5px;max-height:150px;overflow:auto}.confirm-box-wrapper .confirm-box .foot{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;padding:18px}.confirm-box-wrapper .confirm-box .foot .button-cancel{border:1px solid #d9d9d9}.hljs{display:block;overflow-x:auto;padding:.5em;color:#333;background:#f8f8f8}.hljs-comment,.hljs-quote{color:#998;font-style:italic}.hljs-keyword,.hljs-selector-tag,.hljs-subst{color:#333;font-weight:700}.hljs-literal,.hljs-number,.hljs-tag .hljs-attr,.hljs-template-variable,.hljs-variable{color:teal}.hljs-doctag,.hljs-string{color:#d14}.hljs-section,.hljs-selector-id,.hljs-title{color:#900;font-weight:700}.hljs-subst{font-weight:400}.hljs-class .hljs-title,.hljs-type{color:#458;font-weight:700}.hljs-attribute,.hljs-name,.hljs-tag{color:navy;font-weight:400}.hljs-link,.hljs-regexp{color:#009926}.hljs-bullet,.hljs-symbol{color:#990073}.hljs-built_in,.hljs-builtin-name{color:#0086b3}.hljs-meta{color:#999;font-weight:700}.hljs-deletion{background:#fdd}.hljs-addition{background:#dfd}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}
+
+
+
+
+    </style>
+    <style type="text/css">
+        .button-cancel[data-v-87ffcada]{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel[data-v-87ffcada],.button-primary[data-v-87ffcada]{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary[data-v-87ffcada]{color:#fff;background-color:#ff5a05;border-radius:3px}.pd[data-v-87ffcada]{padding-left:1.375rem;padding-right:1.375rem}.article[data-v-87ffcada]{max-width:70rem;margin:0 auto}.article .article-unavailable[data-v-87ffcada]{color:#fa8919;font-size:15px;font-weight:600;line-height:24px;border-radius:5px;padding:12px;background-color:#f6f7fb;margin-top:20px}.article .article-unavailable .iconfont[data-v-87ffcada]{font-size:12px}.article .main[data-v-87ffcada]{padding:1.25rem 0;margin-bottom:52px}.article-title[data-v-87ffcada]{color:#353535;font-weight:400;line-height:1.65rem;font-size:1.34375rem}.article-info[data-v-87ffcada]{color:#888;font-size:.9375rem;margin-top:1.0625rem}.article-content[data-v-87ffcada]{margin-top:1.0625rem}.article-content.android video[data-v-87ffcada]::-webkit-media-controls-fullscreen-button{display:none}.copyright[data-v-87ffcada]{color:#b2b2b2;padding-bottom:20px;margin-top:20px;font-size:13px}.audio-player[data-v-87ffcada]{width:100%;margin:20px 0}.to-comment[data-v-87ffcada]{overflow:hidden;padding-top:10px;margin-bottom:-30px}.to-comment a.button-primary[data-v-87ffcada]{float:right;height:20px;font-size:12px;line-height:20px;padding:4px 8px;cursor:pointer}.article-comments[data-v-87ffcada]{margin-top:2rem}.article-comments h2[data-v-87ffcada]{text-align:center;color:#888;position:relative;z-index:1;margin-bottom:1rem}.article-comments h2[data-v-87ffcada]:before{border-top:1px dotted #888;content:"";position:absolute;top:56%;left:0;width:100%;z-index:-1}.article-comments h2 span[data-v-87ffcada]{font-size:15.25px;font-weight:400;padding:0 1rem;background:#fff;display:inline-block}.article-sub-bottom[data-v-87ffcada]{z-index:10;cursor:pointer}.switch-btns[data-v-87ffcada]{height:76px;cursor:pointer;padding-top:24px;padding-bottom:24px;border-bottom:10px solid #f6f7fb;position:relative}.switch-btns[data-v-87ffcada]:before{content:" ";height:1px;background:#e8e8e8;position:absolute;top:0;left:0;-webkit-box-sizing:border-box;box-sizing:border-box;left:1.375rem;right:1.375rem}.switch-btns .btn[data-v-87ffcada]{height:38px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.switch-btns .btn .tag[data-v-87ffcada]{-webkit-box-flex:0;-ms-flex:0 0 62px;flex:0 0 62px;text-align:center;color:#888;font-size:14px;border-radius:10px;height:22px;line-height:22px;background:#f6f7fb;font-weight:400}.switch-btns .btn .txt[data-v-87ffcada]{margin-left:10px;-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto;color:#888;font-size:15px;height:22px;line-height:22px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:400}@media (max-width:769px){.article .breadcrumb[data-v-87ffcada]{padding-top:10px;padding-bottom:10px}}
+
+
+
+
+
+    </style>
+
+    <style type="text/css">
+        .comment-item{list-style-position:inside;width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;margin-bottom:1rem}.comment-item a{border-bottom:none}.comment-item .avatar{width:2.625rem;height:2.625rem;-ms-flex-negative:0;flex-shrink:0;border-radius:50%}.comment-item .info{margin-left:.5rem;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1}.comment-item .info .hd{width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .username{color:#888;font-size:15.25px;font-weight:400;line-height:1.2}.comment-item .info .hd .control{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .control .btn-share{color:#888;font-size:.75rem;margin-right:1rem}.comment-item .info .hd .control .btn-praise{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-size:15.25px;text-decoration:none}.comment-item .info .hd .control .btn-praise i{color:#888;display:inline-block;font-size:.75rem;margin-right:.3rem;margin-top:-.01rem}.comment-item .info .hd .control .btn-praise i.on,.comment-item .info .hd .control .btn-praise span{color:#ff5a05}.comment-item .info .bd{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6}.comment-item .info .time{color:#888;font-size:9px;line-height:1}.comment-item .info .reply .reply-hd{font-size:15.25px}.comment-item .info .reply .reply-hd span{margin-left:-12px;color:#888;font-weight:400}.comment-item .info .reply .reply-hd i{color:#ff5a05;font-size:15.25px}.comment-item .info .reply .reply-content{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all}.comment-item .info .reply .reply-time{color:#888;font-size:9px}
+
+
+
+
+    </style>
+</head>
+<body>
+<div id="app">
+
+
+    <div data-v-87ffcada="" class="article" id="watermark">
+        
+        <div data-v-87ffcada="" class="main main-app">
+            <h1 data-v-87ffcada="" class="article-title pd">
+                第12讲讲TCP协议（下）：西行必定多妖孽，恒心智慧消磨难
+            </h1>
+            <div data-v-87ffcada="" class="article-content typo common-content pd"><img data-v-87ffcada=""
+                                                                                        src="https://static001.geekbang.org/resource/image/2d/62/2dc5971d53278502b34a0253d69ee062.jpg">
+
+
+                <div data-v-87ffcada="" id="article-content" class="">
+                    <div class="text">
+                        <p>我们前面说到玄奘西行，要出网关。既然出了网关，那就是在公网上传输数据，公网往往是不可靠的，因而需要很多的机制去保证传输的可靠性，这里面需要恒心，也即各种<strong>重传的策略</strong>，还需要有智慧，也就是说，这里面包含着<strong>大量的算法</strong>。</p>
+<h2 id="-">如何做个靠谱的人？</h2>
+<p>TCP想成为一个成熟稳重的人，成为一个靠谱的人。那一个人怎么样才算靠谱呢？咱们工作中经常就有这样的场景，比如你交代给下属一个事情以后，下属到底能不能做到，做到什么程度，什么时候能够交付，往往就会有应答，有回复。这样，处理事情的过程中，一旦有异常，你也可以尽快知道，而不是交代完之后就石沉大海，过了一个月再问，他说，啊我不记得了。</p>
+<p>对应到网络协议上，就是客户端每发送的一个包，服务器端都应该有个回复，如果服务器端超过一定的时间没有回复，客户端就会重新发送这个包，直到有回复。</p>
+<p>这个发送应答的过程是什么样呢？可以是<strong>上一个收到了应答，再发送下一个</strong>。这种模式有点像两个人直接打电话，你一句，我一句。但是这种方式的缺点是效率比较低。如果一方在电话那头处理的时间比较长，这一头就要干等着，双方都没办法干其他事情。咱们在日常工作中也不是这样的，不能你交代你的下属办一件事情，就一直打着电话看着他做，而是应该他按照你的安排，先将事情记录下来，办完一件回复一件。在他办事情的过程中，你还可以同时交代新的事情，这样双方就并行了。</p>
+<p>如果使用这种模式，其实需要你和你的下属就不能靠脑子了，而是要都准备一个本子，你每交代下属一个事情，双方的本子都要记录一下。</p>
+<p>当你的下属做完一件事情，就回复你，做完了，你就在你的本子上将这个事情划去。同时你的本子上每件事情都有时限，如果超过了时限下属还没有回复，你就要主动重新交代一下：上次那件事情，你还没回复我，咋样啦？</p>
+<p>既然多件事情可以一起处理，那就需要给每个事情编个号，防止弄错了。例如，程序员平时看任务的时候，都会看JIRA的ID，而不是每次都要描述一下具体的事情。在大部分情况下，对于事情的处理是按照顺序来的，先来的先处理，这就给应答和汇报工作带来了方便。等开周会的时候，每个程序员都可以将JIRA ID的列表拉出来，说以上的都做完了，而不用一个个说。</p>
+<h2 id="-">如何实现一个靠谱的协议？</h2>
+<p>TCP协议使用的也是同样的模式。为了保证顺序性，每一个包都有一个ID。在建立连接的时候，会商定起始的ID是什么，然后按照ID一个个发送。为了保证不丢包，对于发送的包都要进行应答，但是这个应答也不是一个一个来的，而是会应答某个之前的ID，表示都收到了，这种模式称为<strong>累计确认</strong>或者<strong>累计应答</strong>（<strong>cumulative acknowledgment</strong>）。</p>
+<p>为了记录所有发送的包和接收的包，TCP也需要发送端和接收端分别都有缓存来保存这些记录。发送端的缓存里是按照包的ID一个个排列，根据处理的情况分成四个部分。</p>
+<p>第一部分：发送了并且已经确认的。这部分就是你交代下属的，并且也做完了的，应该划掉的。</p>
+<p>第二部分：发送了并且尚未确认的。这部分是你交代下属的，但是还没做完的，需要等待做完的回复之后，才能划掉。</p>
+<p>第三部分：没有发送，但是已经等待发送的。这部分是你还没有交代给下属，但是马上就要交代的。</p>
+<p>第四部分：没有发送，并且暂时还不会发送的。这部分是你还没有交代给下属，而且暂时还不会交代给下属的。</p>
+<p>这里面为什么要区分第三部分和第四部分呢？没交代的，一下子全交代了不就完了吗？</p>
+<p>这就是我们上一节提到的十个词口诀里的“流量控制，把握分寸”。作为项目管理人员，你应该根据以往的工作情况和这个员工反馈的能力、抗压力等，先在心中估测一下，这个人一天能做多少工作。如果工作布置少了，就会不饱和；如果工作布置多了，他就会做不完；如果你使劲逼迫，人家可能就要辞职了。</p>
+<p>到底一个员工能够同时处理多少事情呢？在TCP里，接收端会给发送端报一个窗口的大小，叫<strong>Advertised window</strong>。这个窗口的大小应该等于上面的第二部分加上第三部分，就是已经交代了没做完的加上马上要交代的。超过这个窗口的，接收端做不过来，就不能发送了。</p>
+<p>于是，发送端需要保持下面的数据结构。</p>
+<!-- [[[read_end]]] -->
+<p><img src="https://static001.geekbang.org/resource/image/16/7b/16dcd6fb8105a1caa75887b5ffa0bd7b.jpg" alt="">  </p>
+<ul>
+<li><p>LastByteAcked：第一部分和第二部分的分界线</p>
+</li>
+<li><p>LastByteSent：第二部分和第三部分的分界线</p>
+</li>
+<li><p>LastByteAcked + AdvertisedWindow：第三部分和第四部分的分界线</p>
+</li>
+</ul>
+<p>对于接收端来讲，它的缓存里记录的内容要简单一些。</p>
+<p>第一部分：接受并且确认过的。也就是我领导交代给我，并且我做完的。</p>
+<p>第二部分：还没接收，但是马上就能接收的。也即是我自己的能够接受的最大工作量。</p>
+<p>第三部分：还没接收，也没法接收的。也即超过工作量的部分，实在做不完。</p>
+<p>对应的数据结构就像这样。
+
+<img src="https://static001.geekbang.org/resource/image/f7/a4/f7b1d3bc6b6d8e55f0951e82294c8ba4.jpg" alt=""></p>
+<ul>
+<li><p>MaxRcvBuffer：最大缓存的量；</p>
+</li>
+<li><p>LastByteRead之后是已经接收了，但是还没被应用层读取的；</p>
+</li>
+<li><p>NextByteExpected是第一部分和第二部分的分界线。</p>
+</li>
+</ul>
+<p>第二部分的窗口有多大呢？</p>
+<p>NextByteExpected和LastByteRead的差其实是还没被应用层读取的部分占用掉的MaxRcvBuffer的量，我们定义为A。</p>
+<p>AdvertisedWindow其实是MaxRcvBuffer减去A。</p>
+<p>也就是：AdvertisedWindow=MaxRcvBuffer-((NextByteExpected-1)-LastByteRead)。</p>
+<p>那第二部分和第三部分的分界线在哪里呢？NextByteExpected加AdvertisedWindow就是第二部分和第三部分的分界线，其实也就是LastByteRead加上MaxRcvBuffer。</p>
+<p>其中第二部分里面，由于受到的包可能不是顺序的，会出现空挡，只有和第一部分连续的，可以马上进行回复，中间空着的部分需要等待，哪怕后面的已经来了。</p>
+<h2 id="-">顺序问题与丢包问题</h2>
+<p>接下来我们结合一个例子来看。</p>
+<p>还是刚才的图，在发送端来看，1、2、3已经发送并确认；4、5、6、7、8、9都是发送了还没确认；10、11、12是还没发出的；13、14、15是接收方没有空间，不准备发的。</p>
+<p>在接收端来看，1、2、3、4、5是已经完成ACK，但是没读取的；6、7是等待接收的；8、9是已经接收，但是没有ACK的。</p>
+<p>发送端和接收端当前的状态如下：</p>
+<ul>
+<li><p>1、2、3没有问题，双方达成了一致。</p>
+</li>
+<li><p>4、5接收方说ACK了，但是发送方还没收到，有可能丢了，有可能在路上。</p>
+</li>
+<li><p>6、7、8、9肯定都发了，但是8、9已经到了，但是6、7没到，出现了乱序，缓存着但是没办法ACK。</p>
+</li>
+</ul>
+<p>根据这个例子，我们可以知道，顺序问题和丢包问题都有可能发生，所以我们先来看<strong>确认与重发的机制</strong>。</p>
+<p>假设4的确认到了，不幸的是，5的ACK丢了，6、7的数据包丢了，这该怎么办呢？</p>
+<p>一种方法就是<strong>超时重试</strong>，也即对每一个发送了，但是没有ACK的包，都有设一个定时器，超过了一定的时间，就重新尝试。但是这个超时的时间如何评估呢？这个时间不宜过短，时间必须大于往返时间RTT，否则会引起不必要的重传。也不宜过长，这样超时时间变长，访问就变慢了。</p>
+<p>估计往返时间，需要TCP通过采样RTT的时间，然后进行加权平均，算出一个值，而且这个值还是要不断变化的，因为网络状况不断的变化。除了采样RTT，还要采样RTT的波动范围，计算出一个估计的超时时间。由于重传时间是不断变化的，我们称为<strong>自适应重传算法</strong>（<strong>Adaptive Retransmission Algorithm</strong>）。</p>
+<p>如果过一段时间，5、6、7都超时了，就会重新发送。接收方发现5原来接收过，于是丢弃5；6收到了，发送ACK，要求下一个是7，7不幸又丢了。当7再次超时的时候，有需要重传的时候，TCP的策略是<strong>超时间隔加倍</strong>。<strong>每当遇到一次超时重传的时候，都会将下一次超时时间间隔设为先前值的两倍</strong>。<strong>两次超时，就说明网络环境差，不宜频繁反复发送。</strong></p>
+<p>超时触发重传存在的问题是，超时周期可能相对较长。那是不是可以有更快的方式呢？</p>
+<p>有一个可以快速重传的机制，当接收方收到一个序号大于下一个所期望的报文段时，就检测到了数据流中的一个间格，于是发送三个冗余的ACK，客户端收到后，就在定时器过期之前，重传丢失的报文段。</p>
+<p>例如，接收方发现6、8、9都已经接收了，就是7没来，那肯定是丢了，于是发送三个6的ACK，要求下一个是7。客户端收到3个，就会发现7的确又丢了，不等超时，马上重发。</p>
+<p>还有一种方式称为<strong>Selective Acknowledgment</strong>  （<strong>SACK</strong>）。这种方式需要在TCP头里加一个SACK的东西，可以将缓存的地图发送给发送方。例如可以发送ACK6、SACK8、SACK9，有了地图，发送方一下子就能看出来是7丢了。</p>
+<h2 id="-">流量控制问题</h2>
+<p>我们再来看流量控制机制，在对于包的确认中，同时会携带一个窗口的大小。</p>
+<p>我们先假设窗口不变的情况，窗口始终为9。4的确认来的时候，会右移一个，这个时候第13个包也可以发送了。</p>
+<p><img src="https://static001.geekbang.org/resource/image/73/33/7339fd8973865164d25227cac206ca33.jpg" alt=""></p>
+<p>这个时候，假设发送端发送过猛，会将第三部分的10、11、12、13全部发送完毕，之后就停止发送了，未发送可发送部分为0。</p>
+<p><img src="https://static001.geekbang.org/resource/image/06/d2/06cc25118730fbf611eb315705420ed2.jpg" alt="">  </p>
+<p>当对于包5的确认到达的时候，在客户端相当于窗口再滑动了一格，这个时候，才可以有更多的包可以发送了，例如第14个包才可以发送。</p>
+<p> <img src="https://static001.geekbang.org/resource/image/bd/c3/bddb59ebbf7eecc4853cafce0bb1dcc3.jpg" alt="">  </p>
+<p>如果接收方实在处理的太慢，导致缓存中没有空间了，可以通过确认信息修改窗口的大小，甚至可以设置为0，则发送方将暂时停止发送。</p>
+<p>我们假设一个极端情况，接收端的应用一直不读取缓存中的数据，当数据包6确认后，窗口大小就不能再是9了，就要缩小一个变为8。</p>
+<p><img src="https://static001.geekbang.org/resource/image/92/31/92f66b1556b76c46c669aba232d35a31.jpg" alt="">  </p>
+<p>这个新的窗口8通过6的确认消息到达发送端的时候，你会发现窗口没有平行右移，而是仅仅左面的边右移了，窗口的大小从9改成了8。</p>
+<p><img src="https://static001.geekbang.org/resource/image/a7/ba/a78f5195ebf9b4f9dc4ea5a9b91e94ba.jpg" alt=""></p>
+<p>如果接收端还是一直不处理数据，则随着确认的包越来越多，窗口越来越小，直到为0。</p>
+<p><img src="https://static001.geekbang.org/resource/image/15/d2/150f28d9e745952f5968eff05e3f0ad2.jpg" alt="">  </p>
+<p>当这个窗口通过包14的确认到达发送端的时候，发送端的窗口也调整为0，停止发送。</p>
+<p><img src="https://static001.geekbang.org/resource/image/30/30/3014a6a259f74b0c950bf3067581ac30.jpg" alt="">  </p>
+<p>如果这样的话，发送方会定时发送窗口探测数据包，看是否有机会调整窗口的大小。当接收方比较慢的时候，要防止低能窗口综合征，别空出一个字节来就赶快告诉发送方，然后马上又填满了，可以当窗口太小的时候，不更新窗口，直到达到一定大小，或者缓冲区一半为空，才更新窗口。</p>
+<p>这就是我们常说的流量控制。</p>
+<h2 id="-">拥塞控制问题</h2>
+<p>最后，我们看一下拥塞控制的问题，也是通过窗口的大小来控制的，前面的滑动窗口rwnd是怕发送方把接收方缓存塞满，而拥塞窗口cwnd，是怕把网络塞满。</p>
+<p>这里有一个公式 LastByteSent - LastByteAcked &lt;= min {cwnd, rwnd} ，是拥塞窗口和滑动窗口共同控制发送的速度。</p>
+<p>那发送方怎么判断网络是不是满呢？这其实是个挺难的事情，因为对于TCP协议来讲，他压根不知道整个网络路径都会经历什么，对他来讲就是一个黑盒。TCP发送包常被比喻为往一个水管里面灌水，而TCP的拥塞控制就是在不堵塞，不丢包的情况下，尽量发挥带宽。</p>
+<p>水管有粗细，网络有带宽，也即每秒钟能够发送多少数据；水管有长度，端到端有时延。在理想状态下，水管里面水的量=水管粗细 x 水管长度。对于到网络上，通道的容量 = 带宽 × 往返延迟。</p>
+<p>如果我们设置发送窗口，使得发送但未确认的包为为通道的容量，就能够撑满整个管道。</p>
+<p><img src="https://static001.geekbang.org/resource/image/db/e6/db8510541662281175803c7f9d1fcae6.jpg" alt=""></p>
+<p>如图所示，假设往返时间为8s，去4s，回4s，每秒发送一个包，每个包1024byte。已经过去了8s，则8个包都发出去了，其中前4个包已经到达接收端，但是ACK还没有返回，不能算发送成功。5-8后四个包还在路上，还没被接收。这个时候，整个管道正好撑满，在发送端，已发送未确认的为8个包，正好等于带宽，也即每秒发送1个包，乘以来回时间8s。</p>
+<p>如果我们在这个基础上再调大窗口，使得单位时间内更多的包可以发送，会出现什么现象呢？</p>
+<p>我们来想，原来发送一个包，从一端到达另一端，假设一共经过四个设备，每个设备处理一个包时间耗费1s，所以到达另一端需要耗费4s，如果发送的更加快速，则单位时间内，会有更多的包到达这些中间设备，这些设备还是只能每秒处理一个包的话，多出来的包就会被丢弃，这是我们不想看到的。</p>
+<p>这个时候，我们可以想其他的办法，例如这个四个设备本来每秒处理一个包，但是我们在这些设备上加缓存，处理不过来的在队列里面排着，这样包就不会丢失，但是缺点是会增加时延，这个缓存的包，4s肯定到达不了接收端了，如果时延达到一定程度，就会超时重传，也是我们不想看到的。</p>
+<p>于是TCP的拥塞控制主要来避免两种现象，<strong>包丢失</strong>和<strong>超时重传</strong>。一旦出现了这些现象就说明，发送速度太快了，要慢一点。但是一开始我怎么知道速度多快呢，我怎么知道应该把窗口调整到多大呢？</p>
+<p>如果我们通过漏斗往瓶子里灌水，我们就知道，不能一桶水一下子倒进去，肯定会溅出来，要一开始慢慢的倒，然后发现总能够倒进去，就可以越倒越快。这叫作慢启动。</p>
+<p>一条TCP连接开始，cwnd设置为一个报文段，一次只能发送一个；当收到这一个确认的时候，cwnd加一，于是一次能够发送两个；当这两个的确认到来的时候，每个确认cwnd加一，两个确认cwnd加二，于是一次能够发送四个；当这四个的确认到来的时候，每个确认cwnd加一，四个确认cwnd加四，于是一次能够发送八个。可以看出这是<strong>指数性的增长</strong>。</p>
+<p>涨到什么时候是个头呢？有一个值ssthresh为65535个字节，当超过这个值的时候，就要小心一点了，不能倒这么快了，可能快满了，再慢下来。</p>
+<p>每收到一个确认后，cwnd增加1/cwnd，我们接着上面的过程来，一次发送八个，当八个确认到来的时候，每个确认增加1/8，八个确认一共cwnd增加1，于是一次能够发送九个，变成了线性增长。</p>
+<p>但是线性增长还是增长，还是越来越多，直到有一天，水满则溢，出现了拥塞，这时候一般就会一下子降低倒水的速度，等待溢出的水慢慢渗下去。</p>
+<p>拥塞的一种表现形式是丢包，需要超时重传，这个时候，将sshresh设为cwnd/2，将cwnd设为1，重新开始慢启动。这真是一旦超时重传，马上回到解放前。但是这种方式太激进了，将一个高速的传输速度一下子停了下来，会造成网络卡顿。</p>
+<p>前面我们讲过<strong>快速重传算法</strong>。当接收端发现丢了一个中间包的时候，发送三次前一个包的ACK，于是发送端就会快速的重传，不必等待超时再重传。TCP认为这种情况不严重，因为大部分没丢，只丢了一小部分，cwnd减半为cwnd/2，然后sshthresh = cwnd，当三个包返回的时候，cwnd = sshthresh + 3，也就是没有一夜回到解放前，而是还在比较高的值，呈线性增长。</p>
+<p><img src="https://static001.geekbang.org/resource/image/19/d2/1910bc1a0048d4de7b2128eb0f5dbcd2.jpg" alt="">  </p>
+<p>就像前面说的一样，正是这种知进退，使得时延很重要的情况下，反而降低了速度。但是如果你仔细想一下，TCP的拥塞控制主要来避免的两个现象都是有问题的。</p>
+<p><strong>第一个问题</strong>是丢包并不代表着通道满了，也可能是管子本来就漏水。例如公网上带宽不满也会丢包，这个时候就认为拥塞了，退缩了，其实是不对的。</p>
+<p><strong>第二个问题</strong>是TCP的拥塞控制要等到将中间设备都填充满了，才发生丢包，从而降低速度，这时候已经晚了。其实TCP只要填满管道就可以了，不应该接着填，直到连缓存也填满。</p>
+<p>为了优化这两个问题，后来有了<strong>TCP BBR拥塞算法</strong>。它企图找到一个平衡点，就是通过不断的加快发送速度，将管道填满，但是不要填满中间设备的缓存，因为这样时延会增加，在这个平衡点可以很好的达到高带宽和低时延的平衡。</p>
+<p><img src="https://static001.geekbang.org/resource/image/a2/4c/a2b3a5df5eca52e302b75824e4bbbd4c.jpg" alt=""></p>
+<h2 id="-">小结</h2>
+<p>好了，这一节我们就到这里，总结一下：</p>
+<ul>
+<li><p>顺序问题、丢包问题、流量控制都是通过滑动窗口来解决的，这其实就相当于你领导和你的工作备忘录，布置过的工作要有编号，干完了有反馈，活不能派太多，也不能太少；</p>
+</li>
+<li><p>拥塞控制是通过拥塞窗口来解决的，相当于往管道里面倒水，快了容易溢出，慢了浪费带宽，要摸着石头过河，找到最优值。</p>
+</li>
+</ul>
+<p>最后留两个思考题：</p>
+<ol>
+<li><p>TCP的BBR听起来很牛，你知道他是如何达到这个最优点的嘛？</p>
+</li>
+<li><p>学会了UDP和TCP，你知道如何基于这两种协议写程序吗？这样的程序会有什么坑呢？</p>
+</li>
+</ol>
+<p>欢迎你留言和我讨论。趣谈网络协议，我们下期见！</p>
+<p><img src="https://static001.geekbang.org/resource/image/b5/fb/b5bc14cb81d3630919fee94a512cc3fb.jpg" alt=""></p>
+
+                    </div>
+                </div>
+
+            </div>
+            <div data-v-87ffcada="" class="article-comments pd"><h2 data-v-87ffcada=""><span
+                    data-v-87ffcada="">精选留言</span></h2>
+                <ul data-v-87ffcada="">
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/87/dd/4f53f95d.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">进阶的码农</span>
+                            </div>
+                            <div class="bd">AdvertisedWindow=MaxRcvBuffer-((NextByteExpected-1)-LastByteRead)。<br>我根据图中例子计算 14-((5-1)-0) 算出来是10 ，括号里边的-1是减的什么，为啥和图例算出来的结果不一样，还是我计算的有问题，麻烦详细说一下 谢谢 <br></div>
+                            <span class="time">2018-06-13 11:07</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">这里我写的的确有问题，nextbyteexpected其实是6，就是目前接收到五，下一个期望的是六，这样就对了</p>
+                                <p class="reply-time">2018-06-13 13:23</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/49/a5/e4c1c2d4.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">qpm</span>
+                            </div>
+                            <div class="bd">1 设备缓存会导致延时？<br>	假如经过设备的包都不需要进入缓存，那么得到的速度是最快的。进入缓存且等待，等待的时间就是额外的延时。BBR就是为了避免这些问题：<br>	充分利用带宽；降低buffer占用率。<br><br>2 降低发送packet的速度，为何反而提速了？<br>	标准TCP拥塞算法是遇到丢包的数据时快速下降发送速度，因为算法假设丢包都是因为过程设备缓存满了。快速下降后重新慢启动，整个过程对于带宽来说是浪费的。通过packet速度-时间的图来看，从积分上看，BBR充分利用带宽时发送效率才是最高的。可以说BBR比标准TCP拥塞算法更正确地处理了数据丢包。对于网络上有一定丢包率的公网，BBR会更加智慧一点。<br>	回顾网络发展过程，带宽的是极大地改进的，而最小延迟会受限与介质传播速度，不会明显减少。BBR可以说是应运而生。<br><br>3 BBR如何解决延时？<br>	S1：慢启动开始时，以前期的延迟时间为延迟最小值Tmin。然后监控延迟值是否达到Tmin的n倍，达到这个阀值后，判断带宽已经消耗尽且使用了一定的缓存，进入排空阶段。<br>	S2：指数降低发送速率，直至延迟不再降低。这个过程的原理同S1<br>	S3：协议进入稳定运行状态。交替探测带宽和延迟，且大多数时间下都处于带宽探测阶段。<br><br>深夜读了BBR的论文和网上大牛的讲解得出的小结，分享给大家，过程比较匆忙，不足之处也望老师能指出指正。 <br></div>
+                            <span class="time">2018-06-14 01:47</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">大唐江山</span>
+                            </div>
+                            <div class="bd">作者辛苦啊，这一章读起来开始有点累了 <br></div>
+                            <span class="time">2018-06-13 08:08</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">华林</span>
+                            </div>
+                            <div class="bd">这么说起来，我们经常发现下载速度是慢慢的增加到顶峰，然后就在那个值的附近徘徊，原因就是tcp的流量控制喽？ <br></div>
+                            <span class="time">2018-06-13 08:10</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">卜</span>
+                            </div>
+                            <div class="bd">好奇什么级别的程序开发需要了解怎么细，开发了好多网络程序都没用到，重传这些都是应用层在做 <br></div>
+                            <span class="time">2018-06-24 21:49</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/10/3b/36/2d61e080.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">行者</span>
+                            </div>
+                            <div class="bd">问题1，想到BBR可以根据ACK时间来判断，比如同一时刻发送了A、B、C三个包，A、B两个包10ms收到ACK，而C包20ms后收到ACK，那么就认为网络拥堵或被中间设备缓存，降低发送速度。<br>问题2，TCP优点在于准确到达，可靠性高，但是速度慢；UDP优点在于简单，但是不确认可达；像后端接口一般使用TCP协议，因为客户端和服务器之间会有多次交互，且请求数据要确认可达；但是如果是直播的话使用UDP会更好，管你网络咋样，反正我赶紧发，让用户等急了就不好了。<br>刘老师，有一个问题，接口有时候会受到2次相同时间相同内容的请求，但是客户端仅仅调用了接口一次，会是什么原因导致这个问题呢？TCP重复发送包导致的嘛？ <br></div>
+                            <span class="time">2018-06-13 09:17</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/12/bf/8f/196e555e.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">谛听</span>
+                            </div>
+                            <div class="bd">不太清楚累积应答，比如接收端收到了包1、2、3、4，它的应答应该是5吗？也就是说中间的包就不用应答了吗？ <br></div>
+                            <span class="time">2018-09-22 20:35</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">是的</p>
+                                <p class="reply-time">2018-09-22 21:08</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/10/37/ce/65bf8dc9.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">lyz</span>
+                            </div>
+                            <div class="bd">jira太真实了 <br></div>
+                            <span class="time">2018-07-24 22:07</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/10/12/b3/7aef77fd.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">MoFanDon</span>
+                            </div>
+                            <div class="bd">5的ACK丢包了，出发发送端重发。重发过去后，接收端发现接收过了，丢弃。……如果接收端丢弃5后，没有继续发送ACK,那这样不是发送端永远也也没法接受到5的ACK？ <br></div>
+                            <span class="time">2018-07-24 08:54</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/8f/ad/6e3e9e15.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">产品助理</span>
+                            </div>
+                            <div class="bd">问题：<br><br>1、如下公式的 -1  到底是为什么？<br><br>	AdvertisedWindow=MaxRcvBuffer-((NextByteExpected-1)-LastByteRead)<br><br>   图例中的LastByteRead是0还是1？NextByteExpected是6还是5？MaxRcvBuffer是14吗？<br><br>2、如果按照上述公式，那下面又是为了什么？<br><br>	NextByteExpected 加 AdvertisedWindow 就是第二部分和第三部分的分界线，其实也就是 LastByteRead 加上 MaxRcvBuffer。<br><br>	按照第一条的公式，NextByteExpected + AdvertisedWindow = NextByteExpected + （MaxRcvBuffer-((NextByteExpected-1)-LastByteRead))<br>	= MaxRcvBuffer + 1 + LastByteRead<br><br>	应该有个+1啊。。<br><br>多谢老师！	 <br></div>
+                            <span class="time">2018-11-22 15:53</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">这里我写的的确有问题，nextbyteexpected其实是6，就是目前接收到五，下一个期望的是六，这样就对了<br>2018-06-13</p>
+                                <p class="reply-time">2018-11-22 20:47</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/10/8b/b3/c340227c.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">GL</span>
+                            </div>
+                            <div class="bd">网络层分片和传输层分片是怎么进行的？ <br></div>
+                            <span class="time">2018-06-22 22:56</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">旭风</span>
+                            </div>
+                            <div class="bd">在传统算法和快速算法的对比描述中，对于快速算法中提到 cwnd减半为cwnd&#47;2，sshthresh=cwnd ，后面cwnd=sshthresh+3，转折点是20变为13，这里的cwnd为10吗？<br><br>2018-06-15<br><br> 作者回复<br><br>cwnd先是为10，后面变为13<br><br>继上一个问题，传统算法，cwnd 从1,2,4,8,16指数增长，这时cwnd为16，收发是不是各占8个？然后由16变成17，满8个确认时cwnd＋1，就是17，那么增加到20这里，cwnd为20，这时产生拥塞，如果是传统的话，立马降下来，如果是快速，那么减半，也就是10，等待3个确认包＋3，，后续每一个确认cwnd就＋1吗？还是？这样子理解吗？ <br></div>
+                            <span class="time">2018-06-19 09:35</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">是的</p>
+                                <p class="reply-time">2018-06-19 15:57</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/63/f4/6fdc1508.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">陈栋</span>
+                            </div>
+                            <div class="bd">第三部分和第四部分分界线写错了，应该是lastByteSent+advertisedWindow <br></div>
+                            <span class="time">2018-06-19 09:30</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">没错的，advertisewindow是那个黑框，不是接下来能发的部分</p>
+                                <p class="reply-time">2018-06-19 11:30</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">旭风</span>
+                            </div>
+                            <div class="bd">在传统算法和快速算法的对比描述中，对于快速算法中提到 cwnd减半为cwnd&#47;2，sshthresh=cwnd ，后面cwnd=sshthresh+3，转折点是20变为13，这里的cwnd为10吗？ <br></div>
+                            <span class="time">2018-06-15 15:06</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">cwnd先是为10，后面变为13</p>
+                                <p class="reply-time">2018-06-15 18:36</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/e9/91/da888d22.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">初学者</span>
+                            </div>
+                            <div class="bd">fack 应该不是收到一个大于期望的包发送三个ack，收到一个包只会回复这个ack吧 <br></div>
+                            <span class="time">2018-06-14 01:01</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/d1/15/7d47de48.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">咖啡猫口里的咖啡猫</span>
+                            </div>
+                            <div class="bd">老师，TCP协议栈，保证包一定到吗，，哪几种情况下会丢失，，，能不能总结下 <br></div>
+                            <span class="time">2018-06-13 12:15</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">不能保证，只是尽力重试，再重试</p>
+                                <p class="reply-time">2018-06-14 18:46</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/fe/c5/3467cf94.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">正是那朵玫瑰</span>
+                            </div>
+                            <div class="bd">为大牛点赞，有点复杂，先慢慢消化下；先问个问题，tcp建立连接后，每发送一个数据包都要像三次握手一样来回三次么，发送数据-发送ack-回复ack，才算数据发送成功？ <br></div>
+                            <span class="time">2018-06-13 08:33</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/12/37/1b/8a75023d.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">拿笔小星</span>
+                            </div>
+                            <div class="bd">怎么办，越到后面越看不懂了，没有网络基础，老湿有什么建议吗？ <br></div>
+                            <span class="time">2018-12-08 20:58</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/13/51/33/56f8bcbe.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">yinhua_upc</span>
+                            </div>
+                            <div class="bd"><br>&quot;6、7 是等待接收的；8、9 是已经接收，但是没有 ACK 的&quot;<br>从接收端的图看6-14都是等待接收未确认，为什么8、9是已经接收？<br> <br></div>
+                            <span class="time">2018-11-09 10:34</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">假设，所以画了实线</p>
+                                <p class="reply-time">2018-11-10 09:10</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/12/6f/63/8808cc00.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">扬～</span>
+                            </div>
+                            <div class="bd">2个问题：<br>1. TCP可靠的连接会不会影响到业务层，比如超时重传导致了服务端函数调用2次，那岂不是业务都要考虑幂等性了，我很懵逼，果然是懂得越多越白痴。<br>2. 拥塞控制的窗口跟流量控制的窗口一回事吗，还是流量控制的窗口的出来后就会进入拥塞控制窗口？ <br></div>
+                            <span class="time">2018-11-01 17:48</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">不会，重传的包不会交给应用层。是一个窗口</p>
+                                <p class="reply-time">2018-11-02 10:17</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

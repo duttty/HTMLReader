@@ -1,0 +1,371 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <style type="text/css">
+
+#watermark {
+
+  position: relative;
+  overflow: hidden;
+}
+
+#watermark .x {
+  position: absolute;
+  top: 800;
+  left: 400;
+  color: #3300ff;
+  font-size: 50px;
+  pointer-events: none;
+  opacity:0.5;
+  filter:Alpha(opacity=50);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+}
+    </style>
+
+
+    <style type="text/css">
+ html{color:#333;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizelegibility;font-family:Helvetica Neue,PingFang SC,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif}html.borderbox *,html.borderbox :after,html.borderbox :before{box-sizing:border-box}article,aside,blockquote,body,button,code,dd,details,dl,dt,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hr,input,legend,li,menu,nav,ol,p,pre,section,td,textarea,th,ul{margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,menu,nav,section{display:block}audio,canvas,video{display:inline-block}body,button,input,select,textarea{font:300 1em/1.8 PingFang SC,Lantinghei SC,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,Helvetica,sans-serif}button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}blockquote{position:relative;color:#999;font-weight:400;border-left:1px solid #1abc9c;padding-left:1em;margin:1em 3em 1em 2em}@media only screen and (max-width:640px){blockquote{margin:1em 0}}abbr,acronym{border-bottom:1px dotted;font-variant:normal}abbr{cursor:help}del{text-decoration:line-through}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:400}ol,ul{list-style:none}caption,th{text-align:left}q:after,q:before{content:""}sub,sup{font-size:75%;line-height:0;position:relative}:root sub,:root sup{vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}a{color:#1abc9c}a:hover{text-decoration:underline}.typo a{border-bottom:1px solid #1abc9c}.typo a:hover{border-bottom-color:#555;color:#555}.typo a:hover,a,ins{text-decoration:none}.typo-u,u{text-decoration:underline}mark{background:#fffdd1;border-bottom:1px solid #ffedce;padding:2px;margin:0 5px}code,pre,pre tt{font-family:Courier,Courier New,monospace}pre{background:hsla(0,0%,97%,.7);border:1px solid #ddd;padding:1em 1.5em;display:block;-webkit-overflow-scrolling:touch}hr{border:none;border-bottom:1px solid #cfcfcf;margin-bottom:.8em;height:10px}.typo-small,figcaption,small{font-size:.9em;color:#888}b,strong{font-weight:700;color:#000}[draggable]{cursor:move}.clearfix:after,.clearfix:before{content:"";display:table}.clearfix:after{clear:both}.clearfix{zoom:1}.textwrap,.textwrap td,.textwrap th{word-wrap:break-word;word-break:break-all}.textwrap-table{table-layout:fixed}.serif{font-family:Palatino,Optima,Georgia,serif}.typo-dl,.typo-form,.typo-hr,.typo-ol,.typo-p,.typo-pre,.typo-table,.typo-ul,.typo dl,.typo form,.typo hr,.typo ol,.typo p,.typo pre,.typo table,.typo ul,blockquote{margin-bottom:1rem}h1,h2,h3,h4,h5,h6{font-family:PingFang SC,Helvetica Neue,Verdana,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif;color:#000;line-height:1.35}.typo-h1,.typo-h2,.typo-h3,.typo-h4,.typo-h5,.typo-h6,.typo h1,.typo h2,.typo h3,.typo h4,.typo h5,.typo h6{margin-top:1.2em;margin-bottom:.6em;line-height:1.35}.typo-h1,.typo h1{font-size:2em}.typo-h2,.typo h2{font-size:1.8em}.typo-h3,.typo h3{font-size:1.6em}.typo-h4,.typo h4{font-size:1.4em}.typo-h5,.typo-h6,.typo h5,.typo h6{font-size:1.2em}.typo-ul,.typo ul{margin-left:1.3em;list-style:disc}.typo-ol,.typo ol{list-style:decimal;margin-left:1.9em}.typo-ol ol,.typo-ol ul,.typo-ul ol,.typo-ul ul,.typo li ol,.typo li ul{margin-bottom:.8em;margin-left:2em}.typo-ol ul,.typo-ul ul,.typo li ul{list-style:circle}.typo-table td,.typo-table th,.typo table caption,.typo table td,.typo table th{border:1px solid #ddd;padding:.5em 1em;color:#666}.typo-table th,.typo table th{background:#fbfbfb}.typo-table thead th,.typo table thead th{background:hsla(0,0%,95%,.7)}.typo table caption{border-bottom:none}.typo-input,.typo-textarea{-webkit-appearance:none;border-radius:0}.typo-em,.typo em,caption,legend{color:#000;font-weight:inherit}.typo-em{position:relative}.typo-em:after{position:absolute;top:.65em;left:0;width:100%;overflow:hidden;white-space:nowrap;content:"\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB"}.typo img{max-width:100%}.common-content{font-weight:400;color:#353535;line-height:1.75rem;white-space:normal;word-break:normal;font-size:1rem}.common-content img{display:block;max-width:100%;background-color:#eee}.common-content audio,.common-content video{width:100%;background-color:#eee}.common-content center,.common-content font{margin-top:1rem;display:inline-block}.common-content center{width:100%}.common-content pre{margin-top:1rem;padding-left:0;padding-right:0;position:relative;overflow:hidden}.common-content pre code{font-size:.8rem;font-family:Consolas,Liberation Mono,Menlo,monospace,Courier;display:block;width:100%;box-sizing:border-box;padding-left:1rem;padding-right:1rem;overflow-x:auto}.common-content hr{border:none;margin-top:1.5rem;margin-bottom:1.5rem;border-top:1px solid #f5f5f5;height:1px;background:none}.common-content b,.common-content h1,.common-content h2,.common-content h3,.common-content h4,.common-content h5,.common-content strong{font-weight:700}.common-content h1,.common-content h2{font-size:1.125rem;margin-bottom:.45rem}.common-content h3,.common-content h4,.common-content h5{font-size:1rem;margin-bottom:.45rem}.common-content p{font-weight:400;color:#353535;margin-top:.15rem}.common-content .orange{color:#ff5a05}.common-content .reference{font-size:1rem;color:#888}.custom-rich-content h1{margin-top:0;font-weight:400;font-size:15.25px;border-bottom:1px solid #eee;line-height:2.8}.custom-rich-content li,.custom-rich-content p{font-size:14px;color:#888;line-height:1.6}table.hljs-ln{margin-bottom:0;border-spacing:0;border-collapse:collapse}table.hljs-ln,table.hljs-ln tbody,table.hljs-ln td,table.hljs-ln tr{box-sizing:border-box}table.hljs-ln td{padding:0;border:0}table.hljs-ln td.hljs-ln-numbers{min-width:15px;color:rgba(27,31,35,.3);text-align:right;white-space:nowrap;cursor:pointer;user-select:none}table.hljs-ln td.hljs-ln-code,table.hljs-ln td.hljs-ln-numbers{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;font-size:12px;line-height:20px;vertical-align:top}table.hljs-ln td.hljs-ln-code{position:relative;padding-right:10px;padding-left:10px;overflow:visible;color:#24292e;word-wrap:normal;white-space:pre}video::-webkit-media-controls{overflow:hidden!important}video::-webkit-media-controls-enclosure{width:calc(100% + 32px);margin-left:auto}.button-cancel{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel,.button-primary{-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary{color:#fff;background-color:#ff5a05;border-radius:3px}@font-face{font-family:iconfont;src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot);src:url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.woff) format("woff"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.ttf) format("truetype"),url(//at.alicdn.com/t/font_372689_bwwwtosxtzp.svg#iconfont) format("svg")}@font-face{font-family:player-font;src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot);src:url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.woff) format("woff"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.ttf) format("truetype"),url(//at.alicdn.com/t/font_509397_1cyjv4o90qiod2t9.svg#player-font) format("svg")}.iconfont{font-family:iconfont!important;font-size:16px;font-style:normal;-webkit-font-smoothing:antialiased;-webkit-text-stroke-width:.2px;-moz-osx-font-smoothing:grayscale}html{background:#fff;min-height:100%;-webkit-tap-highlight-color:rgba(0,0,0,0)}body{width:100%}body.fixed{overflow:hidden;position:fixed;width:100vw;height:100vh}i{font-style:normal}a{word-wrap:break-word;-webkit-tap-highlight-color:rgba(0,0,0,0)}a:hover{text-decoration:none}.fade-enter-active,.fade-leave-active{transition:opacity .3s}.fade-enter,.fade-leave-to{opacity:0}.MathJax,.MathJax_CHTML,.MathJax_MathContainer,.MathJax_MathML,.MathJax_PHTML,.MathJax_PlainSource,.MathJax_SVG{outline:0}.ios-app-switch .js-audit{display:none}._loading_wrap_{position:fixed;width:100vw;height:100vh;top:50%;left:50%;transform:translate(-50%,-50%);z-index:999}._loading_div_class_,._loading_wrap_{display:-ms-flexbox;display:flex;-ms-flex-pack:center;justify-content:center;-ms-flex-align:center;align-items:center}._loading_div_class_{word-wrap:break-word;padding:.5rem .75rem;text-align:center;z-index:9999;font-size:.6rem;max-width:60%;color:#fff;border-radius:.25rem;-ms-flex-direction:column;flex-direction:column}._loading_div_class_ .message{color:#353535;font-size:16px;line-height:3}.spinner{animation:circle-rotator 1.4s linear infinite}.spinner *{line-height:0;box-sizing:border-box}@keyframes circle-rotator{0%{transform:rotate(0deg)}to{transform:rotate(270deg)}}.path{stroke-dasharray:187;stroke-dashoffset:0;transform-origin:center;animation:circle-dash 1.4s ease-in-out infinite,circle-colors 5.6s ease-in-out infinite}@keyframes circle-colors{0%{stroke:#ff5a05}to{stroke:#ff5a05}}@keyframes circle-dash{0%{stroke-dashoffset:187}50%{stroke-dashoffset:46.75;transform:rotate(135deg)}to{stroke-dashoffset:187;transform:rotate(450deg)}}.confirm-box-wrapper,.confirm-box-wrapper .mask{position:absolute;top:0;left:0;right:0;bottom:0}.confirm-box-wrapper .mask{background:rgba(0,0,0,.6)}.confirm-box-wrapper .confirm-box{position:fixed;top:50%;left:50%;width:267px;background:#fff;transform:translate(-50%,-50%);border-radius:7px}.confirm-box-wrapper .confirm-box .head{margin:0 18px;font-size:18px;text-align:center;line-height:65px;border-bottom:1px solid #d9d9d9}.confirm-box-wrapper .confirm-box .body{padding:18px;padding-bottom:0;color:#353535;font-size:12.5px;max-height:150px;overflow:auto}.confirm-box-wrapper .confirm-box .foot{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;padding:18px}.confirm-box-wrapper .confirm-box .foot .button-cancel{border:1px solid #d9d9d9}.hljs{display:block;overflow-x:auto;padding:.5em;color:#333;background:#f8f8f8}.hljs-comment,.hljs-quote{color:#998;font-style:italic}.hljs-keyword,.hljs-selector-tag,.hljs-subst{color:#333;font-weight:700}.hljs-literal,.hljs-number,.hljs-tag .hljs-attr,.hljs-template-variable,.hljs-variable{color:teal}.hljs-doctag,.hljs-string{color:#d14}.hljs-section,.hljs-selector-id,.hljs-title{color:#900;font-weight:700}.hljs-subst{font-weight:400}.hljs-class .hljs-title,.hljs-type{color:#458;font-weight:700}.hljs-attribute,.hljs-name,.hljs-tag{color:navy;font-weight:400}.hljs-link,.hljs-regexp{color:#009926}.hljs-bullet,.hljs-symbol{color:#990073}.hljs-built_in,.hljs-builtin-name{color:#0086b3}.hljs-meta{color:#999;font-weight:700}.hljs-deletion{background:#fdd}.hljs-addition{background:#dfd}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}
+
+
+
+
+    </style>
+    <style type="text/css">
+        .button-cancel[data-v-87ffcada]{color:#888;border:1px solid #888;border-radius:3px;margin-right:12px}.button-cancel[data-v-87ffcada],.button-primary[data-v-87ffcada]{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;height:35px;display:inline-block;font-size:15px;text-align:center;line-height:36px}.button-primary[data-v-87ffcada]{color:#fff;background-color:#ff5a05;border-radius:3px}.pd[data-v-87ffcada]{padding-left:1.375rem;padding-right:1.375rem}.article[data-v-87ffcada]{max-width:70rem;margin:0 auto}.article .article-unavailable[data-v-87ffcada]{color:#fa8919;font-size:15px;font-weight:600;line-height:24px;border-radius:5px;padding:12px;background-color:#f6f7fb;margin-top:20px}.article .article-unavailable .iconfont[data-v-87ffcada]{font-size:12px}.article .main[data-v-87ffcada]{padding:1.25rem 0;margin-bottom:52px}.article-title[data-v-87ffcada]{color:#353535;font-weight:400;line-height:1.65rem;font-size:1.34375rem}.article-info[data-v-87ffcada]{color:#888;font-size:.9375rem;margin-top:1.0625rem}.article-content[data-v-87ffcada]{margin-top:1.0625rem}.article-content.android video[data-v-87ffcada]::-webkit-media-controls-fullscreen-button{display:none}.copyright[data-v-87ffcada]{color:#b2b2b2;padding-bottom:20px;margin-top:20px;font-size:13px}.audio-player[data-v-87ffcada]{width:100%;margin:20px 0}.to-comment[data-v-87ffcada]{overflow:hidden;padding-top:10px;margin-bottom:-30px}.to-comment a.button-primary[data-v-87ffcada]{float:right;height:20px;font-size:12px;line-height:20px;padding:4px 8px;cursor:pointer}.article-comments[data-v-87ffcada]{margin-top:2rem}.article-comments h2[data-v-87ffcada]{text-align:center;color:#888;position:relative;z-index:1;margin-bottom:1rem}.article-comments h2[data-v-87ffcada]:before{border-top:1px dotted #888;content:"";position:absolute;top:56%;left:0;width:100%;z-index:-1}.article-comments h2 span[data-v-87ffcada]{font-size:15.25px;font-weight:400;padding:0 1rem;background:#fff;display:inline-block}.article-sub-bottom[data-v-87ffcada]{z-index:10;cursor:pointer}.switch-btns[data-v-87ffcada]{height:76px;cursor:pointer;padding-top:24px;padding-bottom:24px;border-bottom:10px solid #f6f7fb;position:relative}.switch-btns[data-v-87ffcada]:before{content:" ";height:1px;background:#e8e8e8;position:absolute;top:0;left:0;-webkit-box-sizing:border-box;box-sizing:border-box;left:1.375rem;right:1.375rem}.switch-btns .btn[data-v-87ffcada]{height:38px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.switch-btns .btn .tag[data-v-87ffcada]{-webkit-box-flex:0;-ms-flex:0 0 62px;flex:0 0 62px;text-align:center;color:#888;font-size:14px;border-radius:10px;height:22px;line-height:22px;background:#f6f7fb;font-weight:400}.switch-btns .btn .txt[data-v-87ffcada]{margin-left:10px;-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto;color:#888;font-size:15px;height:22px;line-height:22px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:400}@media (max-width:769px){.article .breadcrumb[data-v-87ffcada]{padding-top:10px;padding-bottom:10px}}
+
+
+
+
+
+    </style>
+
+    <style type="text/css">
+        .comment-item{list-style-position:inside;width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;margin-bottom:1rem}.comment-item a{border-bottom:none}.comment-item .avatar{width:2.625rem;height:2.625rem;-ms-flex-negative:0;flex-shrink:0;border-radius:50%}.comment-item .info{margin-left:.5rem;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1}.comment-item .info .hd{width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .username{color:#888;font-size:15.25px;font-weight:400;line-height:1.2}.comment-item .info .hd .control{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.comment-item .info .hd .control .btn-share{color:#888;font-size:.75rem;margin-right:1rem}.comment-item .info .hd .control .btn-praise{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-size:15.25px;text-decoration:none}.comment-item .info .hd .control .btn-praise i{color:#888;display:inline-block;font-size:.75rem;margin-right:.3rem;margin-top:-.01rem}.comment-item .info .hd .control .btn-praise i.on,.comment-item .info .hd .control .btn-praise span{color:#ff5a05}.comment-item .info .bd{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all;line-height:1.6}.comment-item .info .time{color:#888;font-size:9px;line-height:1}.comment-item .info .reply .reply-hd{font-size:15.25px}.comment-item .info .reply .reply-hd span{margin-left:-12px;color:#888;font-weight:400}.comment-item .info .reply .reply-hd i{color:#ff5a05;font-size:15.25px}.comment-item .info .reply .reply-content{color:#353535;font-size:15.25px;font-weight:400;white-space:normal;word-break:break-all}.comment-item .info .reply .reply-time{color:#888;font-size:9px}
+
+
+
+
+    </style>
+</head>
+<body>
+<div id="app">
+
+
+    <div data-v-87ffcada="" class="article" id="watermark">
+        
+        <div data-v-87ffcada="" class="main main-app">
+            <h1 data-v-87ffcada="" class="article-title pd">
+                我是如何创作“趣谈网络协议”专栏的？
+            </h1>
+            <div data-v-87ffcada="" class="article-content typo common-content pd"><img data-v-87ffcada=""
+                                                                                        src="https://static001.geekbang.org/resource/image/01/3e/01ed308a1a6d6b7bd5a141253a17de3e.jpg">
+
+
+                <div data-v-87ffcada="" id="article-content" class="">
+                    <div class="text">
+                        <hr />
+<p>我用将近半年的时间在“极客时间”写了一个专栏“趣谈网络协议”。对于我自己来讲，这真的是个非常特殊而又难忘的经历。</p>
+<p>很多人都很好奇，这个专栏究竟是怎么一步步创作出来的，每一篇文章是怎么写出来的？自己录音频又是什么样的感受？写完整个专栏之后，我终于有时间回顾、整理一下这半年的所感所想。对我来说，<span class="orange">这是一次难得的体验，也是一次与“极客时间”的深度沟通。</span></p>
+<h2>专栏是写给谁的？</h2>
+<p>和极客时间的编辑谈妥主题之后，他们首先要求我基于约定的主题，写一个36节至50节的大纲，之后会以每周三篇的频率，文字加音频的方式发布。每篇文章的体量要求在3000字左右，录成音频大约就是10分钟。</p>
+<p>我本来觉得写这么一个专栏根本就不是个事儿。毕竟咱也是在IT圈摸爬滚打了许多年的“老司机”，干货积累得也不少。只要是熟悉的领域，不用准备，聊个把小时都没啥问题。况且我原来还写过书、写过博客、写过公众号。所以，我对自己文字方面的能力很有自信。</p>
+<p>至于语言方面，咱常年出入各大技术论坛，什么场子没趟过。一个两天的线下培训，咱都能扛过来。每篇10分钟，总共36篇，那不才是6个小时嘛，肯定没问题。</p>
+<p>但是，写了之后我发现，<strong>自己会是一回事儿，能讲给别人是另一回事儿</strong>，而能讲给“看不见的陌生人”听，是这世上最难的事儿。</p><!-- [[[read_end]]] -->
+<p>我知道，很多技术人都有这样一个“毛病”，就是觉得掌握技术本身是最重要的，其他什么产品、市场、销售，都没技术含量。这种思维导致很多技术比较牛的人会以自我为中心，仅站在自己的角度思考问题。所以，<strong>常常是自己讲得很爽，完全不管听的人是不是真的接受了</strong>。写专栏的时候，这绝对是个大忌。</p>
+<p>除此之外，这种思维对职业发展的影响也是很大的。单打独斗，一个人搞定一个软件的时代已经过去了。学会和别人合作，才是现代社会的生存法则，而良好的合作源于沟通。</p>
+<p>但沟通不易，高质量的沟通更难。面对的人越多，沟通的难度就越大。因为每个人的背景、知识、基础都不同，想听的内容肯定更是千差万别。况且不是每个人都能准确地表达出自己的需求，加之需求的表达、转述都会因表达方式和传递媒介而发生变形，这样一来，接收信息的一方自然很难把握真实的需求。</p>
+<p>写专栏的时候，“极客时间”的编辑不断地告诉我，我的受众只有一个人，就是“你”。我心想，这个简单啊，因为面对的人最少嘛！可是，事实上证明，我又“错”了。</p>
+<p>这个抽象的“你”，看起来只有一个，其实却是看不到、摸不着的许许多多的人。所以，这个其实是最难的。协议专栏上线10天，就有10000多人订阅，而订阅专栏的用户里，只有少数人会留言。所以，对于很多读者的真实情况，我都无从得知，你可能每天都听但是没有留言的习惯，也可能买了之后觉得我讲得不好，骂一句“这钱白花了”，然后再也不听。</p>
+<p>所以，<strong>如何把控内容，写给广大未知受众，是我写这个专栏面临的最大挑战</strong>。而这里面，文章的深度、广度，音频的语调、语气，每一个细节都非常重要。</p>
+<h2>专栏文章是怎么写的？</h2>
+<p>经过大纲和前几篇文稿的打磨，我对“极客时间”和专栏创作也有了更深的了解。我私下和很多人交流过一个问题，那就是，咱们平时聊一个话题的时候，有很多话可以说。但是真正去写一篇文章的时候，好像又没有什么可讲的，尤其是那些看起来很基础的内容。</p>
+<p>我在写专栏的过程中，仔细思考过这样一个问题：很多人对某一领域或者行业研究得很深入，也有自己长期的实践，但是<strong>有多少人可以<strong><strong>从感性认识上升到理性</strong></strong>认知<strong><strong>的</strong></strong>高度呢？</strong></p>
+<p>现在技术变化这么快，我们每个人的精力都是有限的，不少人学习新知识的方式就是看看书，看看博客、技术文章，或者听同事讲一下，了解个大概就觉得可以直接上手去做了。我也是这样的。可是一旦到写专栏的时候，<strong>基础掌握不扎实的问题一下子全都“暴露”出来了。</strong></p>
+<p>落到文字上的东西一定要是严谨的。所以，在写到很多细节的时候，我查了大量的资料，找到权威的书籍、官方文档、RFC里面的具体描述，有时候我甚至要做个实验，或者打开代码再看一下，才放心下笔。</p>
+<p>尽管我对自己写文章有很多“完美倾向”的要求，但是这其实依旧是站在我自己的角度去看的。读者究竟想要看什么内容呢？</p>
+<p>太深入了，看不懂；太浅显了，也不行。太长了，负担太重；太短了，没有干货；同时，每篇文字还要自成一体，所有文章要是一个完整的知识体系。我发现，原来我不仅是对知识的了解没那么全面、具体，对用户阅读和倾听场景也没有过多的考虑。</p>
+<p>除了写文字，专栏还要录音频，所以为了方便“听”，文章内不能放大量代码、实验。如果很多人在通勤路上听，而我把一张图片讲得天花乱坠，听的人却根本看不到，那肯定是不行的，所以写文章的时候，我还要把故事性、画面感都考虑进去，尽量详尽而不啰嗦。</p>
+<p>把这些限制条件加起来之后，我发现，写专栏这件事儿，真的太不容易了。每篇文章看起来内容不多，但是都是费了很多心思的，这也是为什么很多老师说，写完专栏就像是过了火焰山。</p>
+<h2>专栏音频是怎么录的？</h2>
+<p>说完写文章，我来说说录音频。我平时听播音员说话，感觉非常轻松，所以当时我毫不犹豫地就说，“我要自己录”。但是在录开篇词的时候，我就觉得这完全不是我想的那么回事啊！</p>
+<p>专栏的文章在录音的时候一定会有个“音频稿”，我一开始很不理解，我对着发布的稿件直接讲就好了啊，为什么还要特意准备一个供录音频的稿件啊？</p>
+<p>我在没有音频稿的情况下，自己试着“发挥”了几次，结果，我发现我的嘴会“吃”字，会反复讲一个内容而且表达不清，但是自己却经常毫无察觉，还会自己讲着讲着就收不住等等。</p>
+<p>咱们平时说话的时候，会有很多口头语和重复的词语。面对面交流的时候，我们为什么没有注意这个问题呢？因为我们会更注重对方的表情、手势，但是一旦录成音频，这些“啰嗦”的地方就特别明显。</p>
+<p>而有了音频稿之后，整个过程就严谨很多。如果哪句话说错了，看着稿件再说一遍就好了。而且，你会发现录音的时间大大缩短了，原来需要用十分钟，现在五分钟就可以很精炼地讲出来了。</p>
+<p>有了稿子，那我是不是对着念就好了？这不是很容易吗？不，我又遇到了新的难题。</p>
+<p>录音频的时候，我常常一个人关在密闭的房间里，对着显示器“读”，这和公共演讲肯定是不一样的。加上因为有写好的音频稿，我常常感觉束手束脚，找不到演讲那种有激情的感觉，很容易就变成了念课文。</p>
+<p>为了同时满足自然和严谨，一方面我会先熟记“台词”；另一方面，每次录的时候，我都假想对面有个人，我在对着他缓缓地讲出来。讲到某些地方，我还会假想他对这个知识点是不是有疑问，这样就更加有互动感。</p>
+<p>录音频这件事对我的改变非常大。我说话、演讲的时候变得更加严谨了。我会下意识地不去重复已经说过的话。一旦想重复，也闭嘴不发音，等想好了下一句再说。后面，我的录音也越来越顺利，一开始要录五六遍才能成功，后面基本一遍就过了。</p>
+<p>创作专栏的过程还有许多事情，都是我很难得的记忆。我很佩服“极客时间”的编辑做专栏时的专业和认真。我也很庆幸，我没有固执地按照自己认为正确的方向和方式来做，而是尊重了他们的专业。很显然，<strong>他们没有我懂技术，但是他们比我<strong><strong>更</strong></strong>懂“你”。</strong></p>
+<p>专栏结束后，我回看这半年的准备和努力，我发现，<strong>无论对自己的领域多么熟悉，写这个专栏都让我又上升了一个新高度</strong>。</p>
+<p>我知道很多技术人都喜欢分享，而写文章又是最容易实现的方式。写文章的时候，可以检验你对基础知识的掌握是否扎实，是不是有换位思考能力，能不能从感性认识上升到理性认知。</p>
+<p>除此之外，我觉得最重要的一点是，在创作专栏文章的过程中，我学到了很多技术之外的东西，比如换位思考能力和细节把控的能力。</p>
+<p>我在这里记下与“极客时间”的相识和相知。希望看到更多人在极客时间，分享自己的知识和见解。</p>
+<p><img src="https://static001.geekbang.org/resource/image/b5/fb/b5bc14cb81d3630919fee94a512cc3fb.jpg" alt="" /></p>
+
+                    </div>
+                </div>
+
+            </div>
+            <div data-v-87ffcada="" class="article-comments pd"><h2 data-v-87ffcada=""><span
+                    data-v-87ffcada="">精选留言</span></h2>
+                <ul data-v-87ffcada="">
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/a3/74/3b6d10c5.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">冯红斌</span>
+                            </div>
+                            <div class="bd">所以写1个专栏比学10个专栏带来的提升都要大。<br>有一天也写专栏提升一下自己。 <br></div>
+                            <span class="time">2018-09-07 07:58</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">加油</p>
+                                <p class="reply-time">2018-09-07 08:42</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/67/0e/c77ad9b1.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">eason2017</span>
+                            </div>
+                            <div class="bd">您的文章，我花了69元。但是，学到的知识超值了！感谢老师，对世界有了深入的认识，和发现自己的不足。 <br></div>
+                            <span class="time">2018-09-06 09:03</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/49/b8/fb19aa6a.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">yaxin</span>
+                            </div>
+                            <div class="bd">专栏很不错，通俗易懂。但有时候会看了后边忘了前边，哈哈 <br></div>
+                            <span class="time">2018-09-05 22:12</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/3d/e4/72713a5f.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">星星</span>
+                            </div>
+                            <div class="bd">良心专栏 <br></div>
+                            <span class="time">2018-09-08 11:20</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/d1/15/7d47de48.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">咖啡猫口里的咖啡猫</span>
+                            </div>
+                            <div class="bd">说实话，还喜欢英文，要不英文在写遍( oωo ) <br></div>
+                            <span class="time">2018-09-06 08:51</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">这个。。。</p>
+                                <p class="reply-time">2018-09-06 11:33</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/10/ff/ce/ff215671.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">Cloud*</span>
+                            </div>
+                            <div class="bd">循序渐进，把枯燥的技术写得有趣味性，而且不失专业和严谨，简直不能再赞了 <br></div>
+                            <span class="time">2018-09-06 07:49</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/12/13/7c/c1b5b16d.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">Sarah</span>
+                            </div>
+                            <div class="bd">对着机器录过没有观众的培训视频，对老师单独录音的状态能感同身受，老师讲的特别棒啊，收获很大，只听了一遍音频，打算用电脑从头过一遍 <br></div>
+                            <span class="time">2018-10-26 12:30</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/13/2b/ec/af6d0b10.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">caohuan</span>
+                            </div>
+                            <div class="bd">刘老师 因为责任，所以才会有压力，谢谢 刘老师的付出和分享，老师的工作还是蛮清闲的，要不要再出个 趣谈二，提升自我，永无止境吗，老师 讲完了，会回头看留言吗？老师 如果遇到问题 怎么请教与你。 <br></div>
+                            <span class="time">2018-12-12 12:49</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">刘超</span>
+                            </div>
+                            <div class="bd">老师真的很棒，真的是为我完全打开了另一片天地。 <br></div>
+                            <span class="time">2018-11-29 20:25</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/4a/6f/abb7bfe3.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">Sunsun</span>
+                            </div>
+                            <div class="bd">耗子哥，不，耗子叔专栏里这样说：“如果你是个新手，那应该多读代码，多动手写代码”，“如果你是个老手，你有多年的“感性认识”了，那么你的成长需要更多的理性认识“。自己coding了4年了，觉得很失败，就是写代码太多，看经典书籍太少，所以一直停留在感性认识，没有什么提高。<br><br>在这里又看到老师提到了“理性认识”，看来每个高手对这的认识都是相同的。<br> <br></div>
+                            <span class="time">2018-11-21 13:59</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">是的是的</p>
+                                <p class="reply-time">2018-11-22 19:28</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/13/f9/e0/2cdd1bc9.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">Gray13</span>
+                            </div>
+                            <div class="bd">刚购买课程我从最后一个文章看起 看的出来 是个靠谱并且不自大而且用心的好讲师  <br></div>
+                            <span class="time">2018-11-16 00:51</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/42/34/c489dd0f.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">风之翼</span>
+                            </div>
+                            <div class="bd">深有体会 <br></div>
+                            <span class="time">2018-09-29 18:59</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">shupian418</span>
+                            </div>
+                            <div class="bd">建议，再写一个专栏，偏重网络实践操作的，听懂了和操作完全是两回事。 <br></div>
+                            <span class="time">2018-09-14 15:21</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/12/90/4e/a055e858.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">墨禾</span>
+                            </div>
+                            <div class="bd">老师您好！很佩服您的文字功底和技术水平。我也很喜欢写技术帖，但由于多年的坚持并没有多大进步，总结原因有：1.缺乏社区互动，写出来的东西没有人评价或是关注，一方面缺乏写作的动力，另一方面还是一个个人思维的呈现，总之没有多大提升；2.技术帖没有技术核心，目前我是一个科研人员，研究的技术主要是辅助科研成果，并没有很核心的技术要展示出来，所以下笔之后离题万里。        不知道老师可否支学生两招？ <br></div>
+                            <span class="time">2018-09-09 08:31</span>
+                            
+                            <div class="reply">
+                                <div class="reply-hd"><span>作者回复</span></div>
+                                <p class="reply-content">当遇到一个知识点的时候，要有意识的阅读相关经典书籍，上升为理性认识，然后再写。经典书籍都是成体系的</p>
+                                <p class="reply-time">2018-09-09 20:41</p>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/12/90/4e/a055e858.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">墨禾</span>
+                            </div>
+                            <div class="bd">老师您好，我也是一个很喜欢写文的技术搬砖工，平常也会写技术帖，但由于缺少粉丝互动，所以也无从知道自己的文稿写得到底怎么样。这么多年的坚持感觉也并没有多大进步。   很佩服老师的文字功底，还有幽默风趣的文风，请问小白该如何下手去练习写技术帖子呢？ <br></div>
+                            <span class="time">2018-09-09 08:24</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/0f/48/77/771fa4dc.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">阿亮</span>
+                            </div>
+                            <div class="bd">下一个专栏想好了没？大家等的好着急 <br></div>
+                            <span class="time">2018-09-07 21:40</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">帅窝</span>
+                            </div>
+                            <div class="bd">写的很好，就是很多还没有消化 <br></div>
+                            <span class="time">2018-09-06 12:13</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/10/f2/1e/d9fa3269.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">秦至</span>
+                            </div>
+                            <div class="bd">虽然专栏还没有看完，但是对我而言，有很大的帮助。非常感谢超哥带来的分享！╰(*'︶`*)╯ <br></div>
+                            <span class="time">2018-09-06 09:11</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/11/5f/fb/af061ca7.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">qpzm7903</span>
+                            </div>
+                            <div class="bd">内容挺好，就是看了后面忘了前面。还是自己对这方面不够熟悉吧 <br></div>
+                            <span class="time">2018-09-06 08:42</span>
+                            
+                        </div>
+                    </li>
+                    
+                    <li data-v-87ffcada="" class="comment-item"><img
+                            src="https://static001.geekbang.org/account/avatar/00/10/f6/32/358f9411.jpg" class="avatar">
+                        <div class="info">
+                            <div class="hd"><span class="username">梦想启动的蜗牛</span>
+                            </div>
+                            <div class="bd">发现自己不光是技术需要向老师学习，还有很多东西都是自己缺乏的 <br></div>
+                            <span class="time">2018-09-06 08:26</span>
+                            
+                        </div>
+                    </li>
+                    
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
