@@ -1,6 +1,7 @@
 package main
 
 import (
+	"HTMLReader/order"
 	"fmt"
 	"html/template"
 	"io/ioutil"
@@ -138,9 +139,8 @@ func getAbs() string {
 	return abs
 }
 
-//获取目录以及删除非html文件
+//获取目录以及html文件
 func getList(dir string) []string {
-	flag := false
 	fInfoL, err := ioutil.ReadDir(dir)
 	if err != nil {
 		log.Fatalf("getList err:\ndir=%s\nerr:%s", dir, err)
@@ -150,24 +150,12 @@ func getList(dir string) []string {
 		name := v.Name()
 		if strings.HasSuffix(name, ".html") {
 			fList = append(fList, name)
-		} else {
-			if !flag {
-				fmt.Printf("是否删除%s?按Y确定", dir)
-				var f string
-				fmt.Scanln(&f)
-				if f == "Y" {
-					flag = true
-				} else {
-					log.Fatalln("目录存在重要文件", dir)
-				}
-			}
-			err := os.RemoveAll(dir + "/" + name)
-			if err != nil {
-				fmt.Println("delete err:", name)
-			}
 		}
 	}
-	return fList
+	//排序
+	// sort.Strings(fList)
+
+	return order.Strings(fList)
 }
 
 //初始化目录信息
@@ -178,7 +166,7 @@ func initContents() {
 		log.Fatalln("init cts err : ", err)
 	}
 	for _, v := range fInfo {
-		if v.IsDir() {
+		if v.IsDir() && v.Name() != ".git" {
 			bookList = append(bookList, v.Name())
 			ctsMap[v.Name()] = getList(rootPath + "/" + v.Name())
 		}
