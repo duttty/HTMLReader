@@ -153,9 +153,9 @@ func getList(dir string) []string {
 		}
 	}
 	//排序
-	// sort.Strings(fList)
+	order.Strings(fList)
 
-	return order.Strings(fList)
+	return fList
 }
 
 //初始化目录信息
