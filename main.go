@@ -1,7 +1,6 @@
 package main
 
 import (
-	"HTMLReader/order"
 	"fmt"
 	"html/template"
 	"io/ioutil"
@@ -12,6 +11,7 @@ import (
 	"path/filepath"
 	"strings"
 
+	"github.com/duttty/order"
 	"github.com/julienschmidt/httprouter"
 )
 
