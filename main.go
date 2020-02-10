@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bytes"
 	"fmt"
 	"html/template"
 	"io/ioutil"
@@ -10,6 +11,7 @@ import (
 	"os"
 	"path/filepath"
 	"strings"
+	"time"
 
 	"github.com/duttty/order"
 	"github.com/julienschmidt/httprouter"
@@ -33,16 +35,17 @@ var (
 					</body>
 				</html>
 			`
-	tRight = `" style="font-weight: bold;font-size:20%;">→</a>
-		</div>
-	`
-	tLeft = `
+
+	tLeft = []byte(`
 	<div style="
 		position: fixed;
 		right: 0;
 		top: 50%;
-		margin-top: -10px;
-	"><a href="`
+		margin-top: 10px;
+	"><a href="/">主页</a><br><a href="./">目录</a><br>
+	<a href="`)
+	tRight = []byte(`" style="font-weight: bold;font-size:20;">→</a>
+	</div>`)
 )
 
 func main() {
@@ -70,8 +73,9 @@ func rootHandler(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 //进入图书
 func pathHandler(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	//获取cookie
-	cookie, err := r.Cookie("read-" + ps.ByName("path"))
 	path := ps.ByName("path")
+	cookie, err := r.Cookie("read-" + path)
+
 	//不存在则展示目录
 	if err != nil {
 		cts := ctsMap[path]
@@ -92,8 +96,9 @@ func bookHandler(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	name := ps.ByName("name")
 	//写入cookie
 	http.SetCookie(w, &http.Cookie{
-		Name:  fmt.Sprintf("read-%s", path),
-		Value: url.QueryEscape(name),
+		Name:    fmt.Sprintf("read-%s", path),
+		Value:   url.QueryEscape(name),
+		Expires: time.Now().AddDate(0, 0, 20),
 	})
 	fp := fmt.Sprintf("%s/%s/%s", rootPath, path, name)
 	//读入文件
@@ -103,8 +108,7 @@ func bookHandler(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 		w.WriteHeader(http.StatusBadRequest)
 		return
 	}
-	temStr := string(b)
-	idx := strings.LastIndex(temStr, "</div>")
+	idx := bytes.LastIndex(b, []byte("</body>"))
 	//如果没有body字段直接返回
 	if idx == -1 {
 		w.Write(b)
@@ -119,11 +123,11 @@ func bookHandler(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 		}
 	}
 	if this == len(list)-1 {
-		temStr = fmt.Sprintf("%s%s%s%s%s", temStr[:idx], tLeft, name, tRight, temStr[idx:])
+		b = bytes.Join([][]byte{b[:idx], tLeft, []byte(url.PathEscape(name)), tRight, b[idx:]}, nil)
 	} else {
-		temStr = fmt.Sprintf("%s%s%s%s%s", temStr[:idx], tLeft, list[this+1], tRight, temStr[idx:])
+		b = bytes.Join([][]byte{b[:idx], tLeft, []byte(url.PathEscape(list[this+1])), tRight, b[idx:]}, nil)
 	}
-	w.Write([]byte(temStr))
+	w.Write(b)
 }
 
 //获取绝对路径
