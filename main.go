@@ -25,7 +25,7 @@ var (
 					<body>		
 						<ul>
 							{{range $k,$v := .}}
-							<li>
+							<li style="line-height:36px;">
 								<a href="{{$v}}">{{$v}}</a>
 							</li>
 							{{end}}
@@ -33,15 +33,16 @@ var (
 					</body>
 				</html>
 			`
-	right = `
-		<div style="
-			position: fixed;
-			right: 0;
-			top: 50%;
-			margin-top: -10px;
-		"><a href="{{.}}" style="font-weight: bold;">→</a>
+	tRight = `" style="font-weight: bold;font-size:20%;">→</a>
 		</div>
 	`
+	tLeft = `
+	<div style="
+		position: fixed;
+		right: 0;
+		top: 50%;
+		margin-top: -10px;
+	"><a href="`
 )
 
 func main() {
@@ -103,11 +104,10 @@ func bookHandler(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 		return
 	}
 	temStr := string(b)
-	idx := strings.LastIndex(temStr, "</body>")
-	temStr = fmt.Sprintf("%s%s%s", temStr[:idx], right, temStr[idx:])
-	t, err := template.New("right").Parse(temStr)
-	if err != nil {
-		fmt.Println("tem err : ", err)
+	idx := strings.LastIndex(temStr, "</div>")
+	//如果没有body字段直接返回
+	if idx == -1 {
+		w.Write(b)
 		return
 	}
 	this := 0
@@ -119,11 +119,11 @@ func bookHandler(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 		}
 	}
 	if this == len(list)-1 {
-		t.Execute(w, name)
+		temStr = fmt.Sprintf("%s%s%s%s%s", temStr[:idx], tLeft, name, tRight, temStr[idx:])
 	} else {
-		t.Execute(w, list[this+1])
+		temStr = fmt.Sprintf("%s%s%s%s%s", temStr[:idx], tLeft, list[this+1], tRight, temStr[idx:])
 	}
-
+	w.Write([]byte(temStr))
 }
 
 //获取绝对路径
