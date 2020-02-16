@@ -1,0 +1,1134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>03-光圈与景深：拍照片可以不对焦？</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <style>
+        html {
+            color: #333;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            text-rendering: optimizelegibility;
+            font-family: Helvetica Neue, PingFang SC, Verdana, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif
+        }
+
+        html.borderbox *,
+        html.borderbox :after,
+        html.borderbox :before {
+            box-sizing: border-box
+        }
+
+        article,
+        aside,
+        blockquote,
+        body,
+        button,
+        code,
+        dd,
+        details,
+        dl,
+        dt,
+        fieldset,
+        figcaption,
+        figure,
+        footer,
+        form,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        header,
+        hr,
+        input,
+        legend,
+        li,
+        menu,
+        nav,
+        ol,
+        p,
+        pre,
+        section,
+        td,
+        textarea,
+        th,
+        ul {
+            margin: 0;
+            padding: 0
+        }
+
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        menu,
+        nav,
+        section {
+            display: block
+        }
+
+        audio,
+        canvas,
+        video {
+            display: inline-block
+        }
+
+        body,
+        button,
+        input,
+        select,
+        textarea {
+            font: 300 1em/1.8 PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, Helvetica, sans-serif
+        }
+
+        button::-moz-focus-inner,
+        input::-moz-focus-inner {
+            padding: 0;
+            border: 0
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0
+        }
+
+        fieldset,
+        img {
+            border: 0
+        }
+
+        blockquote {
+            position: relative;
+            color: #999;
+            font-weight: 400;
+            border-left: 1px solid #1abc9c;
+            padding-left: 1em;
+            margin: 1em 3em 1em 2em
+        }
+
+        @media only screen and (max-width: 640px) {
+            blockquote {
+                margin: 1em 0
+            }
+        }
+
+        abbr,
+        acronym {
+            border-bottom: 1px dotted;
+            font-variant: normal
+        }
+
+        abbr {
+            cursor: help
+        }
+
+        del {
+            text-decoration: line-through
+        }
+
+        address,
+        caption,
+        cite,
+        code,
+        dfn,
+        em,
+        th,
+        var {
+            font-style: normal;
+            font-weight: 400
+        }
+
+        ol,
+        ul {
+            list-style: none
+        }
+
+        caption,
+        th {
+            text-align: left
+        }
+
+        q:after,
+        q:before {
+            content: ""
+        }
+
+        sub,
+        sup {
+            font-size: 75%;
+            line-height: 0;
+            position: relative
+        }
+
+        :root sub,
+        :root sup {
+            vertical-align: baseline
+        }
+
+        sup {
+            top: -.5em
+        }
+
+        sub {
+            bottom: -.25em
+        }
+
+        a {
+            color: #1abc9c
+        }
+
+        a:hover {
+            text-decoration: underline
+        }
+
+        .typo a {
+            border-bottom: 1px solid #1abc9c
+        }
+
+        .typo a:hover {
+            border-bottom-color: #555;
+            color: #555
+        }
+
+        .typo a:hover,
+        a,
+        ins {
+            text-decoration: none
+        }
+
+        .typo-u,
+        u {
+            text-decoration: underline
+        }
+
+        mark {
+            background: #fffdd1;
+            border-bottom: 1px solid #ffedce;
+            padding: 2px;
+            margin: 0 5px
+        }
+
+        code,
+        pre,
+        pre tt {
+            font-family: Courier, Courier New, monospace
+        }
+
+        pre {
+            background: hsla(0, 0%, 97%, .7);
+            border: 1px solid #ddd;
+            padding: 1em 1.5em;
+            display: block;
+            -webkit-overflow-scrolling: touch
+        }
+
+        hr {
+            border: none;
+            border-bottom: 1px solid #cfcfcf;
+            margin-bottom: .8em;
+            height: 10px
+        }
+
+        .typo-small,
+        figcaption,
+        small {
+            font-size: .9em;
+            color: #888
+        }
+
+        b,
+        strong {
+            font-weight: 700;
+            color: #000
+        }
+
+        [draggable] {
+            cursor: move
+        }
+
+        .clearfix:after,
+        .clearfix:before {
+            content: "";
+            display: table
+        }
+
+        .clearfix:after {
+            clear: both
+        }
+
+        .clearfix {
+            zoom: 1
+        }
+
+        .textwrap,
+        .textwrap td,
+        .textwrap th {
+            word-wrap: break-word;
+            word-break: break-all
+        }
+
+        .textwrap-table {
+            table-layout: fixed
+        }
+
+        .serif {
+            font-family: Palatino, Optima, Georgia, serif
+        }
+
+        .typo-dl,
+        .typo-form,
+        .typo-hr,
+        .typo-ol,
+        .typo-p,
+        .typo-pre,
+        .typo-table,
+        .typo-ul,
+        .typo dl,
+        .typo form,
+        .typo hr,
+        .typo ol,
+        .typo p,
+        .typo pre,
+        .typo table,
+        .typo ul,
+        blockquote {
+            margin-bottom: 1rem
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: PingFang SC, Helvetica Neue, Verdana, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
+            color: #000;
+            line-height: 1.35
+        }
+
+        .typo-h1,
+        .typo-h2,
+        .typo-h3,
+        .typo-h4,
+        .typo-h5,
+        .typo-h6,
+        .typo h1,
+        .typo h2,
+        .typo h3,
+        .typo h4,
+        .typo h5,
+        .typo h6 {
+            margin-top: 1.2em;
+            margin-bottom: .6em;
+            line-height: 1.35
+        }
+
+        .typo-h1,
+        .typo h1 {
+            font-size: 2em
+        }
+
+        .typo-h2,
+        .typo h2 {
+            font-size: 1.8em
+        }
+
+        .typo-h3,
+        .typo h3 {
+            font-size: 1.6em
+        }
+
+        .typo-h4,
+        .typo h4 {
+            font-size: 1.4em
+        }
+
+        .typo-h5,
+        .typo-h6,
+        .typo h5,
+        .typo h6 {
+            font-size: 1.2em
+        }
+
+        .typo-ul,
+        .typo ul {
+            margin-left: 1.3em;
+            list-style: disc
+        }
+
+        .typo-ol,
+        .typo ol {
+            list-style: decimal;
+            margin-left: 1.9em
+        }
+
+        .typo-ol ol,
+        .typo-ol ul,
+        .typo-ul ol,
+        .typo-ul ul,
+        .typo li ol,
+        .typo li ul {
+            margin-bottom: .8em;
+            margin-left: 2em
+        }
+
+        .typo-ol ul,
+        .typo-ul ul,
+        .typo li ul {
+            list-style: circle
+        }
+
+        .typo-table td,
+        .typo-table th,
+        .typo table caption,
+        .typo table td,
+        .typo table th {
+            border: 1px solid #ddd;
+            padding: .5em 1em;
+            color: #666
+        }
+
+        .typo-table th,
+        .typo table th {
+            background: #fbfbfb
+        }
+
+        .typo-table thead th,
+        .typo table thead th {
+            background: hsla(0, 0%, 95%, .7)
+        }
+
+        .typo table caption {
+            border-bottom: none
+        }
+
+        .typo-input,
+        .typo-textarea {
+            -webkit-appearance: none;
+            border-radius: 0
+        }
+
+        .typo-em,
+        .typo em,
+        caption,
+        legend {
+            color: #000;
+            font-weight: inherit
+        }
+
+        .typo-em {
+            position: relative
+        }
+
+        .typo-em:after {
+            position: absolute;
+            top: .65em;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            content: "\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB\30FB"
+        }
+
+        .typo img {
+            max-width: 100%
+        }
+
+        .common-content {
+            font-weight: 400;
+            color: #353535;
+            line-height: 1.75rem;
+            white-space: normal;
+            word-break: normal;
+            font-size: 1rem
+        }
+
+        .common-content img {
+            display: block;
+            max-width: 100%;
+            background-color: #eee
+        }
+
+        .common-content audio,
+        .common-content video {
+            width: 100%;
+            background-color: #eee
+        }
+
+        .common-content center,
+        .common-content font {
+            margin-top: 1rem;
+            display: inline-block
+        }
+
+        .common-content center {
+            width: 100%
+        }
+
+        .common-content pre {
+            margin-top: 1rem;
+            padding-left: 0;
+            padding-right: 0;
+            position: relative;
+            overflow: hidden
+        }
+
+        .common-content pre code {
+            font-size: .8rem;
+            font-family: Consolas, Liberation Mono, Menlo, monospace, Courier;
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            overflow-x: auto
+        }
+
+        .common-content hr {
+            border: none;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-top: 1px solid #f5f5f5;
+            height: 1px;
+            background: none
+        }
+
+        .common-content b,
+        .common-content h1,
+        .common-content h2,
+        .common-content h3,
+        .common-content h4,
+        .common-content h5,
+        .common-content strong {
+            font-weight: 700
+        }
+
+        .common-content h1,
+        .common-content h2 {
+            font-size: 1.125rem;
+            margin-bottom: .45rem
+        }
+
+        .common-content h3,
+        .common-content h4,
+        .common-content h5 {
+            font-size: 1rem;
+            margin-bottom: .45rem
+        }
+
+        .common-content p {
+            font-weight: 400;
+            color: #353535;
+            margin-top: .15rem
+        }
+
+        .common-content .orange {
+            color: #ff5a05
+        }
+
+        .common-content .reference {
+            font-size: 1rem;
+            color: #888
+        }
+
+        .custom-rich-content h1 {
+            margin-top: 0;
+            font-weight: 400;
+            font-size: 15.25px;
+            border-bottom: 1px solid #eee;
+            line-height: 2.8
+        }
+
+        .custom-rich-content li,
+        .custom-rich-content p {
+            font-size: 14px;
+            color: #888;
+            line-height: 1.6
+        }
+
+        table.hljs-ln {
+            margin-bottom: 0;
+            border-spacing: 0;
+            border-collapse: collapse
+        }
+
+        table.hljs-ln,
+        table.hljs-ln tbody,
+        table.hljs-ln td,
+        table.hljs-ln tr {
+            box-sizing: border-box
+        }
+
+        table.hljs-ln td {
+            padding: 0;
+            border: 0
+        }
+
+        table.hljs-ln td.hljs-ln-numbers {
+            min-width: 15px;
+            color: rgba(27, 31, 35, .3);
+            text-align: right;
+            white-space: nowrap;
+            cursor: pointer;
+            user-select: none
+        }
+
+        table.hljs-ln td.hljs-ln-code,
+        table.hljs-ln td.hljs-ln-numbers {
+            font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;
+            font-size: 12px;
+            line-height: 20px;
+            vertical-align: top
+        }
+
+        table.hljs-ln td.hljs-ln-code {
+            position: relative;
+            padding-right: 10px;
+            padding-left: 10px;
+            overflow: visible;
+            color: #24292e;
+            word-wrap: normal;
+            white-space: pre
+        }
+
+        video::-webkit-media-controls {
+            overflow: hidden !important
+        }
+
+        video::-webkit-media-controls-enclosure {
+            width: calc(100% + 32px);
+            margin-left: auto
+        }
+
+        ._29HP61GA_0 {
+            max-width:800px;
+            margin:0 auto;
+            margin-bottom: 20px;
+            font-weight: 400;
+            color: #353535;
+            line-height: 1.76;
+            white-space: normal;
+            word-break: normal;
+            font-size: 17px;
+            -webkit-transition: background-color .3s ease;
+            transition: background-color .3s ease
+        }
+
+        ._29HP61GA_0 .MathJax_Display {
+            overflow: auto
+        }
+
+        ._29HP61GA_0 .poster {
+            position: fixed;
+            left: -10000px;
+            top: -10000px;
+            overflow: hidden;
+            padding: 1rem;
+            background: #ececec
+        }
+
+        ._29HP61GA_0 .richcontent-pre-copy {
+            font-size: 13px;
+            color: #888;
+            position: absolute;
+            right: 1em;
+            top: .5em;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none
+        }
+
+        ._29HP61GA_0 .richcontent-pre-copy .iconfont {
+            font-size: 12px;
+            margin-right: .2em
+        }
+
+        ._29HP61GA_0 a {
+            color: #fa8919;
+            border-bottom: 1px solid #fa8919
+        }
+
+        ._29HP61GA_0 img {
+            display: block;
+            max-width: 100%;
+            position: relative;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+            background-color: #eee;
+            vertical-align: top;
+            border-radius: 0
+        }
+
+        ._29HP61GA_0 audio,
+        ._29HP61GA_0 video {
+            width: 100%;
+            background-color: #eee
+        }
+
+        ._29HP61GA_0 pre {
+            margin-top: 16px;
+            padding: 34px 0 0;
+            margin-bottom: 30px;
+            position: relative;
+            border-radius: 6px;
+            background: rgba(246, 247, 251, .749);
+            border: 0
+        }
+
+        ._29HP61GA_0 pre code {
+            font-size: 12px;
+            font-family: Consolas, Liberation Mono, Menlo, monospace, Courier;
+            display: block;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            margin-left: 16px;
+            margin-right: 16px;
+            overflow-x: scroll
+        }
+
+        ._29HP61GA_0 pre code:after {
+            content: "";
+            height: 30px;
+            width: 100%;
+            display: block
+        }
+
+        ._29HP61GA_0 hr {
+            border: none;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-top: 1px solid #f5f5f5;
+            height: 1px;
+            background: none
+        }
+
+        ._29HP61GA_0 h1,
+        ._29HP61GA_0 h2,
+        ._29HP61GA_0 h3,
+        ._29HP61GA_0 h4,
+        ._29HP61GA_0 h5 {
+            margin-bottom: 20px;
+            margin-top: 0;
+            font-weight: 700
+        }
+
+        ._29HP61GA_0 b,
+        ._29HP61GA_0 strong {
+            font-weight: 700
+        }
+
+        ._29HP61GA_0 h1 {
+            font-size: 21px
+        }
+
+        ._29HP61GA_0 h2 {
+            font-size: 20px
+        }
+
+        ._29HP61GA_0 h3 {
+            font-size: 19px
+        }
+
+        ._29HP61GA_0 h4 {
+            font-size: 18px
+        }
+
+        ._29HP61GA_0 h5 {
+            font-size: 17px
+        }
+
+        ._29HP61GA_0 center,
+        ._29HP61GA_0 p {
+            font-weight: 400;
+            color: #353535;
+            margin-top: 0;
+            margin-bottom: 30px;
+            word-break: break-word
+        }
+
+        ._29HP61GA_0 center {
+            text-align: center
+        }
+
+        ._29HP61GA_0 blockquote {
+            margin-top: 0;
+            margin-bottom: 34px;
+            border-left: 3px solid #e8e8e8;
+            padding-left: 17px;
+            color: #353535
+        }
+
+        ._29HP61GA_0 blockquote p {
+            margin-top: 0;
+            margin-bottom: 0
+        }
+
+        ._29HP61GA_0 ol,
+        ._29HP61GA_0 ul {
+            margin-bottom: 30px
+        }
+
+        ._29HP61GA_0 ol p,
+        ._29HP61GA_0 ul p {
+            margin-top: 0;
+            margin-bottom: 0
+        }
+
+        ._29HP61GA_0 ol {
+            list-style: decimal;
+            margin-left: 20px
+        }
+
+        ._29HP61GA_0 ul li {
+            padding-left: 17px;
+            position: relative;
+            margin-bottom: 10px
+        }
+
+        ._29HP61GA_0 ul li:after {
+            content: "";
+            height: 6px;
+            width: 6px;
+            border-radius: 50%;
+            background: #353535;
+            position: absolute;
+            top: 10px;
+            left: 0
+        }
+
+        ._29HP61GA_0 .orange {
+            color: #fa8919
+        }
+
+        ._29HP61GA_0 .reference {
+            color: #888
+        }
+
+        ._29HP61GA_0 .m-right {
+            text-align: right
+        }
+
+        ._29HP61GA_0 .m-center {
+            text-align: center;
+            display: block
+        }
+
+        ._29HP61GA_0 .m-gray {
+            color: #888
+        }
+
+        ._29HP61GA_0 .m-small {
+            font-size: 15px
+        }
+
+        ._29HP61GA_0 table.hljs-ln {
+            margin-bottom: 0;
+            border-spacing: 0;
+            border-collapse: collapse
+        }
+
+        ._29HP61GA_0 table.hljs-ln,
+        ._29HP61GA_0 table.hljs-ln tbody,
+        ._29HP61GA_0 table.hljs-ln td,
+        ._29HP61GA_0 table.hljs-ln tr {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box
+        }
+
+        ._29HP61GA_0 table.hljs-ln td {
+            padding: 0;
+            border: 0
+        }
+
+        ._29HP61GA_0 table.hljs-ln td.hljs-ln-numbers {
+            min-width: 15px;
+            font-size: 12px;
+            color: rgba(27, 31, 35, .3);
+            text-align: right;
+            white-space: nowrap;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none
+        }
+
+        ._29HP61GA_0 table.hljs-ln td.hljs-ln-code,
+        ._29HP61GA_0 table.hljs-ln td.hljs-ln-numbers {
+            font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;
+            line-height: 20px;
+            vertical-align: top
+        }
+
+        ._29HP61GA_0 table.hljs-ln td.hljs-ln-code {
+            position: relative;
+            padding-right: 10px;
+            padding-left: 10px;
+            overflow: visible;
+            font-size: 13px;
+            color: #666;
+            word-wrap: normal;
+            white-space: pre
+        }
+
+    </style>
+</head>
+<body>
+<div class="_29HP61GA_0">
+<h1>03-光圈与景深：拍照片可以不对焦？</h1>
+<p>你好，我是小麥。</p><p>今天这节课我会带你了解相机操作的第一个基本概念——光圈，让你知道光圈是什么，它是怎么影响我们的拍摄结果的，我们又该怎么掌握它，并由此展开到对“景深”这一概念的探讨。在学习完这节课以后，你会彻底搞清楚那些摄影师是怎么仅靠调节光圈就让眼前明亮、刺眼的画面变成柔和、昏暗的成片的，还有那些背景虚化的照片是怎么拍出来的。</p><p>我们先来一起看看光圈是什么。</p><p>在 iOS 7 之前，iPhone 的相机 UI 是这样的：相机启动，这些小叶片旋转着打开，按下快门，这些小叶片旋转着合上，搞得很多人都觉得相机里的快门长这个样子。事实上，这也确实是快门，是快门结构的一种——镜间快门，但目前市面上我们常见的相机的快门都不长这样了，更何况现在应该也没有有快门机械结构的手机相机了，手机相机用的是电子快门。所以从 iOS 7 开始，当 iOS 不再执着于“拟物风格”的 UI 了，这个动画效果就被改掉了。但这些小叶片曾经给我造成过困惑，我相信还会有其他人跟我有一样的误解，我们觉得只有快门才长这个样子，以至于之后见到相机里光圈的叶片结构的时候，误以为光圈是快门。</p><p><img src="https://static001.geekbang.org/resource/image/39/c9/397ffe1c522ecd2bd52dab9a50176ac9.png" alt=""></p><p>虽然我们现在已经不用镜间快门这种叶片结构的快门了，但我们常用的相机里还有另一组不得不用的叶片结构，那就是：<strong>光圈 (Aperture)</strong>。</p><!-- [[[read_end]]] --><p><strong>光圈是镜头里用来控制镜头孔径大小的部件</strong>，它和快门协同工作控制进光量。对于一枚成品镜头，我们不能随便改变镜头本身的直径，但我们可以在镜头里放一些多边形叶片，它们围成一圈儿，中间留个孔，我们可以通过改变它们的收缩幅度以控制中间那个孔的大小，然后以此控制镜头的通光量。</p><p><img src="https://static001.geekbang.org/resource/image/02/f9/02f4e777265a24e2a9a3f20d1192c7f9.gif" alt="" title="通过改变镜头中间可以收缩的孔的大小（光圈）[br]
+控制通光量"></p><p>看上面这张动图我们会发现，通过改变孔的大小，我们可以掌握通光量的多少。<strong>孔越小</strong>，通过的光自然就越少，相机的感光元件因为接收到的光少了，<strong>画面就会越暗</strong>。反之，<strong>孔越大</strong>，通光量越大，<strong>画面也就会越亮</strong>。</p><p><img src="https://static001.geekbang.org/resource/image/b2/e1/b221ea2519ca317ced4b725ef27702e1.jpg" alt="" title="快门和 ISO 不变[br]光圈从大到小画面的亮度变化"></p><p>我们通常用 F 值来表示光圈大小，它的计算方式是：光圈 F 值 = 镜头的焦距/光圈口径。但这个公式并不重要，你只需要记住，<strong>F 值小的是大光圈，F 值大的是小光圈</strong>。</p><p><strong>注：最学术的写法应该是“f值”，相应的各光圈值是应该是 f/2、f/2.8、f/4、f/5.6、f/8、f/11、f/16 等，但为了文字在视觉上协调，我在下面的课里都直接写成了 F2、F2.8、F4、F5.6、F8、F11、F16 等……这样写没有错误，只是不够学术，特此说明。</strong></p><p><img src="https://static001.geekbang.org/resource/image/89/13/8916027edeed4e8b2d7fb219ec62e513.png" alt=""></p><p>光圈除了可以控制通光量，也可以控制<strong>景深 (Depth of Field)</strong>。</p><p>相机在完成对焦以后（对焦：指的是拍照前，调整对焦点到相应的距离位置上，以使拍出来的照片清晰），其实不光焦点上的物体是清晰的，焦点前后一段距离内的物体也是清晰的。这个距离范围，就是景深。</p><p>比如，我用一枚 50mm 焦段的镜头，在光圈 F4 的情况下，拍摄距离我 1.5m 远的物体，我把对焦点设置在 1.5m 上，但不仅仅正好在 1.5m 这个点上的物体是清晰的，在距离我 1.4m 到 1.6m 这个距离范围内的物体，也同样会是清晰的。而这 20cm 的距离范围，就是景深。</p><p><img src="https://static001.geekbang.org/resource/image/eb/bb/eb52c6fdf04be577ad5e52b7552af7bb.png" alt="" title="景深产生的原理图"></p><p>在不考虑镜头焦段的情况下，同一枚镜头，<strong>光圈越大，景深越浅</strong>（照片中清晰的范围越小）；<strong>光圈越小，景深越大</strong>（照片中清晰的范围越大）。</p><p><img src="https://static001.geekbang.org/resource/image/70/28/70ad4d6e2a00e3949256c1b4a7707828.jpeg" alt=""></p><p><img src="https://static001.geekbang.org/resource/image/1c/b0/1c864a5cc8f5cbe8a9eaf66d9ab502b0.jpg" alt="" title="从左到右，光圈逐渐缩小[br]光圈 F2.8，背景模糊明显[br]光圈 F16，“威利汽船”与背景“CHAOS”一样清晰"></p><p>我们常说的什么背景虚化，其实就是大光圈搞出来的，好多人最早买相机的原因之一就是为了拍出那种照片。虚化这个东西对大家有着特别的吸引力，原因就在于它不同于我们日常的视觉体验，能让我们创造出独特的视觉效果。除了让背景虚化，有创意的摄影师们也会利用景深的原理，让前景虚化，作为创意手段。</p><p><img src="https://static001.geekbang.org/resource/image/0d/7d/0d1a12a473383cfd57bf3ad7a2c9897d.jpg" alt="" title="Gueorgui Pinkhassov"></p><p>总而言之，<strong>一个合格的摄影师可以恰当利用镜头虚化所带来的视觉效果，主动控制虚化范围，来拍摄独特的作品</strong>。</p><p>如今，各路手机的相机 App 里也都有了人像模式 (Portrait Mode) 或者大光圈模式 (Aperture Mode/Bokeh)，靠算法模拟光学虚化，以制造柔美的模糊背景。但不得不说，虚化原本只是相机镜头的光学特性，而大家如今对它过分的追求，让“虚化”变成了一股“妖风”，也让越来越多的糖水片大行其道。</p><p>虽然大光圈被无数职业摄影师所厌恶，但依然有很多惯用大光圈的摄影师，利用这一特性拍摄出了好多优秀的作品，比如川内伦子。她会巧妙地利用背景虚化突出拍摄主体，而足够近的距离也会诱导观众去关注被摄物体更细微的纹理、质感、形状等，然后利用大家对这些内容的关注，来传达自己细微、温柔、童真之类的情绪。应该说，<strong>背景虚化从来不是单纯地为了屏蔽画面中的干扰因素而存在的，虚化的背景本身也要作为画面中的一部分进入我们的考量范围。</strong>在川内伦子的照片里，我们能清楚地发现虚化掉的背景更像是纯净的色块儿，让画面更加简洁。</p><p>但对于新闻摄影或纪实摄影来说，小光圈可以说是标配，因为摄影师首先要保证的就是画面内容的完整性，该拍到的东西一定要都拍到。这自然导致了摄影师会选择小光圈，没有那么多虚化，从前到后通通透透清清楚楚，比如布列松、卡帕、寇德卡等一众纪实系摄影师。</p><p>在知道了景深的知识以后，我们就可以讲讲<strong>景深陷阱</strong>这个概念了。</p><p>景深陷阱也叫<strong>陷阱对焦</strong>，指的是<strong>在手动对焦的情况下，提前预估被摄主体与相机之间的距离，利用镜头小光圈所带来的更大的景深范围，在被摄主体进入这个景深范围时，不需要再临时对焦，而直接进行拍摄。</strong></p><p>比如：我用一枚 28mm 的镜头，F16 的小光圈，把对焦点提前设置在距离我 1.5m 远的地方，由于 28mm 的镜头在光圈 F16 的时候，本身自带的景深范围是 0.8m-15m，也就是说，尽管我的焦点设置在了离我 1.5m 远的那个点上，但实际拍摄的时候，所有落在 0.8m-15m 这个距离范围内的物体都是清晰的，因此我根本不用花时间让相机进行对焦。</p><p>这样做的好处是，在实际拍摄的过程中，我们可以完全省略对焦这一环节，只需要利用<strong>“景深范围内所有物体都是清晰的”</strong>这一光学特性，就可以提前构图，可以手起刀落迅速拍摄而不用半按快门等待相机进行自动对焦。</p><p><strong>再快的自动对焦，也没有不对焦快</strong>。实际拍摄时，哪怕 0.1s 的耽搁都会让你眼睁睁地看着画面转瞬即逝。景深陷阱是所有熟练掌握相机操作的摄影师在拍摄的时候常用的技术手段，只需要提前设置好光圈，就可以专注于构图，等待拍摄时机到来，直接按快门，不用再担心照片是否合焦。为了保证足够大的景深范围，小光圈自然也就是陷阱对焦的标配。</p><p>说到景深陷阱，自然就要提到景深标尺。我们怎么能知道在设置好光圈和对焦点以后我能得到的景深范围究竟是多少呢？</p><p>不知道你在用相机的时候有没有注意过相机镜头上有这样一个标尺，一般由三排数字和一个刻度标尺组成。中间两排数字是距离标尺，以英制单位制 ft（英尺）和国际单位制 m（米）标注，同时指代对焦距离和景深，你熟悉英尺就看英尺，你熟悉米就看米。最上方是光圈值，剩下的那一个刻度尺，表示的就是在相应光圈下的景深范围。</p><p><img src="https://static001.geekbang.org/resource/image/2a/6e/2a8f63f0b6f6c4701e2f903c772dc26e.jpg" alt=""></p><p>景深标尺的用法是：先看刻度尺上的主刻度，主刻度指向的正上方表示当前的对焦距离，多少英尺或多少米，而对焦距离的正上方表示当前的光圈值。先确定光圈值是多少，然后在主刻度上找到同样光圈值的左右两个刻度，这两个刻度对应的上方数值就是景深范围。</p><p>比如这是一枚 Leica 35mm 镜头，它上面刻着景深标尺。这支镜头光圈开在 F5.6，对焦点设置在 ∞（无穷远），观察景深标尺得知，光圈开在 F5.6 时，大概 5m-∞（无穷远），都是清晰的景深范围。</p><p>景深标尺惯常用在旁轴相机上，是 Leica 的主要贡献之一。这也是为什么大量纪实摄影师惯用 Leica 的原因：<strong>景深范围直观可见</strong>。</p><p>虽然现在各大相机厂商在自动对焦的速度和精度这两块儿下了很大的功夫，比如 SONY 的 α7R Ⅳ，567 个相位对焦点，425 个对比度检测对焦点，全时眼控对焦，最快对焦速度零点几秒，但很多时候，我们差的就是那零点几秒，就是那半按快门等待相机自动合焦的瞬间……我们经常会说，<strong>“一旦你看见了，你就拍不到了”</strong>，说的就是这零点几秒的事儿。拍小动物，拍孩子，抓拍人脸上瞬息万变的表情、神态，还有人物的动作、体态，没有那零点几秒的对焦时间预留给你，所见的一切都会转瞬即逝，所以这时景深陷阱就变得非常好用了。</p><p><strong>拍照片拍到最后经常靠的是直觉</strong>，这个直觉来自于长时间的视觉训练，可能一刹那间，你敏感的眼睛就会告诉你，眼前出现的这个画面构图是正确的，取景器里出现的元素都在它们应该在的位置上了，而在这个时候，你根本不会有时间再去慢慢思考，慢慢构图，慢慢调整光圈，然后慢慢对焦。</p><p>在你熟练掌握景深陷阱的用法后，你只需要心无旁骛地时刻关注取景器，当你觉得取景器里的一切都对了，或者说在你预判取景器里的一切马上就要都对了的时候，直接按下快门，就不会再有错失机会和画面的烦恼了。<br>
+<strong>　</strong></p><h2><center>总结</center></h2><p>在今天这节课里，我们讲了光圈、景深与景深陷阱三者间的关系。<strong>F 值越大，光圈越小，进光量越少，画面越暗，景深越大（画面越清晰）；F 值越小，光圈越大，进光量越多，画面越亮，景深越浅（背景会模糊）。</strong></p><p>虽然光圈大小会直接影响景深，但影响景深范围的不仅仅只有光圈这一个因素，其他还包括物距、画幅（感光元件大小）和镜头焦段。</p><p>物距指的是相机离物体的距离，<strong>物距越近，景深也就越浅</strong>，这跟人眼的自然视觉是一样的。想想看，你在盯着一个物体的时候，是不是离它越近，它之外的事物就会变得越模糊？</p><p>关于画幅，我们在后面的课程专门讲到相机的时候，会重点说一说它是怎么影响景深的，这节课就暂且先不说了。</p><p>至于焦段是如何影响景深的，不同的焦段又有什么不同的用法，那就是我们下节课要讨论的内容了。在完成下节课的内容学习后，我相信会解决一切你在选择和使用镜头方面的纠结和苦恼。<br>
+<strong>　</strong></p><h2><center>课后小练习</center></h2><ol>
+<li>在 ISO、快门速度不变的情况下，使用最大光圈和最小光圈分别对同一画面进行拍摄，观察两张照片的明暗变化。</li>
+<li>使用相机的光圈优先模式（相机拨盘上的 A 档/Av 档），在 ISO 不变的情况下，使用最大光圈和最小光圈分别对同一画面进行拍摄，观察两张照片的景深变化。</li>
+<li>在光照条件充足的情况下，将光圈固定设定在 F8 以上，尝试使用景深陷阱，在不进行对焦的情况下，到户外进行拍摄，抓拍街上转瞬即逝的画面。</li>
+</ol><p><strong>　</strong><br>
+我们下节课见。</p><p><strong>　</strong></p><h2>精选留言：</h2>
+        <ul>
+        
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;            line-height:1.2">
+            On my way  2019-12-23 19:27:01
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;            word-break:break-all;line-height:1.6">
+            “比如这是一枚 Leica 35mm 镜头，它上面刻着景深标尺。这支镜头光圈开在 F5.6，对焦点设置在 ∞（无穷远），观察景深标尺得知，光圈开在 F5.6 时，大概 5m-∞（无穷远），都是清晰的景深范围。”这块对照图没看懂。 [7赞]
+        </div>
+        <br/>
+<div>
+    <div style="color:#888;font-size:15.25px;font-weight:400;        line-height:1.2">作者回复2019-12-23 19:52:37</div>
+    <div style="color:#353535;font-weight:400;white-space:normal;        word-break:break-all;line-height:1.6">先看光圈，设置在 F5.6 上；再看对焦距离，设置在 ∞ 上；接着看最下面的标尺，有两个 5.6，然后这两个 5.6 的标尺指向了上面的距离数值；最后，左边的 5.6 指向了 5m，右边的 5.6 指在了 ∞ 的右边，也就是说大于 ∞；<br><br>所以我们可以说这枚镜头在光圈 F5.6 的情况下，在对焦距离设置在了∞的情况下，景深范围是 5m-∞。</div>
+</div>
+            
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;            line-height:1.2">
+            七月  2019-12-23 17:35:27
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;            word-break:break-all;line-height:1.6">
+            想学这门课得买相机么、可是听说玩单反穷三代那。😢 [6赞]
+        </div>
+        <br/>
+<div>
+    <div style="color:#888;font-size:15.25px;font-weight:400;        line-height:1.2">作者回复2019-12-23 17:44:31</div>
+    <div style="color:#353535;font-weight:400;white-space:normal;        word-break:break-all;line-height:1.6">也可以不买，不买就云学，想象着学，学习效果可能会打折扣，所以最好还是能有一台相机...「玩」单反可能会穷三代，但我不玩儿，我用，所以目前还好，没有特别穷，也没有连累我爸跟我儿子~</div>
+</div>
+            
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;            line-height:1.2">
+            商滕义  2019-12-24 00:50:07
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;            word-break:break-all;line-height:1.6">
+            对于我这种没学过没用过单反的人来说，你这些大小相互关系还是有点晕。 [1赞]
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;            line-height:1.2">
+            张德  2019-12-23 20:27:15
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;            word-break:break-all;line-height:1.6">
+            新闻摄影所运用的技术  上大学时候摄影老师叫做  超焦距  看到您的文章  感觉您是一个专业人士👍👍 [1赞]
+        </div>
+        <br/>
+<div>
+    <div style="color:#888;font-size:15.25px;font-weight:400;        line-height:1.2">作者回复2019-12-23 20:51:50</div>
+    <div style="color:#353535;font-weight:400;white-space:normal;        word-break:break-all;line-height:1.6">说“超焦距”不是很准确，准确来说还应该是说“景深陷阱”~</div>
+</div>
+            
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;            line-height:1.2">
+            minideerx  2019-12-24 12:01:07
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;            word-break:break-all;line-height:1.6">
+            终于知道为什么池老师要在极客时间里放这门摄影入门课了，确实不同于一般的书籍和网课。景深陷阱应该可以解决我的一个痛点。因为夜间取证需要，暗光环境很难对焦成功，所以单反老是拉风箱。现在可以预设一个景深和物距范围，不对焦直接拍。 
+        </div>
+        <br/>
+<div>
+    <div style="color:#888;font-size:15.25px;font-weight:400;        line-height:1.2">作者回复2019-12-24 12:29:38</div>
+    <div style="color:#353535;font-weight:400;white-space:normal;        word-break:break-all;line-height:1.6">可不是么，“景深陷阱”超级好使~</div>
+</div>
+            
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;            line-height:1.2">
+            瘋狂造夢者  2019-12-24 11:42:23
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;            word-break:break-all;line-height:1.6">
+            小麥老师，我是个小白有台富士X-T1，上你的这个课程相机够用吗？ 
+        </div>
+        <br/>
+<div>
+    <div style="color:#888;font-size:15.25px;font-weight:400;        line-height:1.2">作者回复2019-12-24 12:03:33</div>
+    <div style="color:#353535;font-weight:400;white-space:normal;        word-break:break-all;line-height:1.6">完全够用~</div>
+</div>
+            
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;            line-height:1.2">
+            七月  2019-12-24 10:16:34
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;            word-break:break-all;line-height:1.6">
+            如果老师还打算推进阶课程的话，那可以推荐个5千左右，性价比高点的入门相机。跟着学起来。 
+        </div>
+        <br/>
+<div>
+    <div style="color:#888;font-size:15.25px;font-weight:400;        line-height:1.2">作者回复2019-12-24 10:34:42</div>
+    <div style="color:#353535;font-weight:400;white-space:normal;        word-break:break-all;line-height:1.6">1. 不是老师，叫我小麥就好；2. 看完第八九节课，你自己可以给自己推荐；</div>
+</div>
+            
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;            line-height:1.2">
+            Hugo  2019-12-24 02:16:45
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;            word-break:break-all;line-height:1.6">
+            想在学完课程后，能自己拿着相机拍出比手机拍得好的照片，到甚至愿意出门带包的程度。你建议我买部单反还是无反呢？ 
+        </div>
+        <br/>
+<div>
+    <div style="color:#888;font-size:15.25px;font-weight:400;        line-height:1.2">作者回复2019-12-24 07:59:40</div>
+    <div style="color:#353535;font-weight:400;white-space:normal;        word-break:break-all;line-height:1.6">等学完第八九课，你自己决定~</div>
+</div>
+            
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;            line-height:1.2">
+            寻觅  2019-12-23 23:23:36
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;            word-break:break-all;line-height:1.6">
+            通俗、形象，印象深刻。 
+        </div>
+        
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;            line-height:1.2">
+            美食家  2019-12-23 21:59:53
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;            word-break:break-all;line-height:1.6">
+            👍老师讲的通俗易懂 
+        </div>
+        <br/>
+<div>
+    <div style="color:#888;font-size:15.25px;font-weight:400;        line-height:1.2">作者回复2019-12-23 22:19:10</div>
+    <div style="color:#353535;font-weight:400;white-space:normal;        word-break:break-all;line-height:1.6">不是老师，叫我小麥就好~</div>
+</div>
+            
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;            line-height:1.2">
+            Mason  2019-12-23 21:36:57
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;            word-break:break-all;line-height:1.6">
+            第一次搞明白了景深的含义，还学到了景深陷阱这个点。怪不得我的快门总是不够快，用TV也也不行。赞，景深陷阱练起来😎 
+        </div>
+        <br/>
+<div>
+    <div style="color:#888;font-size:15.25px;font-weight:400;        line-height:1.2">作者回复2019-12-23 22:02:15</div>
+    <div style="color:#353535;font-weight:400;white-space:normal;        word-break:break-all;line-height:1.6">景深陷阱确实太好用了，再快的自动对焦或手动对焦也没有不对焦快，大实话~</div>
+</div>
+            
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;            line-height:1.2">
+            羊毛犬 ส็็็็็็  2019-12-23 18:58:18
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;            word-break:break-all;line-height:1.6">
+            讲的太好了，适合我这种小白。但是也没有相机实战光圈。 
+        </div>
+        <br/>
+<div>
+    <div style="color:#888;font-size:15.25px;font-weight:400;        line-height:1.2">作者回复2019-12-23 19:08:41</div>
+    <div style="color:#353535;font-weight:400;white-space:normal;        word-break:break-all;line-height:1.6">知识可以先学着，等基础都打好了，你可能会发现你用手机拍的照片儿也不再是你之前用手机拍的照片儿了~(｡•̀ᴗ-)✧</div>
+</div>
+            
+    </div>
+</li>
+            
+<br/>
+
+<li>
+    <div>
+        <div style="color: #888;font-size:15.25px;font-weight:400;            line-height:1.2">
+            ～风铃～  2019-12-23 18:40:28
+        </div>
+        <div style="color:#353535;font-weight:400;white-space:normal;            word-break:break-all;line-height:1.6">
+            感觉单反拍照很麻烦，不会后期，还不如用手机。 
+        </div>
+        <br/>
+<div>
+    <div style="color:#888;font-size:15.25px;font-weight:400;        line-height:1.2">作者回复2019-12-23 19:03:25</div>
+    <div style="color:#353535;font-weight:400;white-space:normal;        word-break:break-all;line-height:1.6">用手机拍出好照片比相机难得多~</div>
+</div>
+            
+    </div>
+</li>
+            </ul>
+</div>
+</body>
+</html>
