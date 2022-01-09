@@ -58,7 +58,7 @@ func main() {
 	//开始阅读
 	r.GET("/:path/:name", bookHandler)
 
-	log.Fatal(http.ListenAndServe(":8089", r))
+	log.Fatal(http.ListenAndServe(":80", r))
 }
 
 //主目录，显示有哪些书
